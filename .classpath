@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Ch4_Math_Strings_Chars"/>
+	<classpathentry kind="src" path="Ch5_Loops"/>
+	<classpathentry kind="src" path="Ch1_Intro_Programming"/>
+	<classpathentry kind="src" path="Ch2_Programming_with_UserInput"/>
+	<classpathentry kind="src" path="Ch3_Selections_Boolean_RandomNum"/>
+	<classpathentry kind="src" path="Ch6_Methods"/>
+	<classpathentry kind="src" path="Ch7_Arrays"/>
+	<classpathentry kind="src" path="Ch9_Objects_Classes"/>
+	<classpathentry kind="src" path="Ch10_OOP_Thinking"/>
+	<classpathentry kind="src" path="Ch11_Inheritance_Polymorphism"/>
+	<classpathentry kind="src" path="Ch12_ExceptionHandling_Text_IO"/>
+	<classpathentry kind="src" path="Ch13_AbsractClass_Interface"/>
+	<classpathentry kind="src" path="Ch18_Recursion"/>
+	<classpathentry kind="src" path="Ch19_Generics"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
