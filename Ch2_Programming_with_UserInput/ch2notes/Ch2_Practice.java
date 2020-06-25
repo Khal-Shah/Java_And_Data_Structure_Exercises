@@ -30,9 +30,9 @@ class Ch2_Practice
 		System.out.print("Enter price per gallon: ");
 		double ppg = kb.nextDouble();								//price/gallon
 
-		double cost = distance/mpg/ppg;						//how many gallons needed for distance?
-
-		System.out.println("The cost of driving is $" + cost);
+		double cost = (distance / mpg) * ppg;						//how many gallons needed for distance? miles * gal/miles
+																	// gal * price/gal
+		System.out.printf("The cost of driving is $%.2f", cost);
 
 	}
 
