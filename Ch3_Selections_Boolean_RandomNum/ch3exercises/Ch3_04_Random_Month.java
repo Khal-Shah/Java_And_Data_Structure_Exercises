@@ -59,6 +59,47 @@ public class Ch3_04_Random_Month
 			break;
 			case 12: monthName = "December";
 		}
+
+		//New Java 14 Switch way: before we needed break statement to ensure it doesn't go through the below statements
+		//after a case is matched. Now just do case X -> varName = varVal
+
+//		switch(MONTHNUM) {
+//			case 1 -> monthName = "January";
+//			case 2 -> monthName = "February";
+//			case 3 -> monthName = "March";
+//			case 4 -> monthName = "April";
+//			case 5 -> monthName = "May";
+//			case 6 -> monthName = "June";
+//			case 7 -> monthName = "July";
+//			case 8 -> monthName = "August";
+//			case 9 -> monthName = "September";
+//			case 10 -> monthName = "October";
+//			case 11 -> monthName = "November";
+//			case 12 -> monthName = "December";
+//			default -> monthName = "The number doesn't correspond to any month.";
+//		}
+		//Also, if we had "constants", i.e if cases 1-4 were Q1, we could put case 1, 2, 3, 4 -> quarter = "Q1";
+		//We can also use switch as expression (assigned val of statement)
+
+//		monthName = switch(MONTHNUM)
+//				{
+//					case 1 ->  "January";
+//					case 2 -> "February";
+//					case 3 -> "March";
+//					case 4 -> "April";
+//					case 5 -> "May";
+//					case 6 -> "June";
+//					case 7 -> "July";
+//					case 8 -> "August";
+//					case 9 -> "September";
+//					case 10 -> "October";
+//					case 11 -> "November";
+//					case 12 -> "December";
+//					default -> "The number doesn't correspond to any month.";
+//				};
+		//We could also use yield keyword to return a value if we need to say print something for one of the cases (performing
+		//multiple logics for a case, then return a value using yield).
+
 		System.out.println(monthName + ".");
 	}
 
