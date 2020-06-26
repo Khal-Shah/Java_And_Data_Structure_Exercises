@@ -199,3 +199,20 @@ public class Ch3_11_Days_in_Month
 	}
 
  */
+
+// With java 14 switch expression (very elegant!)
+
+// 		System.out.print("Enter the month (number): ");
+//		int monthNum = kb.nextInt();
+//		System.out.print("Enter the year: ");
+//		int year = kb.nextInt();
+//
+//		int days = switch (monthNum)
+//		{
+//		case 1, 3, 5, 7, 8, 10, 12 -> 31;
+//		case 4, 6, 9, 11 -> 30;
+//		case 2 -> ((isLeapYear(year))? 29: 28);
+//		default -> 0;
+//		};
+//
+//		System.out.printf("%d/%d had %d days.", monthNum, year, days);

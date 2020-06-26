@@ -1,10 +1,11 @@
 package ch3exercises;
 import java.util.*;
 
-/* 	Chapter 3 - Exercise 2:
-	(Game: add three numbers) The program in Listing 3.1, AdditionQuiz.java, generates two integers and prompts the
- * 	user to enter the sum of these two integers. Revise the program to generate three single-digit integers and prompt
- * 	the user to enter the sum of these three integers.
+/* Chapter 3 - Exercise 11:
+ * (Find the number of days in a month) Write a program that prompts the user to enter the month and year and
+ * displays the number of days in the month. For example, if the user entered month 2 and year 2012,
+ * the program should display that February 2012 had 29 days.
+ * If the user entered month 3 and year 2015, the program should display that March 2015 had 31 days.
  */
 //By Khaled Shah
 
@@ -12,30 +13,27 @@ import java.util.*;
 public class Ch3_Practice
 {
 	static Scanner kb = new Scanner(System.in);
-	static final int NUM1 = (int) (Math.random() * 9);
-	static final int NUM2 = (int) (Math.random() * 9);
-	static final int NUM3 = (int) (Math.random() * 9);
-	static final int SUM = NUM1 + NUM2 + NUM3;
-	
+
 	public static void main(String[] args)
 	{
-		System.out.printf("Enter the sum of the following numbers. \n" +
-				"\t%d\n\t%d\n+   %d\n-------", NUM1, NUM2, NUM3);
-		System.out.print("\n= ");
-		int userSum = kb.nextInt();
+		System.out.print("Enter the month (number): ");
+		int monthNum = kb.nextInt();
+		System.out.print("Enter the year: ");
+		int year = kb.nextInt();
 
-		while(SUM != userSum)
-		{
-			System.out.print("Incorrect. Try again: ");
-			userSum = kb.nextInt();
-		}
+		int days = switch (monthNum)
+				{
+					case 1, 3, 5, 7, 8, 10, 12 -> 31;
+					case 4, 6, 9, 11 -> 30;
+					case 2 -> ((isLeapYear(year))? 29: 28);
+					default -> 0;
+				};
 
-		System.out.print(userSum + " is correct!");
+		System.out.printf("%d/%d had %d days.", monthNum, year, days);
 	}
-	
 
-	
-	
-	
-
+	public static boolean isLeapYear(int year)
+	{
+		return (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
+	}
 }
