@@ -1,9 +1,11 @@
 package ch3exercises;
 import java.util.*;
 
-/* Chapter 3 - Exercise 4:
- * (Random month) Write a program that randomly generates an integer between 1 and 12 and displays the
- * English month name January, February, ..., December for the number 1, 2, ..., 12, accordingly.
+/* Chapter 3 - Exercise 11:
+ * (Find the number of days in a month) Write a program that prompts the user to enter the month and year and
+ * displays the number of days in the month. For example, if the user entered month 2 and year 2012,
+ * the program should display that February 2012 had 29 days.
+ * If the user entered month 3 and year 2015, the program should display that March 2015 had 31 days.
  */
 //By Khaled Shah
 
@@ -11,89 +13,27 @@ import java.util.*;
 public class Ch3_Practice
 {
 	static Scanner kb = new Scanner(System.in);
-	static final int MONTHNUM =  (int) (1 + Math.random() * 12);
 
 	public static void main(String[] args)
 	{
-		String monthName = "";
-		//Old switch way
-//		switch(MONTHNUM)
-//		{
-//			case 1: monthName = "January";
-//				break;
-//			case 2: monthName = "February";
-//				break;
-//			case 3: monthName = "March";
-//				break;
-//			case 4: monthName = "April";
-//				break;
-//			case 5: monthName = "May";
-//				break;
-//			case 6: monthName = "June";
-//				break;
-//			case 7: monthName = "July";
-//				break;
-//			case 8: monthName = "August";
-//				break;
-//			case 9: monthName = "September";
-//				break;
-//			case 10: monthName = "October";
-//				break;
-//			case 11: monthName = "November";
-//				break;
-//			case 12: monthName = "December";
-//				break;
-//			default: monthName = "The number doesn't correspond to any month.";
-//		}
+		System.out.print("Enter the month (number): ");
+		int monthNum = kb.nextInt();
+		System.out.print("Enter the year: ");
+		int year = kb.nextInt();
 
-		//New Java 14 Switch way: before we needed break statement to ensure it doesn't go through the below statements
-		//after a case is matched. Now just do case X -> varName = varVal
+		int days = switch (monthNum)
+				{
+					case 1, 3, 5, 7, 8, 10, 12 -> 31;
+					case 4, 6, 9, 11 -> 30;
+					case 2 -> ((isLeapYear(year))? 29: 28);
+					default -> 0;
+				};
 
-//		switch(MONTHNUM) {
-//			case 1 -> monthName = "January";
-//			case 2 -> monthName = "February";
-//			case 3 -> monthName = "March";
-//			case 4 -> monthName = "April";
-//			case 5 -> monthName = "May";
-//			case 6 -> monthName = "June";
-//			case 7 -> monthName = "July";
-//			case 8 -> monthName = "August";
-//			case 9 -> monthName = "September";
-//			case 10 -> monthName = "October";
-//			case 11 -> monthName = "November";
-//			case 12 -> monthName = "December";
-//			default -> monthName = "The number doesn't correspond to any month.";
-//		}
-		//Also, if we had "constants", i.e if cases 1-4 were Q1, we could put case 1, 2, 3, 4 -> quarter = "Q1";
-		//We can also use switch as expression (assigned val of statement)
-
-		monthName = switch(MONTHNUM)
-		{
-			case 1 ->  "January";
-			case 2 -> "February";
-			case 3 -> "March";
-			case 4 -> "April";
-			case 5 -> "May";
-			case 6 -> "June";
-			case 7 -> "July";
-			case 8 -> "August";
-			case 9 -> "September";
-			case 10 -> "October";
-			case 11 -> "November";
-			case 12 -> "December";
-			default -> "The number doesn't correspond to any month.";
-		};
-		//We could also use yield keyword to return a value if we need to say print something for one of the cases (performing
-		//multiple logics for a case, then return a value using yield).
-
-		System.out.printf("The month number of %d corresponds to the month %s.", MONTHNUM, monthName);
-
+		System.out.printf("%d/%d had %d days.", monthNum, year, days);
 	}
 
-	
-
-	
-	
-	
-
+	public static boolean isLeapYear(int year)
+	{
+		return (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
+	}
 }
