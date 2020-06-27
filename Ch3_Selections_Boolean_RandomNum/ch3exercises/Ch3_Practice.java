@@ -1,11 +1,16 @@
 package ch3exercises;
 import java.util.*;
 
-/* Chapter 3 - Exercise 11:
- * (Find the number of days in a month) Write a program that prompts the user to enter the month and year and
- * displays the number of days in the month. For example, if the user entered month 2 and year 2012,
- * the program should display that February 2012 had 29 days.
- * If the user entered month 3 and year 2015, the program should display that March 2015 had 31 days.
+/* Chapter 3 - Exercise 18:
+ * (Cost of shipping) A shipping company uses the following function to calculate the cost (in dollars) of shipping based
+ * on the weight of the package (in pounds).
+ * 		Cost									Weight
+ *		3.5 										0 < w <= 1
+ *		5.5										1 < w <= 3
+ *		8.5										3 < w <= 10
+ *		10.5										10 < w <= 20
+ *Write a program that prompts the user to enter the weight of the package and display the shipping cost.
+ *If the weight is greater than 50, display a message “the package cannot be shipped.”
  */
 //By Khaled Shah
 
@@ -13,27 +18,13 @@ import java.util.*;
 public class Ch3_Practice
 {
 	static Scanner kb = new Scanner(System.in);
+	static final int COMP_CHOICE_NUM = (int) (Math.random() * 3);
 
 	public static void main(String[] args)
 	{
-		System.out.print("Enter the month (number): ");
-		int monthNum = kb.nextInt();
-		System.out.print("Enter the year: ");
-		int year = kb.nextInt();
 
-		int days = switch (monthNum)
-				{
-					case 1, 3, 5, 7, 8, 10, 12 -> 31;
-					case 4, 6, 9, 11 -> 30;
-					case 2 -> ((isLeapYear(year))? 29: 28);
-					default -> 0;
-				};
-
-		System.out.printf("%d/%d had %d days.", monthNum, year, days);
 	}
 
-	public static boolean isLeapYear(int year)
-	{
-		return (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0));
-	}
+
+
 }
