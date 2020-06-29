@@ -1,28 +1,54 @@
 package ch3exercises;
 import java.util.*;
 
-/* Chapter 3 - Exercise 18:
- * (Cost of shipping) A shipping company uses the following function to calculate the cost (in dollars) of shipping based
- * on the weight of the package (in pounds).
- * 		Cost									Weight
- *		3.5 										0 < w <= 1
- *		5.5										1 < w <= 3
- *		8.5										3 < w <= 10
- *		10.5										10 < w <= 20
- *Write a program that prompts the user to enter the weight of the package and display the shipping cost.
- *If the weight is greater than 50, display a message “the package cannot be shipped.”
- */
-//By Khaled Shah
+
+//* Chapter 3 - Exercise 26 (Use the &&, || and ^ operators)
+//		* Write a program that prompts the user to enter an integer and determines whether it is divisible by 5 and 6,
+//		* whether it is divisible by 5 or 6, and whether it is divisible by 5 or 6, but not both.
+//		* Here is a sample run of this program:
+//		* Enter an integer: 10
+//		Is 10 divisible by 5 and 6? false
+//		Is 10 divisible by 5 or 6? true
+//		Is 10 divisible by 5 or 6, but not both? true
+//		*/
+////By Khaled Shah
 
 
 public class Ch3_Practice
 {
 	static Scanner kb = new Scanner(System.in);
-	static final int COMP_CHOICE_NUM = (int) (Math.random() * 3);
 
 	public static void main(String[] args)
 	{
+		System.out.print("Enter an integer: ");
+		int userNum = kb.nextInt();
+//		System.out.print("Is " + userNum + " divisible by " + checkDivisibleAnd(userNum) + "\nIs divisible by " + checkDivisibleOr(userNum) +
+//						"\nIs divisible by " + checkDivisibleXOr(userNum));
+		//boolean isDivisibleAnd = checkDivisibleAnd(userNum)
+		System.out.print("Is " + userNum + " divisible by ");
+		System.out.println(checkDivisibleAnd(userNum));
+		System.out.print("Is " + userNum + " divisible by ");
+		System.out.println(checkDivisibleOr(userNum));
+		System.out.print("Is " + userNum + " divisible by ");
+		System.out.println(checkDivisibleXOr(userNum));
+	}
 
+	public static boolean checkDivisibleAnd(int userNum)
+	{
+		System.out.print("5 and 6? ");
+		return ((userNum % 5 == 0) && (userNum % 6 == 0));
+	}
+
+	public static boolean checkDivisibleOr(int userNum)
+	{
+		System.out.print("5 or 6? ");
+		return ((userNum % 5 == 0) || (userNum % 6 == 0));
+	}
+
+	public static boolean checkDivisibleXOr(int userNum)
+	{
+		System.out.print("5 or 6, but not both? ");
+		return ((userNum % 5 == 0) ^ (userNum % 6 == 0));
 	}
 
 

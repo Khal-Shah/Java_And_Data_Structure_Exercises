@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Ch4_09_Char_to_ASCII
 
-		/* (Find the Unicode of a character) Write a program that receives a character and displays its Unicode. 
+		/* Chapter 4 - Exercise 9:
+		   (Find the Unicode of a character) Write a program that receives a character and displays its Unicode.
 		 * Here is a sample run:
 		 * Enter a character: E
 			The Unicode for the character E is 69

@@ -1,81 +1,36 @@
 package ch4notes;
 import java.util.Scanner;
 
-/* Chapter 4 - Exercise 21:
- * (Check SSN) Write a program that prompts the user to enter a Social Security number in the format 
- * DDD-DD-DDDD, where D is a digit. Your program should check whether the input is valid. 
- * 
- * Here are sample runs:
- * Enter a SSN: 232-23-5435
-	232-23-5435 is a valid social security number
-	
-	Enter a SSN: 23-23-5435
-	23-23-5435 is an invalid social security number
- */
-		// By Khaled Shah
+			/* Chapter 4 - Exercise 11:
+		 * (Decimal to hex) Write a program that prompts the user to enter an integer between 0 and 15 and displays
+		 * its corresponding hex number.
+		 *
+		 * Here are some sample runs:
+		 * Enter a decimal value (0 to 15): 11
+			The hex value is B
+
+			Enter a decimal value (0 to 15): 5
+			The hex value is 5
+
+			Enter a decimal value (0 to 15): 31
+			31 is an invalid input
+		 */
+// By Khaled Shah
+
 
 public class Ch4_Practice
 {
 	static Scanner kb = new Scanner(System.in);
-	
-	
-	
+
 	public static void main(String[] args)
 	{
-		System.out.println("Enter a SSN below: ");
-		
-		String SSN = getSSN();
-		
-		boolean checkSSN = isValid(SSN);
-		
-		System.out.println(SSN + " is " + ((checkSSN)? "a valid" : "an invalid") + " social security number.");
-		
-	
+		System.out.print("Enter a decimal value (0 to 15): ");
+		int deciVal = kb.nextInt();
+		String hexiVal = Integer.toHexString(deciVal);
+
+		System.out.println(((deciVal < 0 || deciVal > 15)? (+ deciVal + " is an invalid input.") : "The hex value is " + hexiVal.toUpperCase() + "."));
+
 	}
-	
-	public static String getSSN()
-	{
-		String ssn = kb.next();
-		return ssn;
-	}
-	
-	public static Boolean isValid(String ssn)
-	{
-		boolean isValid = ((ssn.length() == 11));
-		
-		if (!isValid)
-		{
-			return false;
-		}
-		
-		for (int i = 0; i < 11; i++)
-		{
-			/*if (!(Character.isDigit(ssn.charAt(i))))
-				{
-					if ((i == 3) || (i == 6))
-					{
-						isValid = (ssn.charAt(i) ==  '-');
-						continue;
-					}
-					isValid = false;
-				}*/
-			if (i == 3 || i == 6)
-			{
-				isValid = (ssn.charAt(i) ==  '-');
-				
-				if (!isValid)
-				{
-					return false;
-				}
-			}
-			
-			else
-			{
-				isValid = ((Character.isDigit(ssn.charAt(i))));
-			}
-		}
-		
-		return isValid;
-	}
+
 	
 }

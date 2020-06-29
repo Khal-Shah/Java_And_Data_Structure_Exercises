@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Ch4_07_Pentagon_Corner_Points
 
-		/* (Corner point coordinates) Suppose a pentagon is centered at (0, 0) with one point at the 0 o’clock position, 
+		/* Chapter 4 - Exercise 7:
+		  (Corner point coordinates) Suppose a pentagon is centered at (0, 0) with one point at the 0 o’clock position,
 		 * as shown in Figure 4.7c. Write a program that prompts the user to enter the radius of the bounding circle of a 
 		 * pentagon and displays the coordinates of the five corner points on the pentagon. 
 		 * 
