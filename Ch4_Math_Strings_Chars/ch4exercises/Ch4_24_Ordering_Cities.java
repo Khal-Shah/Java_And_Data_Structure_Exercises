@@ -62,6 +62,37 @@ public class Ch4_24_Ordering_Cities
 			System.out.println(city3 + ", " + city2 + ", " + city1);
 		}
 
+		//Alternatively:
+
+//		System.out.print("The three cities in alphabetical order are ");
+//
+//		String orderedCity1 = "";
+//		String orderedCity2 = "";
+//		String orderedCity3 = "";
+//
+//		if (city1.compareToIgnoreCase(city2) < 0 && city1.compareToIgnoreCase(city3) < 0 && city2.compareToIgnoreCase(city3) < 0)
+//		{
+//			orderedCity1 = city1;
+//			orderedCity2 = city2;
+//			orderedCity3 = city3;
+//		}
+//
+//		else if (city2.compareToIgnoreCase(city1) < 0 && city2.compareToIgnoreCase(city3) < 0 && city1.compareToIgnoreCase(city3) < 0)
+//		{
+//			orderedCity1 = city2;
+//			orderedCity2 = city1;
+//			orderedCity3 = city3;
+//		}
+//
+//		else if (city3.compareToIgnoreCase(city1) < 0 && city3.compareToIgnoreCase(city2) < 0 && city1.compareToIgnoreCase(city2) < 0)
+//		{
+//			orderedCity1 = city3;
+//			orderedCity2 = city1;
+//			orderedCity3 = city2;
+//		}
+//
+//		System.out.println(orderedCity1 + " " + orderedCity2 + " " + orderedCity3);
+
 	}
 
 }

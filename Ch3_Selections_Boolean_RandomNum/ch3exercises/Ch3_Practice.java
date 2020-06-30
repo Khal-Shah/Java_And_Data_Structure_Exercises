@@ -1,16 +1,21 @@
 package ch3exercises;
 import java.util.*;
 
-/* Chapter 3 - Exercise 18:
- * (Cost of shipping) A shipping company uses the following function to calculate the cost (in dollars) of shipping based
- * on the weight of the package (in pounds).
- * 		Cost									Weight
- *		3.5 										0 < w <= 1
- *		5.5										1 < w <= 3
- *		8.5										3 < w <= 10
- *		10.5										10 < w <= 20
- *Write a program that prompts the user to enter the weight of the package and display the shipping cost.
- *If the weight is greater than 50, display a message “the package cannot be shipped.”
+
+
+/* Chapter 3 - Exercise 33:
+ * (Financial: compare costs) Suppose you shop for rice in two different packages. You would like to write a program
+ * to compare the cost. The program prompts the user to enter the weight and price of the each package and displays
+ * the one with the better price.
+ * Here is a sample run:
+ *
+ * Enter weight and price for package 1: 50 24.59
+Enter weight and price for package 2: 25 11.99
+Package 2 has a better price.
+
+Enter weight and price for package 1: 50 25
+Enter weight and price for package 2: 25 12.5
+Two packages have the same price.
  */
 //By Khaled Shah
 
@@ -18,13 +23,34 @@ import java.util.*;
 public class Ch3_Practice
 {
 	static Scanner kb = new Scanner(System.in);
-	static final int COMP_CHOICE_NUM = (int) (Math.random() * 3);
 
 	public static void main(String[] args)
 	{
+		System.out.print("Enter weight and price for package 1 below.\nWeight: ");
+		double p1weight = kb.nextDouble();
+		System.out.print("Price: ");
+		double p1price = kb.nextDouble();
 
+		System.out.print("Enter weight and price for package 2 below.\nWeight: ");
+		double p2weight = kb.nextDouble();
+		System.out.print("Price: ");
+		double p2price = kb.nextDouble();
+
+		double p1rate = p1weight / p1price;
+		double p2rate =  p2weight / p2price;
+
+		//System.out.println(p1rate + ", " + p2rate);
+
+		if (p1rate == p2rate)
+		{
+			System.out.print("Two packages have the same price.");
+		}
+
+		else
+		{
+			System.out.print("Package " + ((p1rate > p2rate)? "1" : "2") + " has a better price.");
+		}
 	}
-
 
 
 }
