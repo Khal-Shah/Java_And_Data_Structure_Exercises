@@ -79,5 +79,31 @@ public class Ch4_26_Compute_Change
 	     + nickels + " nickels\n" +
 	     + pennies + " pennies");
 	}
+//	Alternatively:
+//	System.out.print("Enter a monetary amount (ex: 11.56): ");
+//	String amount = kb.next();
+//	int decimalIndex = amount.indexOf(".");
+//
+//	int cents;
+//
+//		if (decimalIndex == -1)
+//	{
+//		cents = Integer.parseInt(amount);
+//	}
+//
+//		else
+//	{
+//		cents = Integer.parseInt(amount.substring(0, decimalIndex) + amount.substring(decimalIndex + 1));
+//	}
+//
+//	//if cents == 1156, cents/100 would be 11 (dollars), then temp = 56 cents (cents % 100)
+//	String consistsOf = cents/100 + " dollars\n";
+//	int temp = cents % 100;
+//	consistsOf += temp / 25 + " quarters\n";
+//	temp %= 25;
+//	consistsOf += temp / 10 + " dimes\n";
+//	temp %= 10;
+//	consistsOf += temp / 5 + " nickels\n" + temp % 5 + " pennies.";
+//		System.out.println(amount + " consists of\n" + consistsOf);
 
 }
