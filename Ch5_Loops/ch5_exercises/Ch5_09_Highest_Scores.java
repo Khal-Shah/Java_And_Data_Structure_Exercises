@@ -38,6 +38,7 @@ public class Ch5_09_Highest_Scores
 			if (studentScore >= highestScore)
 			{
 				secondHighestScore = highestScore;
+				secondHighestName = highestName;
 				highestScore = studentScore;
 				highestName = studentName;
 				
@@ -53,7 +54,7 @@ public class Ch5_09_Highest_Scores
 		} while (count <= totalStudents);
 		
 		System.out.println(highestName + " has the highest score of " + highestScore + ". And the second highest score is " 
-				 + secondHighestScore + ").");
+				 + secondHighestScore + ", which belongs to " + secondHighestName + ".");
 
 	}
 

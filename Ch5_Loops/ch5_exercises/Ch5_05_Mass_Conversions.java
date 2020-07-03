@@ -5,10 +5,11 @@ import java.util.*;
  * (Conversion from kilograms to pounds and pounds to kilograms) 
  * Write a program that displays the following two tables side by side:
 Kilograms 		Pounds 		| 		Pounds 			Kilograms 
-1 							2.2			|		20 						9.09
+1 				2.2			|		20 						9.09
 all the way up to:
-199					  437.8		|		515						234.09
+199				437.8		|		515						234.09
 (kg jumps in 2 and pounds in 5)
+(note that 1 kilogram is 2.2 pounds):
  */
 	//By Khaled Shah
 
@@ -30,7 +31,7 @@ public class Ch5_05_Mass_Conversions
 					(shownPounds * poundsToKg) );
 			shownKg += 2;
 			shownPounds += 5;
-		} while (shownKg <=199 || shownPounds <= 515);
+		} while (shownKg <= 199 || shownPounds <= 515);
 
 	}
 

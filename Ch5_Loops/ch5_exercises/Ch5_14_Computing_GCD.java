@@ -36,7 +36,7 @@ public class Ch5_14_Computing_GCD
 		}
 		
 		System.out.println(((gcd != 1)? "The GCD of " +n1 + " and " + n2 + " is " + gcd : "These numbers are coprimes "
-				+ "(i.e no GCD aside from 1"));
+				+ "(i.e no GCD aside from 1)."));
 
 	}
 
