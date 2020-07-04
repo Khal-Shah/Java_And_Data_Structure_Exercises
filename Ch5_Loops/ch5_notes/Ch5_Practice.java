@@ -1,9 +1,10 @@
 package ch5_notes;
 import java.util.Scanner;
 
-/* Chapter 5 - Exercise 15:
- * (Display the ASCII character table) Write a program that prints the characters in the ASCII character table from ! to ~.
- * Display ten characters per line. The ASCII table is shown in Appendix B. Characters are separated by exactly one space.
+
+/* Chapter 5 - Exercise 24
+ * (Sum a series) Write a program to sum the following series:
+1/3 + 3/5 + 5/7+ 7/9 +...+ 95/97 + 97/99
  */
 //By Khaled Shah
 
@@ -14,14 +15,20 @@ public class Ch5_Practice
 
 	public static void main(String[] args)
 	{
-		//decimal index 33 to 126 according to ASCII table
-		int startAt = 33;
+		System.out.print("The series \"1/3 + 3/5 + 5/7+ 7/9 +...+ 95/97 + 97/99\" converges to ");
+		double convergesTo = 0;
+		int i = 1;
 
-		for (int i = startAt; i <= 126; i++)
+		while(i <= 97)
 		{
-			System.out.print((!((i > 33) && ((i - 3) % 10 == 0) )? "" : "\n") + (char) i + "\t");
+			convergesTo += (i / (i + 2.0));
+			i += 2;
 		}
+
+		System.out.print(convergesTo);
+
 	}
+
 
 }
 

@@ -6,12 +6,13 @@ package ch5_exercises;
  * 100000000.0 + 0.000000001 is equal to 100000000.0. To avoid cancellation errors and obtain more accurate results, 
  * carefully select the order of computation. For example, in computing the following series, you will obtain more 
  * accurate results by computing from right to left rather than from left to right:
- * 1+1/2 + 1/3 + 1/4 +1/n
+ * 1 + 1/2 + 1/3 + 1/4 +...+ 1/n
  * 
  * Write a program that compares the results of the summation of the preceding series, computing from left to 
  * right and from right to left with n = 50000.
  */
 		//By Khaled Shah
+
 public class Ch5_23_Rounding_Errors
 {
 	static final int N = 50_000;
