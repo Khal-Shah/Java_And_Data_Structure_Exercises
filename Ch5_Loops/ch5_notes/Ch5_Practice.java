@@ -2,9 +2,10 @@ package ch5_notes;
 import java.util.Scanner;
 
 
-/* Chapter 5 - Exercise 24
- * (Sum a series) Write a program to sum the following series:
-1/3 + 3/5 + 5/7+ 7/9 +...+ 95/97 + 97/99
+/* Chapter 5 - Exercise 32:
+ * (Game: lottery) Revise Listing 3.8, Lottery.java, to generate a lottery of a two- digit number.
+ * The two digits in the number are distinct.
+ * (Hint: Generate the first digit. Use a loop to continuously generate the second digit until it is different from the first digit.)
  */
 //By Khaled Shah
 
@@ -15,17 +16,19 @@ public class Ch5_Practice
 
 	public static void main(String[] args)
 	{
-		System.out.print("The series \"1/3 + 3/5 + 5/7+ 7/9 +...+ 95/97 + 97/99\" converges to ");
-		double convergesTo = 0;
-		int i = 1;
+		int firstDigit = (int) (Math.random() * 10);
+		int secondDigit;
 
-		while(i <= 97)
+		System.out.println(firstDigit);
+		do
 		{
-			convergesTo += (i / (i + 2.0));
-			i += 2;
-		}
+			secondDigit = (int) (Math.random() * 10);
+			System.out.println(secondDigit);
+		} while (firstDigit == secondDigit);
 
-		System.out.print(convergesTo);
+		String lottery = "" + firstDigit + "" + secondDigit;
+
+		System.out.println("The lottery numbers are " + lottery);
 
 	}
 
