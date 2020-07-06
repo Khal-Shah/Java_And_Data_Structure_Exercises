@@ -39,7 +39,7 @@ public class Ch5_36_ISBN_Check
 		for (int i = 1; i <= userISBN.length(); i++)
 		{
 			d10 += (i * Integer.parseInt(userISBN.substring(i-1, i)));			//charAt wouldn't work, can't do arithmatic with chars
-			//System.out.println(d10);
+			//System.out.println(d10);											//But could do "" + charAt to convert char to str
 		}
 		
 		int checkSum = d10 % 11;

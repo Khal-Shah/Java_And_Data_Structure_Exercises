@@ -38,6 +38,7 @@ public class Ch5_39_Min_SalesCommission
 		
 		//System.out.println(higherCommission);
 		System.out.println("You would need to generate $" + (sales + 10000) + " in sales to make 30K.");
+																	//to account for the first 10k sales
 		
 	}
 

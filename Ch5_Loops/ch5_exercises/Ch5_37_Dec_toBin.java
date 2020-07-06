@@ -23,8 +23,16 @@ public class Ch5_37_Dec_toBin
 		   bin += userDeci % 2;
 		   userDeci /= 2;
 		  }
+
+		  //now reverse:
+		String binary = "";
+
+		for (int i = bin.length() - 1; i >= 0; i--)
+		{
+			binary += bin.charAt(i);
+		}
 		
-		System.out.println("Binary equivalent is " + bin);
+		System.out.println("Binary equivalent is " + binary);
 		
 
 	}

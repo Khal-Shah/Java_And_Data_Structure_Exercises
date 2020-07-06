@@ -2,13 +2,20 @@ package ch5_notes;
 import java.util.Scanner;
 
 
-/* Chapter 5 - Exercise 32:
- * (Game: lottery) Revise Listing 3.8, Lottery.java, to generate a lottery of a two- digit number.
- * The two digits in the number are distinct.
- * (Hint: Generate the first digit. Use a loop to continuously generate the second digit until it is different from the first digit.)
+/* Chapter 5 - Exercise 39:
+ * (Financial application: find the sales amount) You have just started a sales job in a department store.
+ * Your pay consists of a base salary and a commission. The base salary is $5,000. The scheme shown below is used to
+ * determine the commission rate.
+ * Sales Amount								Commission Rate
+$0.01–$5,000											 8 percent
+$5,000.01–$10,000								 10 percent
+$10,000.01 and above						 12 percent
+	Note that this is a graduated rate. The rate for the first $5,000 is at 8%, the next $5000 is at 10%, and the rest is at 12%.
+	If the sales amount is 25,000, the commission is 5,000 * 8% + 5,000 * 10% + 15,000 * 12% = 2,700.
+	Your goal is to earn $30,000 a year. Write a program that finds the minimum sales
+	you have to generate in order to make $30,000.
  */
 //By Khaled Shah
-
 
 public class Ch5_Practice
 {
@@ -16,21 +23,9 @@ public class Ch5_Practice
 
 	public static void main(String[] args)
 	{
-		int firstDigit = (int) (Math.random() * 10);
-		int secondDigit;
-
-		System.out.println(firstDigit);
-		do
-		{
-			secondDigit = (int) (Math.random() * 10);
-			System.out.println(secondDigit);
-		} while (firstDigit == secondDigit);
-
-		String lottery = "" + firstDigit + "" + secondDigit;
-
-		System.out.println("The lottery numbers are " + lottery);
 
 	}
+
 
 
 }
