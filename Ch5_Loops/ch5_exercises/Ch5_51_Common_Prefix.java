@@ -28,7 +28,7 @@ public class Ch5_51_Common_Prefix
 		
 		String commonStr = "";
 		char singleL;
-		
+										//can also do Math.max
 		for (int i = 0; i < ((firstStr.length() < secStr.length())? firstStr.length() : secStr.length()); i++)
 		{
 			if (firstStr.charAt(i) == secStr.charAt(i))

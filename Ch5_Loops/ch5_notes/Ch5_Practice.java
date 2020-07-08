@@ -1,19 +1,16 @@
 package ch5_notes;
 import java.util.Scanner;
 
+/* Chapter 5 - Exercise 51:
+ * (Longest common prefix) Write a program that prompts the user to enter two strings and displays the largest
+ * common prefix of the two strings. Here are some sample runs:
+ * Enter the first string: Welcome to C++
+	Enter the second string: Welcome to programming
+	The common prefix is Welcome to
 
-/* Chapter 5 - Exercise 39:
- * (Financial application: find the sales amount) You have just started a sales job in a department store.
- * Your pay consists of a base salary and a commission. The base salary is $5,000. The scheme shown below is used to
- * determine the commission rate.
- * Sales Amount								Commission Rate
-$0.01–$5,000											 8 percent
-$5,000.01–$10,000								 10 percent
-$10,000.01 and above						 12 percent
-	Note that this is a graduated rate. The rate for the first $5,000 is at 8%, the next $5000 is at 10%, and the rest is at 12%.
-	If the sales amount is 25,000, the commission is 5,000 * 8% + 5,000 * 10% + 15,000 * 12% = 2,700.
-	Your goal is to earn $30,000 a year. Write a program that finds the minimum sales
-	you have to generate in order to make $30,000.
+	Enter the first string: Atlanta
+	Enter the second string: Macon
+	Atlanta and Macon have no common prefix
  */
 //By Khaled Shah
 
@@ -23,6 +20,30 @@ public class Ch5_Practice
 
 	public static void main(String[] args)
 	{
+		System.out.print("Enter the first string: ");
+		String str1 = kb.nextLine();
+
+		System.out.print("Enter the second string: ");
+		String str2 = kb.nextLine();
+
+		String common = "";
+
+		for(int i = 0; i < Math.max(str1.length(), str2.length()); i++)
+		{
+			if (str1.charAt(i) == str2.charAt(i))
+			{
+				common += "" + str1.charAt(i);
+				continue;
+			}
+
+			else
+			{
+				break;
+			}
+		}
+
+		System.out.print(((common.length() == 0)? str1 + " and " + str2 + " have no common prefix." :
+				"The longest common prefix is " + common));
 
 	}
 

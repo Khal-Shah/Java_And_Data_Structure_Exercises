@@ -36,7 +36,8 @@ public class Ch5_50_Counting_Uppercase
 		System.out.println("The number of uppercase letters is " + upperCount);*/
 		
 		//Could also do it with replaceAll
-		userStr = userStr.replaceAll("[^A-Z]", "");
+		userStr = userStr.replaceAll("[^A-Z]", "");			//replace everything that isn't uppercase
+		//or userStr = userStr.replaceAll("[a-z\\s]", "");	//replace all small letters and white space
 		System.out.println("The number of uppercase letters is " + userStr.length());
 		
 		
