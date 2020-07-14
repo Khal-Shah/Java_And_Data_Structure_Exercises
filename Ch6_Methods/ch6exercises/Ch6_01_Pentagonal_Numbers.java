@@ -18,6 +18,7 @@ public class Ch6_01_Pentagonal_Numbers
 		for (int i = 1; i <= 100; i++)
 		{
 			System.out.print(((i % 10 == 0)? getPentagonalNumber(i) + "\n" : (getPentagonalNumber(i)) +"\t"));
+											//Because we're still printing pentNum, just next one is on a new line
 		}
 	}
 	

@@ -16,24 +16,42 @@ public static double sqrt(long n)
  */
 		//By Khaled Shah
 
+import java.util.Scanner;
+
 public class Ch6_22_Approximate_SquareRoot
 {
+	static Scanner kb = new Scanner(System.in);
 
 	public static void main(String[] args)
 	{
-		System.out.printf("%.2f", sqrt(25));
+		System.out.print("What number would you like to guess the square root of? ");
+		int n = kb.nextInt();
+
+		System.out.printf("The square root of %d is %f", n, sqrt(n));
 	}
-	
+
 	public static double sqrt(long n)
 	{
 		double lastGuess = 1;
-		double nextGuess = (lastGuess + n / lastGuess) / 2.0;
-	
-		while (Math.abs(lastGuess - nextGuess) > .0001)
+		//nextGuess = (lastGuess + n / lastGuess) / 2
+		double nextGuess = 0;
+		double difference;
+
+		do
 		{
-			lastGuess = nextGuess;
-			nextGuess = (lastGuess + n / lastGuess) / 2.0;
-		}
+			nextGuess = (lastGuess + n / lastGuess) / 2;
+			difference = Math.abs(nextGuess - lastGuess);
+
+			if(difference < 0.0001)
+			{
+				break;
+			}
+
+			System.out.print("Enter guess: ");
+			lastGuess = kb.nextDouble();
+
+		} while(difference > 0.0001);
+
 		return nextGuess;
 	}
 

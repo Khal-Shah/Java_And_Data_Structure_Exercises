@@ -32,6 +32,7 @@ public class Ch6_37_Format_Int_Prefix
 	public static String format(int number, int width)
 	{
 		//same as System.out.printf("%0" + width + "d", number) But can't return sysout.printf as a String
+		//System.out.printf("%0" + width + "d\n", number);
 		return String.format("%0" + width +"d", number);
 	}
 }

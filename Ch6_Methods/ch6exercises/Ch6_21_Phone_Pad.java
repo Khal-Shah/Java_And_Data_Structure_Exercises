@@ -82,7 +82,28 @@ public class Ch6_21_Phone_Pad
 		return digit;
 		
 	}
-	
+
+	//With new Switch in Jave 14
+
+//	static int getDigit(char letter)
+//	{
+//		letter = Character.toLowerCase(letter);
+//		int digit = switch(letter)
+//				{
+//					case 'a', 'b', 'c' ->  2;
+//					case 'd', 'e', 'f' ->  3;
+//					case 'g', 'h', 'i' ->  4;
+//					case 'j', 'k', 'l' ->  5;
+//					case 'm', 'n', 'o' ->  6;
+//					case 'p', 'q', 'r', 's' ->  7;
+//					case 't', 'u', 'v' ->  8;
+//					case 'w', 'x', 'y', 'z' ->  9;
+//					default -> -1;
+//				};
+//		return digit;
+//	}
+
+
 	public static void printNumber(String str)
 	{
 		int i = 0;
