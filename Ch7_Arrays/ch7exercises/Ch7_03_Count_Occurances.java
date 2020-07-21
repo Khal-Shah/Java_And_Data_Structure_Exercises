@@ -65,7 +65,7 @@ public class Ch7_03_Count_Occurances
 		
 		for (int i = 0; i < 100; i++)
 		{
-			countOccurances [counts [i] - 0]++;
+			countOccurances [counts[i]]++;
 		}
 		return countOccurances;
 	}

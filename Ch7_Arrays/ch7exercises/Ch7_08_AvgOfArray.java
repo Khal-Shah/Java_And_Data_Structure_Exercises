@@ -8,6 +8,7 @@ public static double average(double[] array)
 Write a test program that prompts the user to enter ten double values, invokes this method, and 
 displays the average value.
  */
+	//By Khaled Shah
 
 public class Ch7_08_AvgOfArray
 {

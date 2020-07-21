@@ -34,7 +34,7 @@ public class Ch7_16_Search_Execution_T
 		long execTime = endTime - startTime;
 		System.out.println("The index of the key for linear search is " + linearKeyIndex + "\nExecution time: " + execTime + 
 				" ms");
-		System.out.println("Check: " + largeArr [linearKeyIndex]);
+		System.out.println("Check: list[" + linearKeyIndex + "] = " + largeArr [linearKeyIndex]);
 		
 		key =  (largeArr [(int) (1 + Math.random() * 100_000)]);
 		System.out.println("\nThe new key is " + key);
@@ -47,7 +47,7 @@ public class Ch7_16_Search_Execution_T
 		execTime = endTime - startTime;
 		System.out.println("The index of the key for binary search is " + binaryKeyIndex + "\nExecution time: " + execTime + 
 				" ms");
-		System.out.println("Check: " + largeArr [binaryKeyIndex]);
+		System.out.println("Check: list[" + binaryKeyIndex + "] = " + largeArr [binaryKeyIndex]);
 
 	}
 	

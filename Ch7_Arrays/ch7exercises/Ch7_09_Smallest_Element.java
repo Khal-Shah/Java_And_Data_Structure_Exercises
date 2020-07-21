@@ -12,7 +12,6 @@ Here is a sample run of the program:
 Enter ten numbers: 1.9 2.5 3.7 2 1.5 6 3 4 5 2
 The minimum number is: 1.5
  */
-
 		//By Khaled Shah
 
 public class Ch7_09_Smallest_Element

@@ -20,14 +20,14 @@ public class Ch7_13_RandomNum_Chooser
 	
 	public static int getRandom (int...numbers)
 	{
-		int ranNum = (int) (1 + Math.random() * 55);
+		int ranNum = (int) (1 + Math.random() * 54);
 		
 		for (int i = 0; i < numbers.length; i++)
 		{
 			if (ranNum == numbers [i])
 			{
-				ranNum = (int) (1 + Math.random() * 55);
-				i = 0;
+				ranNum = (int) (1 + Math.random() * 54);
+				i = -1;		//make it -1 here, in for loop the i increments at the top (so will be 0)
 				continue;
 			}
 		}
