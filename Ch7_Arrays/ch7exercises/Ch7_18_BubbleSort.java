@@ -69,7 +69,7 @@ public class Ch7_18_BubbleSort
 		
 		for (double e: nums)
 		{
-			System.out.printf("%.0f\t", e);
+			System.out.printf("%8.2f, ", e);
 		}
 	}
 }

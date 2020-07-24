@@ -21,70 +21,86 @@ public class Ch7_19_Check_Sorted
 	public static void main(String[] args)
 	{
 		System.out.print("Enter list: ");
-		int totalNums = kb.nextInt();
-		
-		int [] userList = new int [totalNums];
-		
-		getUserList(userList);
-		
-		int [] sortedList = new int [totalNums];
-	    System.arraycopy(userList, 0, sortedList, 0, totalNums);
-		
-		getSortedList(sortedList);
-		
-		System.out.println("The list is " + ((checkSorted(userList, sortedList))? "already sorted" : "not sorted"));
-		
+		int size = kb.nextInt();
+
+		int[] list = getList(size);
+		int[] sortedList = getSortedList(list);
+
+		System.out.println("The list is" + ((isSorted(list, sortedList))? " already" : " not") + " sorted.");
 
 	}
-	
-	public static int [] getUserList (int [] list)
+
+	static int[] getSortedList(int[] list)
 	{
-		for (int i = 0; i < list.length; i++)
+		int[] sortedList;
+		sortedList = populateSortedList(list);
+
+		int currentMinVal;
+		int currentMinIndex;
+
+		for(int i = 0; i < sortedList.length; i++)
 		{
-			list [i] = kb.nextInt();
-		}
-		return list;
-	}
-	
-	public static int [] getSortedList (int [] list)
-	{
-		int temp = 0;
-		int minValue;
-		int minIndex;
-		
-		for (int i = 0; i < list.length; i++)
-		{
-			minValue = list [i];
-			minIndex = i;
-			
-			for (int j = i; j < list.length; j++)
+			currentMinVal = sortedList[i];
+			currentMinIndex = i;
+
+			for (int j = i + 1; j < sortedList.length; j++)
 			{
-				if (list [j] < minValue)
+				if(sortedList[j] < currentMinVal)
 				{
-					minValue = list [j];
-					minIndex = j;
+					currentMinVal = sortedList[j];
+					currentMinIndex = j;
 				}
 			}
-			if (minValue != list [i])
+
+			if(currentMinIndex != i)
 			{
-				temp = list [i];
-				list [i] = list [minIndex];
-				list [minIndex] = temp;
+				sortedList[currentMinIndex] = sortedList[i];
+				sortedList[i] = currentMinVal;
 			}
 		}
-		return list;
+		return sortedList;
 	}
-	
-	public static boolean checkSorted (int [] list1, int [] list2)
+
+	static int[] populateSortedList(int[] list)
 	{
-		for (int i = 0; i < list1.length; i++)
+		int[] sortedList = new int[list.length];
+//		int i = 0;
+//		for(int e: list)
+//		{
+//			sortedList[i++] = e;
+//		}
+		//instead of populating E by E, we can use System.arraycopy(srcArr, srcPos, targetArr, targetPos, length
+		System.arraycopy(list, 0, sortedList, 0, list.length);
+
+		return sortedList;
+	}
+
+	static boolean isSorted(int[] list, int[] sortedList)
+	{
+		//int[] sortedList = list;			//makes list the same as sortedList, changing sortedList will reflect on list too!
+		int i = 0;
+		do
 		{
-			if (list1 [i] != list2[i])
+			if(list[i] != sortedList[i])
 			{
 				return false;
 			}
-		}
+			i++;
+		}while (i < list.length);
+
 		return true;
 	}
+
+	static int[] getList(int sz)
+	{
+		int[] list = new int[sz];
+
+		for(int i = 0; i < sz; i++)
+		{
+			list[i] = kb.nextInt();
+		}
+		return list;
+	}
+
 
 }

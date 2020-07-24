@@ -136,5 +136,41 @@ Following program shows how to find key 11 in the list {2, 4, 7, 10, 11, 45, 50,
 	}
 	
 }
-
-
+//	Alternatively
+//	static void sortScores(String[] names, double[] scores)
+//	{
+//		String name = "";
+//		int currentMaxIndex = 0;
+//		double currentMaxVal = scores[0];
+//
+//		for(int i = 0; i < scores.length; i++)
+//		{
+//			currentMaxIndex = i;
+//			currentMaxVal = scores[i];
+//
+//			for(int j = (i + 1); j < scores.length; j++)
+//			{
+//				if(scores[j] > currentMaxVal)
+//				{
+//					currentMaxIndex = j;
+//					currentMaxVal = scores[j];
+//				}
+//			}
+//
+//			if(currentMaxIndex != i)
+//			{
+//				name = names[currentMaxIndex];
+//				names[currentMaxIndex] = names[i];
+//				names[i] = name;
+//				scores[currentMaxIndex] = scores[i];
+//				scores[i] = currentMaxVal;
+//			}
+//		}
+//
+//		System.out.print("Names and scores in descending order below.\nNames\t\t\tScores");
+//
+//		for(int i = 0; i < scores.length; i++)
+//		{
+//			System.out.printf("\n%s\t\t\t%.1f", names[i], scores[i]);
+//		}
+//	}

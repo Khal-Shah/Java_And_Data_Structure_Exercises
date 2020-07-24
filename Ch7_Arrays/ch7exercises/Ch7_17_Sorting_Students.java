@@ -14,46 +14,44 @@ public class Ch7_17_Sorting_Students
 	public static void main(String[] args)
 	{
 		System.out.print("Enter the number of students: ");
-		int totalStudents = kb.nextInt();
+		int size = kb.nextInt();
 		
-		String [] studentNames = getNames(totalStudents);
-		double [] studentScores = getScores (totalStudents);
+		String [] studentNames = getNames(size);
+		double [] studentScores = getScores (studentNames);
 		
 		double [] orderedScores = descendingScores(studentScores, studentNames);	//also swaps name array accordingly
 		
 		displayNames(studentNames, orderedScores);
 
 	}
-	
-	public static String [] getNames (int size)
+
+	static double[] getScores(String[] names)
 	{
-		String [] studentNames = new String [size];
-		
-		System.out.println("Enter " + size + " student names: ");
-		
-		for (int i = 0; i < size; i++)
+		double[] scores = new double[names.length];
+
+		for(int i = 0; i < names.length; i++)
 		{
-			studentNames[i] = kb.next();
+			System.out.print("Enter score for " + names[i] + ": ");
+			scores[i] = kb.nextDouble();
 		}
-		return studentNames;
+		return scores;
 	}
-	
-	public static double [] getScores (int size)
+
+	static String[] getNames(int sz)
 	{
-		double [] studentScores = new double [size];
-		
-		System.out.println("Enter " + size + " student scores: ");
-		
-		for (int i = 0; i < size; i++)
+		String[] names = new String[sz];
+
+		for(int i = 0; i < sz; i++)
 		{
-			studentScores [i] = kb.nextDouble();
+			System.out.print("Enter name of student " + (i + 1) + ": ");
+			names[i] = kb.next();
 		}
-		return studentScores;
+		return names;
 	}
 	
 	public static double [] descendingScores (double [] list, String [] names)
 	{
-		String temp;					//String cuz it can hold both 
+		String name;					//String cuz it can hold both
 		double maxValue;
 		int maxIndex;
 		
@@ -74,14 +72,13 @@ public class Ch7_17_Sorting_Students
 			if (maxValue > list [i])
 			{
 				//now swap the string (name) array
-				temp = names [i];						//stores 1st element
+				name = names [i];						//stores 1st element
 				names [i] = names [maxIndex];		//in place of 1st element, put the big one
-				names [maxIndex] = temp;			//put 1st element into big index's place
+				names [maxIndex] = name;			//put 1st element into big index's place
 				
 				//now swap scores array
-				temp = "" + list [i];
-				list [i] = list [maxIndex];
-				list [maxIndex] = Double.parseDouble(temp);
+				list[maxIndex] = list[i];
+				list[i] = maxValue;
 			}
 		}
 		return list;
@@ -89,11 +86,11 @@ public class Ch7_17_Sorting_Students
 	
 	public static void displayNames (String [] names, double [] scores)
 	{
-		System.out.println("Name\t\t\tScore");
+		System.out.print("Name\t\t\tScore");
 		
 		for (int i = 0; i <names.length; i++)
 		{
-			System.out.println(names[i] + "\t\t\t" + scores [i]);
+			System.out.printf("\n%-10s\t\t%.2f", names[i], scores [i]);
 		}
 		
 	}
