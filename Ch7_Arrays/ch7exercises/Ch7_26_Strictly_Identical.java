@@ -24,12 +24,13 @@ public class Ch7_26_Strictly_Identical
 {
 
 	static Scanner kb = new Scanner (System.in);
+	static int listNum = 1;
 	
 	public static void main(String[] args)
 	{
 
-		int [] list1 = getList1();
-		int [] list2 = getList2();
+		int [] list1 = getList();
+		int [] list2 = getList();
 		
 		System.out.println("Two lists are " + ((equals(list1, list2))? "" : "not ") + "strictly identical.");
 		
@@ -37,14 +38,14 @@ public class Ch7_26_Strictly_Identical
 	
 	public static boolean equals(int[] list1, int[] list2)
 	{
-		return (java.util.Arrays.equals(list1, list2));
+		return (Arrays.equals(list1, list2));
 	}
 	
-	public static int [] getList1()
+	public static int [] getList()
 	{
 		int [] list;
 		
-		System.out.print("Enter list1 (first number is the size): ");
+		System.out.print("Enter list " + listNum++ + " (first number is the size): ");
 		int size = kb.nextInt();
 		int i = 0;
 		list = new int [size];
@@ -56,22 +57,6 @@ public class Ch7_26_Strictly_Identical
 		
 		return list;
 	}
-	
-	public static int [] getList2()
-	{
-		int [] list;
-		
-		System.out.print("Enter list2 (first number is the size): ");
-		int size = kb.nextInt();
-		int i = 0;
-		list = new int [size];
-		
-		do
-		{
-			list [i++] = kb.nextInt();
-		} while (i < size);
-		
-		return list;
-	}
+
 
 }

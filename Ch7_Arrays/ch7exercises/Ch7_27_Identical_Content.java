@@ -23,16 +23,15 @@ Two lists are not identical
 public class Ch7_27_Identical_Content
 {
 	static Scanner kb = new Scanner(System.in);
+	static int listNum = 1;
 
 	public static void main(String[] args)
 	{
 
-		int [] list1 = getList1();
-		int [] list2 = getList2();
+		int [] list1 = getList();
+		int [] list2 = getList();
 		
 		System.out.println("Two lists are " + ((equals(list1, list2))? "" : "not ") + "identical.");
-		
-		
 	}
 	
 	public static boolean equals(int[] list1, int[] list2)
@@ -50,44 +49,27 @@ public class Ch7_27_Identical_Content
 		return true;
 	}
 	
-	public static int[] sort (int [] list)
+	public static int[] sort (int[] list)
 	{
-		java.util.Arrays.sort(list);
+		Arrays.parallelSort(list);
 		return list;
 	}
-	
-	public static int [] getList1()
+
+	static int[] getList()
 	{
-		int [] list;
-		
-		System.out.print("Enter list1 (first number is the size): ");
+		int[] list;
+		System.out.print("Enter list " + listNum++ + " (First number indicates the size): ");
 		int size = kb.nextInt();
+		list = new int[size];
+
 		int i = 0;
-		list = new int [size];
-		
-		do
+
+		for(int e: list)
 		{
-			list [i++] = kb.nextInt();
-		} while (i < size);
-		
+			list[i++] = kb.nextInt();
+		}
 		return list;
 	}
-	
-	public static int [] getList2()
-	{
-		int [] list;
-		
-		System.out.print("Enter list2 (first number is the size): ");
-		int size = kb.nextInt();
-		int i = 0;
-		list = new int [size];
-		
-		do
-		{
-			list [i++] = kb.nextInt();
-		} while (i < size);
-		
-		return list;
-	}
+
 
 }
