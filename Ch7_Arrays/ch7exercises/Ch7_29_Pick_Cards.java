@@ -9,74 +9,122 @@ package ch7exercises;
 
 public class Ch7_29_Pick_Cards
 {
+	static final String[] suits = {"Spades", "Hearts", "Diamonds", "Clubs"};	//cardNum / 13 for suit
+	static final String[] ranks = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
+	//cardNum % 13 for rank
+	static int count = 0;
 
 	public static void main(String[] args)
 	{
-		String [] suits = {"Spades", "Heart", "Diamond", "Club"};
-		String [] ranks = {"Ace",  "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
-		int [] deck = new int [52];
-		
-		shuffleCards(deck, suits, ranks);
+		int[] deck = getDeck(52);
+
+		//System.out.println("Card number " + deck[11] + " is " + ranks[(11 % 13) + 1] + " of " + suits[11 / 13]);
+		int[] first4Cards = new int[4];
+
+		int i = 0;
+		while(i < first4Cards.length)
+		{
+			first4Cards[i] = pickCards(deck);
+			i++;
+		}
+
+		int sum = getSum(first4Cards);
+
+		displayResults(first4Cards, sum);
+
 	}
 
-	public static void shuffleCards(int [] deck, String [] suits, String [] ranks)
+	static void displayResults(int[] cards, int sum)
 	{
-		int temp;
-		int index;
-		
-		for (int i = 0; i < deck.length; i++)				//initialize
+		System.out.println("The 4 cards picked are: ");
+
+		for(int i = 0; i < cards.length; i++)
 		{
-			deck [i] = i;
+			System.out.println("Card number " + cards[i] + " is " + getSuitsAndRanks(cards[i]));
 		}
-		
-		for (int i = 0; i < deck.length; i++)				//shuffle
+
+		if(sum < 24)
 		{
-			index = (int) (Math.random() * deck.length);
-			temp = deck [i];
-			deck [i] = deck [index];
-			deck [index] = temp;
-			
+			System.out.println("4 cards were not enough to reach a sum of 24.");
 		}
-		display4Cards(deck, suits, ranks);
+
+		else
+		{
+			System.out.println("It took " + (count + 1) + " cards to reach 24.");
+		}
 	}
-	
-	public static void display4Cards(int [] deck, String [] suits, String [] ranks)
-	{
-		String suit;
-		String rank;
-		String [] rankCollection = new String[4];
-		
-		for (int i = 0; i < 4; i++)
-		{
-			suit = suits [deck [i] / 13];
-			rank = ranks [deck [i] % 13];
-			rankCollection[i] = rank;
-			System.out.println("Card number " + deck [i] + ": " + rank + " of " + suit + ".");
-		}
-		System.out.println("Their sum is " + getSum(rankCollection));
-	}
-	
-	public static int getSum(String [] ranks)
+
+
+	static int getSum(int[] firstCards)
 	{
 		int sum = 0;
-		int cardVal = 0;
-		
-		for (int i = 0; i < ranks.length; i++)
+		int i = 0;
+		int rankVal = 0;
+
+		do
 		{
-			switch (ranks[i])
+			switch (ranks[firstCards[i] % 13])
 			{
-				case "Ace": cardVal = 1;
-				break;
-				case "Jack": cardVal = 11;
-				break;
-				case "Queen": cardVal = 12;
-				break;
-				case "King": cardVal = 13;
-				break;
-				default: cardVal = Integer.parseInt(ranks[i]);
+				case "Ace" -> rankVal = 1;
+				case "Jack" -> rankVal = 11;
+				case "Queen" -> rankVal = 12;
+				case "King" -> rankVal = 13;
+				default -> rankVal = Integer.parseInt(ranks[firstCards[i] % 13]);
 			}
-			sum += cardVal;
-		}
+			sum += rankVal;
+			i++;
+			if(sum < 24)
+			{
+				count++;
+			}
+		} while(i < firstCards.length);
+
 		return sum;
 	}
+
+	static String getSuitsAndRanks(int cardNum)
+	{
+		return (ranks[(cardNum % 13)] + " of " + suits[cardNum / 13]);
+	}
+
+	static int pickCards(int[] deck)
+	{
+		return ((int) (Math.random() * 52));
+	}
+
+	static int[] getDeck(int size)
+	{
+		int[] deck = new int[size];
+
+		for(int i = 0; i < size; i++)
+		{
+			deck[i] = i;
+		}
+		return deck;
+	}
+
+//	public static void shuffleCards(int [] deck, String [] suits, String [] ranks)
+//	{
+//		int temp;
+//		int index;
+//
+//		for (int i = 0; i < deck.length; i++)				//initialize
+//		{
+//			deck [i] = i;
+//		}
+//
+//		for (int i = 0; i < deck.length; i++)				//shuffle
+//		{
+//			index = (int) (Math.random() * deck.length);
+//			temp = deck [i];
+//			deck [i] = deck [index];
+//			deck [index] = temp;
+//
+//		}
+//		display4Cards(deck, suits, ranks);
+//	}
+	
+
+	
+
 }
