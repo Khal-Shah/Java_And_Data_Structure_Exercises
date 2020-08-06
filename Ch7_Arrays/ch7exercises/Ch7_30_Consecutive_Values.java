@@ -71,7 +71,35 @@ public class Ch7_30_Consecutive_Values
 		}
 		return false;
 	}
-	
+
+	//Can also do with just one loop:
+//	public static boolean isConsecutiveFour(int[] values)
+//	{
+//		int count = 1;	//because if first two are a match then that's TWO (and not one)
+//		int i = 0;
+//
+//		while(i < (values.length - 1))
+//		{
+//			if(values[i] == values[i + 1])
+//			{
+//				count++;
+//
+//				if(count >= 4)
+//				{
+//					return true;
+//				}
+//			}
+//
+//			else
+//			{
+//				count = 1;
+//			}
+//			i++;
+//		}
+//
+//		return ((count >= 4)? true: false);
+//	}
+//
 	public static int [] getValues()
 	{
 		int size = 0;

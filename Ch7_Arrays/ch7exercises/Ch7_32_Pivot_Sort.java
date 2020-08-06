@@ -1,4 +1,5 @@
 package ch7exercises;
+import java.util.Arrays;
 import java.util.Scanner;
 
 /* Chapter 7 - Exercise 32:
@@ -25,84 +26,117 @@ public class Ch7_32_Pivot_Sort
 
 	public static void main(String[] args)
 	{
-		int [] list = getList();
+		int[] list = getNums();
 		int pivotIndex = partition(list);
-		
-		displayPartition(list, pivotIndex);
+		int[] partitionList = getPartitionList(list, pivotIndex);
+
+		System.out.print("After the partition, the list is  ");
+		for(int e: partitionList)
+		{
+			System.out.print(e + " ");
+		}
 
 	}
-	
-	public static int partition(int [] list)
+
+	static int[] getPartitionList(int[] list, int pivotIndex)
 	{
-		//The method returns the index where the pivot is located in the new list.
-	
-		int pivot = list [0];
-		int smaller = 0;
-		
-		for (int i = 1; i < list.length; i++)
+		//pivotIndex is where the pivot should be.
+		int pivot = list[0];
+
+		int[] partitionList = new int[list.length];
+		partitionList[pivotIndex] = pivot;
+		//put all smaller elements to left of pivotIndex and bigger to the right
+		int biggerIndex = partitionList.length - 1;
+		int smallerIndex = 0;
+		int[] morePivots = new int[10];
+		int index = pivotIndex + 1;
+
+		for(int i = 1; i < partitionList.length; i++)
 		{
-			if (list [i] < pivot)
+//			if(i == pivotIndex)
+//			{
+//				continue;
+//			}
+
+			if(list[i] < pivot)
 			{
-				smaller++;
+				partitionList[smallerIndex++] = list[i];
+			}
+
+			else if(list[i] > pivot)
+			{
+				partitionList[biggerIndex--] = list[i];
+			}
+
+//			else if(list[i] == pivot)
+//			{
+//				int temp = partitionList[pivotIndex + 1];
+//				//11 12 94 24 59 60 (so 12 goes to 94's place, 94 to 24's and so on)...need to store the next one
+//				for(int j = pivotIndex + 2; j < list.length - 1; j++)
+//				{
+//					partitionList[j + 1] = partitionList[j];
+//				}
+//				partitionList[partitionList.length - 1] = temp;
+//				partitionList[pivotIndex + 1] = pivot;
+//			}
+
+			else if(list[i] == pivot)
+			{
+				morePivots[index++] = list[i];
+			}
+
+		}
+
+		int morePivotCount = 0;
+		for(int i = 0; i < morePivots.length; i++)
+		{
+			if(morePivots[i] != 0)
+			{
+				morePivotCount++;
 			}
 		}
-		return smaller;
-	}
-	
-	public static int [] getList()
-	{
-		System.out.print("Enter list (first numbe is the size): ");
-		int sz = kb.nextInt();
-		int [] list = new int [sz];
-		
-		for (int i = 0; i < sz; i++)
+
+		index = pivotIndex + 1;
+
+		if (morePivotCount > 0)
 		{
-			list [i] = kb.nextInt();
+			for (int i = pivotIndex + 1; i < (pivotIndex + 1 + morePivotCount); i++)
+			{
+				partitionList[i] = morePivots[index++];
+			}
+		}
+
+		return partitionList;
+	}
+
+	public static int partition(int[] list)
+	{
+		int pivot = list[0];
+		int smallerElements = 0;
+
+		for(int i = 0; i < list.length; i++)
+		{
+			if(list[i] < pivot)
+			{
+				smallerElements++;
+			}
+		}
+		return(smallerElements);
+	}
+
+	static int[] getNums()
+	{
+		System.out.print("Enter size of list" + ": ");
+		int size = kb.nextInt();
+
+		int[] list = new int[size];
+
+		for(int i = 0; i < size; i++)
+		{
+			System.out.print("Enter entry " + (i + 1) + ": ");
+			list[i] = kb.nextInt();
 		}
 		return list;
-	}
-	
-	public static void displayPartition(int [] list, int pivotIndex)
-	{
-		int pivotVal = list[0];
-		//all smaller val go to left of pivotIndex
-		int index = 0;
-		int [] newList = new int [list.length];
-		newList [pivotIndex] = pivotVal;
-		
-		for (int i = 0; i < list.length; i++)
-		{
-			if (index == pivotIndex)
-			{
-				index++;
-			}
-			
-			if (list [i] < pivotVal)
-			{
-				newList[index++] = list[i];
-			}
-		}
-		
-		index = pivotIndex + 1;
-		
-		for (int i = 0; i < list.length; i++)
-		{
-			
-			if (index == pivotIndex)
-			{
-				index++;
-			}
-			
-			if (list[i] > pivotVal)
-			{
-				newList[index++] = list[i];
-			}
-		}
-		
-		for (int e: newList)
-		{
-			System.out.print(e + "\t");
-		}
 	}
 
 }

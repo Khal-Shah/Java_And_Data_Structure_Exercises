@@ -101,3 +101,8 @@ public class Ch7_33_Chinese_Zodiac
 		System.out.println("The year " + year + " in Chinese Zodiac is " + names[year % 12] + ".");
 	}
 }
+
+//This was to practice different way of doing it.
+//The easiest and simplest way to do it is just to assign the names in array:
+//static String[] zodiacs = {"monkey", "rooster", "dog", "pig", "rat", "ox", "tiger", "rabbit", "dragon", "snake",
+//						   "horse", "sheep"};
