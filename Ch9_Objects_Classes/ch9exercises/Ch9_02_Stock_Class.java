@@ -26,7 +26,7 @@ public class Ch9_02_Stock_Class
 		stockObject.setPreviousClosingPrice(34.5);
 		stockObject.setCurrentPrice(34.35);
 		
-		System.out.println("The price-change is " + stockObject.getChangePercent() + "%");
+		System.out.printf("The price-change is %.4f%%", stockObject.getChangePercent());
 		
 
 	}
@@ -48,7 +48,7 @@ class Stock
 	
 	public double getChangePercent ()
 	{
-		return ((previousClosingPrice - currentPrice) / previousClosingPrice) * 100;
+		return ((currentPrice - previousClosingPrice) / previousClosingPrice) * 100;
 	}
 	
 	public void setPreviousClosingPrice (double newClosingPrice)

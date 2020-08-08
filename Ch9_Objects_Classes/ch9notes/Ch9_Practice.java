@@ -1,130 +1,29 @@
 package ch9notes;
-import java.util.Date;
-import java.util.Random;
 
-/* Chapter 9 - Exercise 6:
- * Stopwatch) Design a class named StopWatch. The class contains:
-■ Private data fields startTime and endTime with getter methods.
-■ A no-arg constructor that initializes startTime with the current time.
-■ A method named start() that resets the startTime to the current time.
-■ A method named stop() that sets the endTime to the current time.
-■ A method named getElapsedTime() that returns the elapsed time for the stopwatch in milliseconds.
-Draw the UML diagram for the class and then implement the class. Write a test program that measures the execution 
-time of sorting 100,000 numbers using selection sort.
+
+/* Chapter 9 - Exercise 2:
+ * The Stock class) Following the example of the Circle class in Section 9.2, design a class named Stock that contains:
+ *
+■ A string data field named symbol for the stock’s symbol.
+■ A string data field named name for the stock’s name.
+■ A double data field named previousClosingPrice that stores the stock price for the previous day.
+■ A double data field named currentPrice that stores the stock price for the current time.
+■ A constructor that creates a stock with the specified symbol and name.
+■ A method named getChangePercent() that returns the percentage changed from previousClosingPrice to currentPrice.
+
+Draw the UML diagram for the class and then implement the class. Write a test program that creates a Stock object with the
+stock symbol ORCL, the name Oracle Corporation,and the previous closing price of 34.5. Set a newcurrentprice to 34.35
+and display the price-change percentage.
  */
-		//By Khaled Shah
+//By Khaled Shah
+
 
 public class Ch9_Practice
 {
-	
-	static final int SIZE = 100_000;
 
 	public static void main(String[] args)
 	{
-		//Write a test program that measures the execution time of sorting 100,000 numbers using selection sort.
-		
-		int [] list = getList();
-		
-		int [] sortedList = sortList (list);
-		
-		displaySorted(sortedList);
-		
 	}
-	
-	public static int [] getList()
-	{
-		int [] list = new int [SIZE];
-		
-		Random r = new Random();
-		
-		for (int i = 0; i < SIZE; i++)
-		{
-			list[i] = 1 + r.nextInt(SIZE);			//random val bet 1 and 100_000
-		}
-		return list;
-	}
-	
-	public static int [] sortList(int [] list)
-	{
-		//Selection sort: find the smallest number, swap it with 1st element. 
-		//Then find the smallest number remaining, swap with 2nd element, etc.
-		
-		int currentMinIndex;
-		int currentMinValue;
-		
-		for (int i = 0; i < list.length; i++)
-		{
-			currentMinIndex = i;
-			currentMinValue = list[i];
-			
-			for (int j = (i + 1); j < list.length; j++)
-			{
-				if (currentMinValue > list[j])
-				{
-					currentMinValue = list[j];
-					currentMinIndex = j;
-				}
-			}
-			
-			if (currentMinIndex != i)
-			{
-				list[currentMinIndex] = list[i];
-				list[i] = currentMinValue;
-			}
-		}
-		return list;
-	}
-	
-	public static void displaySorted(int[] sortedList)
-	{
-		int count = 1;
-		
-		for (int e: sortedList)
-		{
-			System.out.print(((count % 50 != 0)? e : "\n") + "  ");
-			count++;
-		}
-	}
-	
+
 }
 
-class StopWatch
-{
-	private long startTime;
-	private long endTime;
-	
-	//A no-arg constructor that initializes startTime with the current time.
-	StopWatch()
-	{
-		startTime = System.currentTimeMillis();
-	}
-	
-	// method named start() that resets the startTime to the current time.
-	
-	void start()
-	{
-		startTime = System.currentTimeMillis();
-	}
-	
-	//A method named stop() that sets the endTime to the current time.
-	void stop()
-	{
-		endTime = System.currentTimeMillis();
-	}
-	
-	//A method named getElapsedTime() that returns the elapsed time for the stopwatch in milliseconds.
-	long getElapsedTime()
-	{
-		return (endTime - startTime);
-	}
-	
-	long getStartTime()
-	{
-		return startTime;
-	}
-	
-	long getEndTime()
-	{
-		return endTime;
-	}
-}

@@ -23,11 +23,11 @@ public class Ch9_01_Rectangle_Class
 		Rectangle rectangle1 = new Rectangle (4, 40);
 		Rectangle rectangle2 = new Rectangle (3.5, 35.9);
 		
-		System.out.println("Rectangle1's width: " + rectangle1.width + "...Rectangle1's height: " + rectangle1.height
-				+ "...Rectangle1's area: " + rectangle1.getArea() + "...Rectangle1's perimeter: " + rectangle1.getPerimeter());
-		
-		System.out.println("Rectangle2's width: " + rectangle2.width + "...Rectangle2's height: " + rectangle2.height
-				+ "...Rectangle2's area: " + rectangle2.getArea() + "...Rectangle2's perimeter: " + rectangle2.getPerimeter());
+		System.out.println("Rectangle1 info:\nwidth = " + rectangle1.width + ", height = " + rectangle1.height
+				+ "\narea = " + rectangle1.getArea() + ", perimeter = " + rectangle1.getPerimeter());
+
+		System.out.printf("Rectangle2 info:\nwidth = %.2f, height = %.2f\narea = %.2f, perimeter = %.2f",
+						  rectangle2.width, rectangle2.height, rectangle2.getArea(), rectangle2.getPerimeter());
 
 	}
 
