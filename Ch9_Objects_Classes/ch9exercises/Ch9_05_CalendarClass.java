@@ -19,18 +19,19 @@ public class Ch9_05_CalendarClass
 	public static void main(String[] args)
 	{
 		GregorianCalendar today = new GregorianCalendar();
-		
+		System.out.print("Current ");
 		displayToday(today);			//task 1
 		
 		//task 2:
 		today.setTimeInMillis(1234567898765L);
+		System.out.print("After setting the given elapsed time, ");
 		displayToday(today);		//~39 yrs after 1970
 
 	}
 
 	public static void displayToday(GregorianCalendar t1)
 	{
-		System.out.println(t1.get(GregorianCalendar.YEAR) + "/" + (t1.get(GregorianCalendar.MONTH) + 1)  + "/" + 
-	t1.get(GregorianCalendar.DAY_OF_MONTH));
+		System.out.printf("year/month/day is: %d/%d/%d\n"
+				,t1.get(GregorianCalendar.YEAR), (t1.get(GregorianCalendar.MONTH) + 1), t1.get(GregorianCalendar.DAY_OF_MONTH));
 	}
 }

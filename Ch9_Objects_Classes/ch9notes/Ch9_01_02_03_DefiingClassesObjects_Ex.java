@@ -50,6 +50,7 @@ public class Ch9_01_02_03_DefiingClassesObjects_Ex
 		//could also use the setRadius method to set.
 		circle2.setRadius(10);
 		System.out.println("The area of the circle of radius "+ circle2.radius + " is " + circle2.getArea());
+		System.out.println("The total number of circles created from the Circle class is " + Circle.getObjectCount());
 		
 		/* As another example, consider television sets. Each TV is an object with states (current channel, 
 		 * current volume level, power on or off) and behaviors (change channels, adjust volume, turn on/off). 
@@ -94,17 +95,19 @@ public class Ch9_01_02_03_DefiingClassesObjects_Ex
 class Circle
 {
 	double radius;						//data field (i.e. instance variable or attributes)
-	
+	static int objectCount = 0;
 	// Construct a circle with radius 1 									(i.e. no arg constructor)
 	Circle ()		//has to match class name
 	{
 		radius = 1;																		//default value
+		objectCount++;
 	}
 	
 	//Construct a circle with a specified radius					(second constructor)
 	Circle (double newRadius)
 	{
 		radius = newRadius;
+		objectCount++;
 	}
 	
 	//Following are methods:
@@ -125,6 +128,11 @@ class Circle
 	void setRadius (double newRadius)
 	{
 		radius = newRadius;
+	}
+
+	static int getObjectCount()
+	{
+		return objectCount;
 	}
 	
 }
