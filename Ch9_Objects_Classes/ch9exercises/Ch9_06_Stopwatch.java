@@ -1,5 +1,7 @@
 package ch9exercises;
+
 import java.util.Arrays;
+import java.util.Random;
 
 /* Chapter 9 - Exercise 6:
  * Stopwatch) Design a class named StopWatch. The class contains:
@@ -15,33 +17,48 @@ time of sorting 100,000 numbers using selection sort.
 
 public class Ch9_06_Stopwatch
 {
+	static final int TOTALNUMS = 100_000;
 
 	public static void main(String[] args)
 	{
-		int [] numbers = new int [100_000];
-		numbers = generateNumbers(numbers);
-		
-		StopWatch stopWatch1 = new StopWatch ();
-		stopWatch1.start();
-		
-		//Now sort array
-		Arrays.sort(numbers);
-		
-		stopWatch1.stop();
-		
-		System.out.println("Execution time to sort an array of " + numbers.length + " integer numbers using the Array class "
-				+ "was " + stopWatch1.getElapsedTime() + " milliseconds");
+		StopWatch watch1 = new StopWatch();
+		//System.out.println(watch1.getStartTime());
+
+		//Write a test program that measures the execution
+		//time of sorting 100,000 numbers using selection sort.
+		System.out.println("List is being created and initialized...");
+		int[] list = new int[TOTALNUMS];
+		initializeList(list);
+		watch1.stop();			//watch1 to get elapsed time to initialize list
+		System.out.println("It took " + watch1.getElapsedTime() + "ms to initialize the list with random values.");
+
+		StopWatch watch2 = new StopWatch();
+		System.out.println("Now sorting list...");
+		watch2.start();
+		sortList(list);
+		watch2.stop();
+		System.out.println("It took " + watch2.getElapsedTime() + "ms to sort the list.");
+		System.out.println("Total time taken to create, initialize and sort list with Array sort method is "
+						   + (watch1.getElapsedTime() + watch2.getElapsedTime()) + "ms.");
 		
 		
 	}
-	
-	public static int [] generateNumbers (int [] numbers)
+
+	static int[] sortList(int[] list)
 	{
-		for (int i = 0; i < numbers.length; i++)
+		Arrays.sort(list);
+		return list;
+	}
+
+	static int[] initializeList(int[] list)
+	{
+		Random r = new Random();
+
+		for(int i = 0; i < TOTALNUMS; i++)
 		{
-			numbers [i] = (int) (Math.random() * 100_001);	//will generate random numbers bet [0, 100000]
+			list[i] = (-1_000_000 + r.nextInt(2_000_001));		//init with val from -1M to 1M
 		}
-		return numbers;
+		return list;
 	}
 
 }

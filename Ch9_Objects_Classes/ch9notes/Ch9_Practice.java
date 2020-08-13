@@ -1,143 +1,142 @@
 package ch9notes;
+import java.util.Arrays;
+import java.util.Date;
 import java.util.Random;
 
-/* Chapter 9 - Exercise 5:
- * (Use the GregorianCalendar class) Java API has the GregorianCalendar class in the java.util package, which you can use to
- * obtain the year, month, and day of a date. The no-arg constructor constructs an instance for the current date, and the
- * methods get(GregorianCalendar.YEAR), get(GregorianCalendar.MONTH), and get(GregorianCalendar.DAY_OF_MONTH)
- * return the year, month, and day. Write a program to perform two tasks:
-■ Display the current year, month, and day.
-■ The GregorianCalendar class has the setTimeInMillis(long), which
-can be used to set a specified elapsed time since January 1, 1970.
-Set the value to 1234567898765L and display the year, month, and day.
+/* Chapter 9 - Exercise 7:
+ * (The Account class) Design a class named Account that contains:
+■ A private int data field named id for the account (default 0).
+■ A private double data field named balance for the account (default 0).
+■ A private double data field named annualInterestRate that stores the current interest rate (default 0).
+Assume all accounts have the same interest rate.
+■ A private Date data field named dateCreated that stores the date when the account was created.
+■ A no-arg constructor that creates a default account.
+■ A constructor that creates an account with the specified id and initial balance.
+■ The accessor and mutator methods for id, balance, and annualInterestRate.
+■ The accessor method for dateCreated.
+■ A method named getMonthlyInterestRate() that returns the monthly interest rate.
+■ A method named getMonthlyInterest() that returns the monthly interest.
+■ A method named withdraw that withdraws a specified amount from the account.
+■ A method named deposit that deposits a specified amount to the account.
+
+Draw the UML diagram for the class and then implement the class. (Hint: The method getMonthlyInterest() is to return
+monthly interest, not the interest rate. Monthly interest is balance * monthlyInterestRate. monthlyInterestRate is
+annualInterestRate / 12. Note that annualInterestRate is a percentage, e.g., like 4.5%. You need to divide it by 100.)
+Write a test program that creates an Account object with an account ID of 1122, a balance of $20,000, and an annual
+interest rate of 4.5%. Use the withdraw method to withdraw $2,500, use the deposit method to deposit $3,000, and print
+the balance, the monthly interest, and the date when this account was created.
  */
-//By Khaled Shah
+	//Khaled Shah
 
 public class Ch9_Practice
 {
 	public static void main(String[] args)
 	{
-//		CirclePractice c1 = new CirclePractice(2);
-//		System.out.println("A circule with radius " + c1.getRadius() + " has area of " + c1.getArea());
-//
-//		CirclePractice c2 = new CirclePractice(5);
-//		System.out.println("A circule with radius " + c2.getRadius() + " has area of " + c2.getArea());
-//		System.out.println("Total obj created: " + CirclePractice.getObjectCount());
-//
-//		System.out.println();
-//		//print area for radius 1 up to 5;
-//		int n = 5;
-//		printCircle(c1, n);
+		Account account1 = new Account(1122, 20_000);
+		account1.setAnnualInterestRate(4.5);
+		account1.withdraw(2500);
+		account1.deposit(3000);
 
-		//Array of objects:
-		//Create 10 circle objects:
-		CirclePractice circleArray[] = new CirclePractice[10];
-		initializeCircleArray(circleArray);
-
-		System.out.println("Total obj created: " + CirclePractice.getObjectCount());	//5
-
-		// program creates circleArray, an array composed of five Circle objects; it then initializes circle
-		// radii with random values and displays the total area of the circles in the array.
-		System.out.println("--------------------------------------------------------------------");
-
-		int size = 5;
-		CirclePractice randomCircles[] = new CirclePractice[size];
-		setRandomCircles(randomCircles, size);
-
-		for(CirclePractice c: randomCircles)
-		{
-			System.out.println("A circle with radius " + c.getRadius() + " has area of " + c.getArea());
-		}
-
-		System.out.println("Total obj created: " + CirclePractice.getObjectCount());		//15
-
+		displayStatus(account1);
 	}
 
-	static CirclePractice[] setRandomCircles(CirclePractice[] c, int size)
+	static void displayStatus(Account acc)
 	{
-		Random r = new Random();
-
-		for(int i = 0; i < size; i++)
-		{
-			c[i] = new CirclePractice(r.nextDouble() * 10);		//random double radius between 0 and 10
-		}
-
-		return c;
+		System.out.printf("Balance: $%.2f\nMonthly interest: $%.2f\n",
+						  acc.getBalance(), acc.getMonthlyInterest(), acc.getDateCreated());
+		System.out.println("Account creation date: " + acc.getDateCreated());
 	}
 
-
-
-	static CirclePractice[] initializeCircleArray(CirclePractice[] c)
-	{
-		for(int i = 0; i < 10; i++)
-		{
-			c[i] = new CirclePractice();
-		}
-		return c;
-	}
-
-	static void printCircle(CirclePractice c, int n)
-	{
-		while (n >= 1)
-		{
-			c.setRadius(Double.valueOf("" + n));
-			System.out.println("A circule with radius " + c.getRadius() + " has area of " + c.getArea());
-			n--;
-		}
-	}
 }
 
-class CirclePractice
+class Account
 {
-	private double radius;
-	private static int objectCount = 0;
+	private int id;
+	private double balance;
+	private double annualInterestRate;
+	private Date dateCreated;
 
-	CirclePractice ()
+	Account()
 	{
-		radius = 1;																		//default value
-		objectCount++;
+		id = 0;
+		balance = 0;
+		annualInterestRate = 0;
+		dateCreated = new Date();
 	}
 
-	//Construct a circle with a specified radius					(second constructor)
-	CirclePractice (double newRadius)
+	Account(int newId, double initialBalance)
 	{
-		radius = newRadius;
-		objectCount++;
+		id = newId;
+		balance = initialBalance;
+		dateCreated = new Date();
 	}
 
-	//Following are methods:
-	//Return the area of this circle */
-	double getArea ()
+	int getId()
 	{
-		return (radius * radius * Math.PI);
+		return id;
 	}
 
-	//Return the perimeter of this circle */
-
-	double getPerimeter ()
+	double getBalance()
 	{
-		return (2 * radius * Math.PI);
+		return balance;
 	}
 
-	//Set a new radius for this circle
-	void setRadius (double newRadius)
+	double getAnnualInterestRate()
 	{
-		radius = newRadius;
+		return annualInterestRate;
 	}
 
-	static int getObjectCount()
+	void setId(int newId)
 	{
-		return objectCount;
+		id = newId;
 	}
 
-	double getRadius()
+	void setBalance(double newBalance)
 	{
-		return radius;
+		balance = newBalance;
 	}
 
+	void setAnnualInterestRate(double newIR)
+	{
+		annualInterestRate = newIR;
+	}
+
+	Date getDateCreated()
+	{
+		return dateCreated;
+	}
+
+	double getMonthlyInterestRate()
+	{
+		return (annualInterestRate / 12.0);
+	}
+
+	double getMonthlyInterest()
+	{
+		return (balance * (getMonthlyInterestRate() / 100));
+	}
+
+	void withdraw(double amount)
+	{
+		balance -= amount;
+	}
+
+	void deposit(double amount)
+	{
+		balance += amount;
+	}
 }
 
-
-
-
-
+//■ A private int data field named id for the account (default 0).
+//		■ A private double data field named balance for the account (default 0).
+//		■ A private double data field named annualInterestRate that stores the current interest rate (default 0).
+//		Assume all accounts have the same interest rate.
+//		■ A private Date data field named dateCreated that stores the date when the account was created.
+//		■ A no-arg constructor that creates a default account.
+//		■ A constructor that creates an account with the specified id and initial balance.
+//		■ The accessor and mutator methods for id, balance, and annualInterestRate.
+//		■ The accessor method for dateCreated.
+//		■ A method named getMonthlyInterestRate() that returns the monthly interest rate.
+//		■ A method named getMonthlyInterest() that returns the monthly interest.
+//		■ A method named withdraw that withdraws a specified amount from the account.
+//		■ A method named deposit that deposits a specified amount to the account.

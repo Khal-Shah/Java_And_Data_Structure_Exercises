@@ -24,6 +24,7 @@ Write a test program that creates an Account object with an account ID of 1122, 
 interest rate of 4.5%. Use the withdraw method to withdraw $2,500, use the deposit method to deposit $3,000, and print 
 the balance, the monthly interest, and the date when this account was created.
  */
+		//By Khaled Shah
 class Account
 {
 	private int id;
@@ -36,14 +37,14 @@ class Account
 		id = 0;
 		balance = 0;
 		annualInterestRate = 0;
-		dateCreated = new Date ();
+		dateCreated = new Date();
 	}
 	
 	Account (int newId, double initialBalance)
 	{
 		id = newId;
 		balance = initialBalance;
-		dateCreated = new Date ();			//if we're passing id and balance parameters, this is the date created
+		dateCreated = new Date();			//if we're passing id and balance parameters, this is the date created
 	}
 	
 	public void setId (int newId)
@@ -76,9 +77,9 @@ class Account
 		return annualInterestRate;
 	}
 	
-	public String getDateCreated ()
+	public Date getDateCreated ()
 	{
-		return dateCreated.toString();
+		return dateCreated;
 	}
 	
 	public double getMonthlyInterestRate ()
@@ -117,10 +118,14 @@ the balance, the monthly interest, and the date when this account was created.
 		account1.setAnnualInterestRate(4.5);
 		account1.withdraw(2500);
 		account1.deposit(3000);
-		
-		System.out.println("Balance: " + account1.getBalance() + "\nMonthly Interest: " + account1.getMonthlyInterest());
-		System.out.println("Account created on: " + account1.getDateCreated());
+		displayStatus(account1);
+	}
 
+	static void displayStatus(Account acc)
+	{
+		System.out.printf("Balance: $%.2f\nMonthly interest: $%.2f\n",
+						  acc.getBalance(), acc.getMonthlyInterest(), acc.getDateCreated());
+		System.out.println("Account creation date: " + acc.getDateCreated());
 	}
 	
 }
