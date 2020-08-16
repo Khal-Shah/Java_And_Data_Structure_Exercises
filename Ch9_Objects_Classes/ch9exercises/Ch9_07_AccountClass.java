@@ -25,6 +25,7 @@ interest rate of 4.5%. Use the withdraw method to withdraw $2,500, use the depos
 the balance, the monthly interest, and the date when this account was created.
  */
 		//By Khaled Shah
+
 class Account
 {
 	private int id;

@@ -18,6 +18,8 @@ Assign maximum speed, radius 10, color yellow, and turn it on to the first objec
 color blue, and turn it off to the second object. Display the objects by invoking their toString method.
  */
 
+		//By Khaled Shah
+
 class Fan
 {
 	final static int SLOW = 1;
@@ -41,7 +43,7 @@ class Fan
 	
 	public void setSpeed (int newSpeed)
 	{
-		speed = (((newSpeed >= 1) && (newSpeed <=3))? newSpeed : speed);
+		speed = (((newSpeed >= 1) && (newSpeed <= 3))? newSpeed : speed);
 	}
 	
 	public void setState (boolean newState)

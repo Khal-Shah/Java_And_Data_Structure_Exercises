@@ -22,6 +22,7 @@ Draw the UML diagram for the class and then implement the class. Write a test pr
 objects, created using the no-arg constructor, using RegularPolygon(6, 4), and using RegularPolygon(10, 4, 5.6, 7.8). 
 For each object, display its perimeter and area.
  */
+		//By Khaled Shah
 
 class RegularPolygon
 {
@@ -114,13 +115,22 @@ public class Ch9_09_Polygon
 
 	public static void main(String[] args)
 	{
-		RegularPolygon polygon1 = new RegularPolygon (6, 4);
-		RegularPolygon polygon2 = new RegularPolygon (10, 4, 5.6, 7.8);
-		RegularPolygon polygon3 = new RegularPolygon ();
-		
-		System.out.println("Polygon1's perimeter: " + polygon1.getPerimeter() + "\nPolygon1's area " + polygon1.getArea());
-	System.out.println("\nPolygon2's perimeter: " + polygon2.getPerimeter() + "\nPolygon2's area " + polygon2.getArea());
-	System.out.println("\nPolygon3's perimeter: " + polygon3.getPerimeter() + "\nPolygon3's area " + polygon3.getArea());
+		RegularPolygon polygon1 = new RegularPolygon ();
+		RegularPolygon polygon2 = new RegularPolygon (6, 4);
+		RegularPolygon polygon3 = new RegularPolygon (10, 4, 5.6, 7.8);
+
+		//Put it in array of objects for brevity.
+		RegularPolygon polygons[] = new RegularPolygon[3];
+		polygons[0] = polygon1;
+		polygons[1] = polygon2;
+		polygons[2] = polygon3;
+
+		int i = 1;
+
+		for(RegularPolygon e: polygons)
+		{
+			System.out.printf("Polygon %d perimeter: %.2f and area: %.2f\n", i++, e.getPerimeter(), e.getArea());
+		}
 	}
 
 }
