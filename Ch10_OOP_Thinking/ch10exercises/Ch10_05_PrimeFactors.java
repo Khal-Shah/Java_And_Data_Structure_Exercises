@@ -1,5 +1,4 @@
 package ch10exercises;
-import java.util.Arrays;
 import java.util.Scanner;
 
 /* Chapter 10 - Exercise 5:
@@ -8,6 +7,7 @@ import java.util.Scanner;
  * 5, 3, 2, 2, 2. Use the StackOfIntegers class to store the factors (e.g., 2, 2, 2, 3, 5) and retrieve and display them in 
  * reverse order.
  */
+		//By Khaled Shah
 
 public class Ch10_05_PrimeFactors
 {

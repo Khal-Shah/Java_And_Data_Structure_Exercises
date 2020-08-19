@@ -18,6 +18,7 @@ package ch10exercises;
 			Enter height in inches: 50
 			BMI is 26.8573
  */
+        //By Khaled Shah
 
 class BMI
 {
