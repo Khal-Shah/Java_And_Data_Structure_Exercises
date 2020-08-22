@@ -9,7 +9,7 @@ and copying the contents of the current array to it.							//like what the stack
 course.
 Write a test program that creates a course, adds three students, removes one, and displays the students in the course.
  */
-
+		//By Khaled Shah
 
 public class Ch10_09_Revised_Course
 {
@@ -21,17 +21,17 @@ public class Ch10_09_Revised_Course
 		comp249.addStudent("Drogo");
 		comp249.addStudent("Kelly");
 		
-	//	System.out.println("Currently there are " + comp249.getNumberOfStudents() + " students enrolled in " + 
-		//comp249.getCourseName() +	". They are: \n" +	comp249.toString());
+		System.out.println("Currently there are " + comp249.getNumberOfStudents() + " students enrolled in " +
+		comp249.getCourseName() +	". They are: \n" +	comp249.toString());
 		
 		comp249.dropStudent("Kelly");
 		
-	//	System.out.println("Currently there are " + comp249.getNumberOfStudents() + " students enrolled in " + 
-		//		comp249.getCourseName() +	". They are: \n" +	comp249.toString());
+		System.out.println("Currently there are " + comp249.getNumberOfStudents() + " students enrolled in " +
+				comp249.getCourseName() +	". They are: \n" +	comp249.toString());
 		comp249.dropStudent("Drogo");
-		//comp249.dropStudent("Kelly");					//already dropped so says not enrolled
-		//System.out.println("Currently there are " + comp249.getNumberOfStudents() + " students enrolled in " + 
-			//	comp249.getCourseName() +	". They are: \n" +	comp249.toString());
+		comp249.dropStudent("Kelly");					//already dropped so says not enrolled
+		System.out.println("Currently there are " + comp249.getNumberOfStudents() + " students enrolled in " +
+				comp249.getCourseName() +	". They are: \n" +	comp249.toString());
 		
 		comp249.dropStudent("Khal");
 		System.out.println("Currently there are " + comp249.getNumberOfStudents() + " students enrolled in " + 

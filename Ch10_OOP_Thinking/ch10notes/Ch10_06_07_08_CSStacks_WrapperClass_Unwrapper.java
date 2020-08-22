@@ -9,14 +9,16 @@ package ch10notes;
 																		|_______|												| Data 1 |
 																																		|_______|
  * Same process for removing data, first Data 3 (first out) would be removed, then Data 2, etc
- */																	
+ */
+
+
 
 public class Ch10_06_07_08_CSStacks_WrapperClass_Unwrapper
 {
 
 	public static void main(String[] args)
 	{
-		StackOfIntegers stack = new StackOfIntegers();
+//		StackOfIntegers stack = new StackOfIntegers();
 		
 		//Push to stack
 		//for (int i = 0; i < 32; i++)
@@ -44,10 +46,10 @@ public class Ch10_06_07_08_CSStacks_WrapperClass_Unwrapper
 		 * Numeric wrapper classes are very similar to each other. Each contains the methods doubleValue(), floatValue(), 
 		 * intValue(), longValue(), shortValue(), and byteValue(). These methods “convert” objects into primitive type values. 
 		 * Examples:
-		 */
-		System.out.println("The maximum integer is " + Integer.MAX_VALUE); 			//integer wrapper class
-		System.out.println("The minimum positive float is " + Float.MIN_VALUE);		//float wrapper class
-		System.out.println("The maximum double-precision floating-point number is " + Double.MAX_VALUE);
+//		 */
+//		System.out.println("The maximum integer is " + Integer.MAX_VALUE); 			//integer wrapper class
+//		System.out.println("The minimum positive float is " + Float.MIN_VALUE);		//float wrapper class
+//		System.out.println("The maximum double-precision floating-point number is " + Double.MAX_VALUE);
 							//^double wrapper class........all classes have methods that you can use
 		
 		/* Each numeric wrapper class contains the methods doubleValue(), floatValue(), intValue(), longValue(), and 
@@ -109,71 +111,71 @@ You can define a class to model stacks. For simplicity, assume the stack holds t
 StackOfIntegers.
  */
 
-class StackOfIntegers
-{
-	private int [] elements; 				//An array to store integers in the stack. The number of integers in the stack.
-	private int size;							//The number of integers in the stack.
-	public static final int DEFAULT_CAP = 16;
+//class StackOfIntegers
+//{
+//	private int [] elements; 				//An array to store integers in the stack. The number of integers in the stack.
+//	private int size;							//The number of integers in the stack.
+//	public static final int DEFAULT_CAP = 16;
+//
+//	//Constructs an empty stack with a default capacity of 16.
+//	StackOfIntegers()
+//	{
+//		this (DEFAULT_CAP);				//assigns 16 to both
+//	}
+//
+//	//Constructs an empty stack with a specified capacity.
+//	StackOfIntegers (int size)
+//	{
+//		elements = new int [size];
+//	}
+//
+//	//Returns true if the stack is empty.
+//	public boolean isEmpty ()
+//	{
+//		return (size == 0);
+//	}
+//
+//	//Returns the integer at the top of the stack without removing it from the stack.
+//	public int peek()
+//	{
+//		return (elements[size-1]);
+//	}
+//
+//	//Stores an integer into the top of the stack.
+//	/* To implement push(int value), assign value to elements[size] if size < capacity. If the stack is full (i.e., size >= capacity),
+//	 * create a new array of twice the current capacity, copy the contents of the current array to the new array, and assign
+//	 * the reference of the new array to the current array in the stack. Now you can add the new value to the array.
+//	 */
+//	public void push (int value)
+//	{
+//		if (size >= elements.length)
+//		{
+//			int [] temp = new int [elements.length * 2];
+//			System.arraycopy(elements, 0, temp, 0, elements.length);
+//			elements = temp;
+//		}
+//		elements[size++] = value;
+//	}
+//
+//	//Removes the integer at the top of the stack and returns it.
+//	public int pop()
+//	{
+//		return (elements [--size]);
+//	}
+//
+//	//Returns the number of elements in the stack
+//	public int getSize()
+//	{
+//		return size;
+//	}
+//
+//	public void displayStack ()
+//	{
+//		for (int i = 0; i < elements.length; i++)
+//		{
+//			System.out.println(elements [i]);
+//		}
+//	}
 	
-	//Constructs an empty stack with a default capacity of 16. 
-	StackOfIntegers()
-	{
-		this (DEFAULT_CAP);				//assigns 16 to both
-	}
-	
-	//Constructs an empty stack with a specified capacity. 
-	StackOfIntegers (int size)
-	{
-		elements = new int [size];
-	}
-	
-	//Returns true if the stack is empty.
-	public boolean isEmpty ()
-	{
-		return (size == 0);
-	}
-	
-	//Returns the integer at the top of the stack without removing it from the stack.
-	public int peek()
-	{
-		return (elements[size-1]);
-	}
-	
-	//Stores an integer into the top of the stack.
-	/* To implement push(int value), assign value to elements[size] if size < capacity. If the stack is full (i.e., size >= capacity), 
-	 * create a new array of twice the current capacity, copy the contents of the current array to the new array, and assign 
-	 * the reference of the new array to the current array in the stack. Now you can add the new value to the array. 
-	 */
-	public void push (int value)
-	{
-		if (size >= elements.length)
-		{
-			int [] temp = new int [elements.length * 2];
-			System.arraycopy(elements, 0, temp, 0, elements.length);
-			elements = temp;
-		}
-		elements[size++] = value;
-	}
-	
-	//Removes the integer at the top of the stack and returns it.
-	public int pop()
-	{
-		return (elements [--size]);
-	}
-	
-	//Returns the number of elements in the stack
-	public int getSize()
-	{
-		return size;
-	}
-	
-	public void displayStack ()
-	{
-		for (int i = 0; i < elements.length; i++)
-		{
-			System.out.println(elements [i]);
-		}
-	}
-	
-}
+//}
 
