@@ -1,4 +1,4 @@
-package ch9exercises;
+package ch9exercises.Ch9_09_Polygon;
 
 /* Chapter 9 - Exercise 9:
  * (Geometry: n-sided regular polygon) In an n-sided regular polygon, all sides have the same length and all angles 
@@ -24,110 +24,25 @@ For each object, display its perimeter and area.
  */
 		//By Khaled Shah
 
-class RegularPolygon
-{
-	private int n;				//default 3
-	private double side;				//1
-	private double x;					//0
-	private double y;					//0
-	
-	RegularPolygon()
-	{
-		n = 3;
-		side = 1;
-		x = 0;
-		y = 0;
-	}
-	
-	RegularPolygon (int n, double side)
-	{
-		//this();				<= could put that instead of doing this for each attribute/data?
-		this.n = n;
-		this.side = side;
-	}
-	
-	RegularPolygon (int n, double side, double x, double y)
-	{//sends to the constructor with n and side as its parameter (above one)
-		this (n, side);			//the already defined n and side of the object (previous constructor)
-		this.x = x;
-		this.y = y;
-	}
-	
-	//mutators:
-	
-	public void setN (int n)
-	{
-		this.n = n;
-	}
-	
-	public void setSide (double side)
-	{
-		this.side = side;
-	}
-	
-	public void setX (double x)
-	{
-		this.x = x;
-	}
-	
-	public void setY (double y)
-	{
-		this.y = y;
-	}
-	
-	//accessors:
-	
-	public int getN()
-	{
-		return n;
-	}
-	
-	public double getSide()
-	{
-		return side;
-	}
-	
-	public double getX()
-	{
-		return x;
-	}
-	
-	public double getY()
-	{
-		return y;
-	}
-	
-	public double getPerimeter()
-	{
-		return (n * side);
-	}
-	
-	public double getArea()
-	{
-		return ((n * Math.pow(side, 2)) / (4 * Math.tan(Math.PI / n)));
-	}
-	
-	
-}
 
 public class Ch9_09_Polygon
 {
 
 	public static void main(String[] args)
 	{
-		RegularPolygon polygon1 = new RegularPolygon ();
-		RegularPolygon polygon2 = new RegularPolygon (6, 4);
-		RegularPolygon polygon3 = new RegularPolygon (10, 4, 5.6, 7.8);
+		Polygon polygon1 = new Polygon();
+		Polygon polygon2 = new Polygon(6, 4);
+		Polygon polygon3 = new Polygon(10, 4, 5.6, 7.8);
 
 		//Put it in array of objects for brevity.
-		RegularPolygon polygons[] = new RegularPolygon[3];
+		Polygon polygons[] = new Polygon[3];
 		polygons[0] = polygon1;
 		polygons[1] = polygon2;
 		polygons[2] = polygon3;
 
 		int i = 1;
 
-		for(RegularPolygon e: polygons)
+		for(Polygon e: polygons)
 		{
 			System.out.printf("Polygon %d perimeter: %.2f and area: %.2f\n", i++, e.getPerimeter(), e.getArea());
 		}

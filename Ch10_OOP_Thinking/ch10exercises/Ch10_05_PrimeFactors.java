@@ -17,27 +17,40 @@ public class Ch10_05_PrimeFactors
 	{
 		System.out.print("Enter a positive integer: ");
 		int userNum = kb.nextInt();
-		
-		StackOfIntegers stack = new StackOfIntegers(userNum);		
-		
+
+		System.out.println(userNum);
+		StackOfIntegers smallestFactorStack = new StackOfIntegers();
+		int savedUserNum = userNum;
+
 		int factor = 2; 	//smallest
 		
 		while (factor <= userNum)
 		{
 			if (userNum % factor == 0)
 			{
-				stack.push(factor);
+				smallestFactorStack.push(factor);
+				userNum /= factor;
 			}
-			factor++;
-		}
-		
-		//no need to revere cuz in stack it's first in last out
-		System.out.println("The factors are...");
-		while(!stack.empty())
-		{
-			System.out.println(stack.pop());
+
+			else
+			{
+				factor++;
+			}
 		}
 
+		if(MyInteger.isPrime(savedUserNum))
+		{
+			System.out.println(savedUserNum + " is a prime number. There are no factors.");
+		}
+
+		else
+		{
+			System.out.println("The factors of " + savedUserNum + " are: ");
+			while (!smallestFactorStack.empty())
+			{
+				System.out.print(smallestFactorStack.pop() + ((smallestFactorStack.empty())? " = " + savedUserNum : " x "));
+			}
+		}
 	}
 
 }

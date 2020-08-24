@@ -1,5 +1,7 @@
 package ch9exercises;
 
+import ch9exercises.Ch9_11_Linear_Equation.LinearEquation;
+
 import java.util.Scanner;
 
 /* Chapter 9 - Exercise 12:

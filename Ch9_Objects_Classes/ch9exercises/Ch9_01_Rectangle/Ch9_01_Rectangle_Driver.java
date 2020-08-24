@@ -1,4 +1,4 @@
-package ch9exercises;
+package ch9exercises.Ch9_01_Rectangle;
 
 /* Chapter 9 - Exercise 1:
  * (The Rectangle class) Following the example of the Circle class in Section 9.2, design a class named Rectangle to 
@@ -15,7 +15,8 @@ and height 35.9. Display the width, height, area, and perimeter of each rectangl
  */
 		//By Khaled Shah
 
-public class Ch9_01_Rectangle_Class
+
+public class Ch9_01_Rectangle_Driver
 {
 
 	public static void main(String[] args)
@@ -33,30 +34,3 @@ public class Ch9_01_Rectangle_Class
 
 }
 
-class Rectangle
-{
-	double width;
-	double height;
-	
-	Rectangle ()
-	{
-		width = 1;
-		height = 1;
-	}
-	
-	Rectangle (double newWidth, double newHeight)
-	{
-		width = newWidth;
-		height = newHeight;
-	}
-	
-	double getArea ()
-	{
-		return (height * width);
-	}
-	
-	double getPerimeter ()
-	{
-		return (2 * width + 2 * height);
-	}
-}

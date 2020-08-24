@@ -66,12 +66,12 @@ class MyInteger
         return (value % 2 == 0);
     }
 
-    public boolean isOdd(int value)
+    public static boolean isOdd(int value)
     {
         return (value % 2 != 0);
     }
 
-    public boolean isPrime(int value)
+    public static boolean isPrime(int value)
     {
         int i = (value / 2);
 

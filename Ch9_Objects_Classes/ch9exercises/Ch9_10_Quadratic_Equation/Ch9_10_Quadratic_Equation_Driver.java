@@ -1,4 +1,4 @@
-package ch9exercises;
+package ch9exercises.Ch9_10_Quadratic_Equation;
 
 /* Chapter 9 - Exercise 10:
 (Algebra: quadratic equations) Design a class named QuadraticEquation for
@@ -32,7 +32,7 @@ discriminant is 0, display the one root. Otherwise, display “The equation has 
 
 import java.util.Scanner;
 
-public class Ch9_10_Quadratic_Equation
+public class Ch9_10_Quadratic_Equation_Driver
 {
     static Scanner kb = new Scanner(System.in);
 
@@ -47,8 +47,8 @@ public class Ch9_10_Quadratic_Equation
         System.out.print("Enter c: ");
         double c = kb.nextDouble();
 
-       QuadraticEquation eq = new QuadraticEquation(a, b, c);
-       int count = getRootCount(eq);
+       QuadraticEquation eq    = new QuadraticEquation(a, b, c);
+       int               count = getRootCount(eq);
        showRoots(eq, count);
 
 
@@ -94,56 +94,3 @@ public class Ch9_10_Quadratic_Equation
     }
 }
 
-class QuadraticEquation
-{
-    private double a;
-    private double b;
-    private double c;
-
-    QuadraticEquation(double a, double b, double c)
-    {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-
-    public double getA()
-    {
-        return this.a;
-    }
-
-    public double getB()
-    {
-        return this.b;
-    }
-
-    public double getC()
-    {
-        return this.c;
-    }
-
-    public double getDiscriminant()
-    {
-        return (Math.pow(b, 2) - (4 * a * c));
-    }
-
-    public double getRoot1()
-    {
-        if(getDiscriminant() < 0)
-        {
-            return 0;
-        }
-
-        return (-b + Math.sqrt(getDiscriminant())) / (2 * a);
-    }
-
-    public double getRoot2()
-    {
-        if(getDiscriminant() < 0)
-        {
-            return 0;
-        }
-
-        return (-b - Math.sqrt(getDiscriminant())) / (2 * a);
-    }
-}

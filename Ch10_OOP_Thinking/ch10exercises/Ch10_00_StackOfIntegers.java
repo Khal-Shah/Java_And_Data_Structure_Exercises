@@ -66,9 +66,17 @@ class StackOfIntegers
     }
 
     //Can also make a method to display element until size:
-    public void displayIntegers()
+    public void displayStackBottomToTop()   //from 0 until size-1 (top/last element)
     {
         for(int i = 0; i < this.size; i++)
+        {
+            System.out.print(elements[i] + ", ");
+        }
+    }
+
+    public void displayStackTopToBottom()           //From last element to the bottom (first)
+    {
+        for(int i = size - 1; i >= 0; i--)
         {
             System.out.print(elements[i] + ", ");
         }
