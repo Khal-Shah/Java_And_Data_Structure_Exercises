@@ -47,9 +47,9 @@ public class MyPoint
     {
         double xDifference = x - this.x;
         double yDifference = y - this.y;
-        double xPowered    = Math.pow(xDifference, 2);
-        double yPowered    = Math.pow(yDifference, 2);
-        double distance    = Math.sqrt(xPowered + yPowered);
+        double xPowered = Math.pow(xDifference, 2);
+        double yPowered = Math.pow(yDifference, 2);
+        double distance = Math.sqrt(xPowered + yPowered);
         return distance;
     }
 
