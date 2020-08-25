@@ -1,4 +1,4 @@
-package ch10exercises;
+package ch10exercises.Ch10_04_MyPoint;
 
 /* Chapter 10 - Exercise 4:
  (The MyPoint class) Design a class named MyPoint to represent a point with x- and y-coordinates. The class contains:
@@ -14,62 +14,7 @@ points (0, 0) and (10, 30.5) and displays the distance between them.
  */
     //By Khaled Shah
 
-class MyPoint
-{
-    private double x;
-    private double y;
-
-    MyPoint()
-    {
-        this.x = 0;
-        this.y = 0;
-    }
-
-    MyPoint(double x, double y)
-    {
-        this.x = x;
-        this.y = y;
-    }
-
-    public double getX()
-    {
-        return x;
-    }
-
-    public double getY()
-    {
-        return y;
-    }
-
-    // A method named distance that returns the distance from this point to a
-    //specified point of the MyPoint type.
-
-    public double distance(MyPoint obj)
-    {
-        //distance formula: Sqrt((x2 - x1)^2 + (y2 - y1)^2)
-        double xDifference = obj.x - this.x;
-        double yDifference = obj.y - this.y;
-        double xPowered = Math.pow(xDifference, 2);
-        double yPowered = Math.pow(yDifference, 2);
-        double distance = Math.pow((xPowered + yPowered), 0.5);
-        return distance;
-    }
-
-//    ■ A method named distance that returns the distance from this point to
-//    another point with specified x- and y-coordinates.
-    public double distance(double x, double y)
-    {
-        double xDifference = x - this.x;
-        double yDifference = y - this.y;
-        double xPowered = Math.pow(xDifference, 2);
-        double yPowered = Math.pow(yDifference, 2);
-        double distance = Math.sqrt(xPowered + yPowered);
-        return distance;
-    }
-
-
-}
-public class Ch10_04_MyPoint
+public class Ch10_04_MyPoint_Driver
 {
     public static void main(String[] args)
     {

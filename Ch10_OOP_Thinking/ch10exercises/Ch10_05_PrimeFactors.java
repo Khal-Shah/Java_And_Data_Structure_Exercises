@@ -1,4 +1,7 @@
 package ch10exercises;
+import ch10exercises.Ch10_00_Stack_Of_Integers.StackOfIntegers;
+import ch10exercises.Ch10_03_MyInteger.MyInteger;
+
 import java.util.Scanner;
 
 /* Chapter 10 - Exercise 5:
@@ -18,7 +21,6 @@ public class Ch10_05_PrimeFactors
 		System.out.print("Enter a positive integer: ");
 		int userNum = kb.nextInt();
 
-		System.out.println(userNum);
 		StackOfIntegers smallestFactorStack = new StackOfIntegers();
 		int savedUserNum = userNum;
 

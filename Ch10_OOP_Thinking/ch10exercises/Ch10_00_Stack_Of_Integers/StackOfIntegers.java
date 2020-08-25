@@ -1,23 +1,18 @@
-package ch10exercises;
+package ch10exercises.Ch10_00_Stack_Of_Integers;
 
-public class Ch10_00_StackOfIntegers
-{
-
-}
-
-class StackOfIntegers
+public class StackOfIntegers
 {
     private int[] elements;
     private int size;               //size counts # of elements in the stack
     static final int DEFAULT_CAPACITY = 16;
 
-    StackOfIntegers()
+    public StackOfIntegers()
     {
         this(DEFAULT_CAPACITY);      //Sends 16....conostructs a stack w/default cap of 16 (in push() we can increase it if needed)
     }
 
     //** Construct a stack with the specified capacity */
-    StackOfIntegers(int capacity)
+    public StackOfIntegers(int capacity)
     {
         elements = new int[capacity];
     }
@@ -43,7 +38,7 @@ class StackOfIntegers
     public void push(int value)
     {
         //What if size > elements.length? We can increase default cap (double it each time)
-        if(size >= elements.length)
+        if (size >= elements.length)
         {
             int[] temp = new int[elements.length * 2];      //There will be nulls, that's why use while(!empty)
             System.arraycopy(elements, 0, temp, 0, elements.length);
@@ -68,7 +63,7 @@ class StackOfIntegers
     //Can also make a method to display element until size:
     public void displayStackBottomToTop()   //from 0 until size-1 (top/last element)
     {
-        for(int i = 0; i < this.size; i++)
+        for (int i = 0; i < this.size; i++)
         {
             System.out.print(elements[i] + ", ");
         }
@@ -76,7 +71,7 @@ class StackOfIntegers
 
     public void displayStackTopToBottom()           //From last element to the bottom (first)
     {
-        for(int i = size - 1; i >= 0; i--)
+        for (int i = size - 1; i >= 0; i--)
         {
             System.out.print(elements[i] + ", ");
         }

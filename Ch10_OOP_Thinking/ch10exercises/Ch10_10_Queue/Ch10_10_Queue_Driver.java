@@ -1,4 +1,4 @@
-package ch10exercises;
+package ch10exercises.Ch10_10_Queue;
 
 /* Chapter 10 - Exercise 10:
  * (The Queue class) Section 10.6 gives a class for Stack. Design a class named Queue for storing integers. Like a stack, 
@@ -11,84 +11,50 @@ package ch10exercises;
 ■ The method dequeue() that removes and returns the element from the queue.
 ■ The method empty() that returns true if the queue is empty.
 ■ The method getSize() that returns the size of the queue.
+*
 Draw an UML diagram for the class. Implement the class with the initial array size set to 8. The array size will be doubled 
 once the number of the elements exceeds the size. After an element is removed from the beginning of the array, you need 
 to shift all elements in the array one position the left. Write a test program that adds 20 numbers from 1 to 20 into the 
 queue and removes these numbers and displays them.
  */
+		//By Khaled Shah
 
-class Queue
-{
-	private int [] elements;
-	private int size;
-	public static final int DEFAULT_CAP = 8;
-	
-	Queue()
-	{
-		this (DEFAULT_CAP);
-	}
-	
-	Queue  (int size)
-	{
-		elements = new int [size];
-	}
-	
-	public int getSize ()
-	{
-		return size;
-	}
-	
-	public boolean isEmpty()
-	{
-		return (size == 0);
-	}
-	
-	public void enqueue (int value)
-	{
-		if (size >= elements.length)
-		{
-			int [] moreE = new int [elements.length * 2];
-			System.arraycopy(elements, 0, moreE, 0, elements.length);
-			elements = moreE;
-		}
-		elements[size++] = value;
-	}
-	
-	public int dequeue()
-	{
-		int out = elements [0];
-		int [] lessE = new int [elements.length];
-		System.arraycopy(elements, 1, lessE, 0, size);
-		elements = lessE;
-		--size;
-		return out;
-	}
-	
-}
-public class Ch10_10_Queue_Class
+
+public class Ch10_10_Queue_Driver
 {
 
 	public static void main(String[] args)
 	{
 		Queue queue = new Queue ();
-		
-		for (int i = 0; i < 20; i++)
+
+		System.out.println("Putting 1, 2, 3..., 20 to queue");
+		for (int i = 1; i <= 20; i++)
 		{
 			queue.enqueue(i);
 		}
 		
-		int [] removedNums = new int [20];
-		
-		for (int i = 0; i < 20; i++)
+//		int[] removedNums = new int [20];
+//
+//		System.out.println("Removing from queue...");
+//		for (int i = 0; i < 20; i++)
+//		{
+//			removedNums[i] = queue.dequeue();
+//		}
+//
+//		System.out.println("The numbers were removed in the following order: ");
+//		for (int e: removedNums)
+//		{
+//			System.out.print(e + ", ");
+//		}
+//		System.out.println("\nQueue: First In First Out.");
+
+		queue.dequeue();
+		System.out.println("After removing one element, the Size is: " + queue.getSize());
+		System.out.println("Now removing (dequeing) all elements: ");
+		while (!queue.isEmpty())
 		{
-			removedNums [i] = queue.dequeue();
+			System.out.println("Value removed: " + queue.dequeue());
 		}
-		
-		for (int e: removedNums)
-		{
-			System.out.println(e);
-		}
- 
 	}
 
 }

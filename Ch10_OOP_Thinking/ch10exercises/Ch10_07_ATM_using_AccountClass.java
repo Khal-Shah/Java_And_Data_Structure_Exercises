@@ -63,7 +63,7 @@ Enter a choice: 4
  */
 		//By Khaled Shah
 
-public class Ch10_07_ATM_with_AccountClass
+public class Ch10_07_ATM_using_AccountClass
 {
 	static Scanner kb = new Scanner(System.in);
 

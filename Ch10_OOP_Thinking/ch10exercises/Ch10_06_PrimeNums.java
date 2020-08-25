@@ -6,6 +6,8 @@ package ch10exercises;
  */
 	//By Khaled Shah
 
+import ch10exercises.Ch10_00_Stack_Of_Integers.StackOfIntegers;
+
 public class Ch10_06_PrimeNums
 {
 	static final int MAX = 120;
