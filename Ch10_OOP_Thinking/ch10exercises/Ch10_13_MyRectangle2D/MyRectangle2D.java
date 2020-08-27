@@ -97,6 +97,45 @@ public class MyRectangle2D
 
     public boolean contains(double x, double y)
     {
-
+        return ((distance(this.x, x) < (width / 2)) && (distance(this.y, y) < (height / 2)));
     }
+
+    //A method contains(MyRectangle2D r) that returns true if the specified rectangle is inside this rectangle
+
+    public boolean contains(MyRectangle2D r)
+    {
+        boolean condition1 = (distance(this.x, r.x) + (r.width / 2)) < (this.width / 2);
+        boolean condition2 = (distance(this.y, r.y) + r.height / 2) < this.height / 2;
+        boolean condition3 = ((height / 2) + (r.height / 2)) < this.height;
+        boolean condition4 = ((width / 2) + (r.width / 2)) < this.width;
+
+        return condition1 && condition2 && condition3 && condition4;
+    }
+
+    //A method overlaps(MyRectangle2D r) that returns true if the speci-
+    //fied rectangle overlaps with this rectangle
+    //return !contains(r) &&
+    //				 ((x + width / 2 > r.getX() - r.getWidth()) ||
+    //				 (y + height / 2 > r.getY() - r.getHeight())) &&
+    //		  		 (getDistance(y, r.getY()) < height / 2 + r.getHeight() / 2) &&
+    //				 (getDistance(x, r.getX()) < width / 2 + r.getWidth() / 2);
+    public boolean overlaps(MyRectangle2D r)
+    {
+        boolean condition1 = (x + width / 2) > (r.x - r.width);
+        boolean condition2 =  (y + height / 2) > (r.y - r.height);
+        boolean condition3 = (distance(this.x, r.x)) < ((width / 2) + (r.width / 2));
+        boolean condition4 = (distance(this.y, r.y)) < ((height / 2) + (r.height / 2));
+
+        return condition1 || condition2 && condition3 && condition4 && !contains(r);
+    }
+
+    //distance between = sqrt(p2 - p1)^2;
+
+    private double distance(double point1, double point2)
+    {
+        return (Math.sqrt(Math.pow(point1 - point2, 2)));
+    }
+
 }
+
+
