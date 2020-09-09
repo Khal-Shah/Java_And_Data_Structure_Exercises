@@ -23,7 +23,7 @@ public class Ch10_11_StringBuilder_Buffer
 		char [] letters = {'a', 'b','c'};
 		StringBuilder sb = new StringBuilder();					//create StringBuilder object				**IMPORTANT**
 		
-		System.out.println(sb.append(letters)); 					//sb initially wa snull, now it has abc
+		System.out.println(sb.append(letters)); 					//sb initially was null, now it has abc
 		sb.append("ABC");
 		System.out.println(sb);											//abcABC
 		

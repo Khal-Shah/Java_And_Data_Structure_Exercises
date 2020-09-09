@@ -1,63 +1,37 @@
 package ch10notes;
 
 
+/* See StringBuilder_Palindrome.java
+Listing 5.14, Palindrome.java, considered all the characters in a string to check whether it is a palindrome. Write a new
+program that ignores nonalphanumeric characters in checking whether a string is a palindrome.
+Here are the steps to solve the problem:
+1. Filter the string by removing the nonalphanumeric characters. This can be done by creating an empty string builder,
+adding each alphanumeric character in the string to a string builder, and returning the string from the string builder.
+You can use the isLetterOrDigit(ch) method in the Character class to check whether character ch is a letter or a digit.
+2. Obtain a new string that is the reversal of the filtered string. Compare the reversed string with the filtered
+string using the equals method.
+ */
+
 public class Ch10_Practice
 {
 
     public static void main(String[] args)
     {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Hello World");
+        System.out.println(sb);
+        sb.reverse();
+        System.out.println(sb);
+        sb.delete(0, sb.length());
+        System.out.println("Now: " + sb);
+        double test = 32532.52379696969653;
+        sb.append(test);
+        System.out.println(sb);
+        System.out.println(sb.capacity());
 
-//        System.out.println(stack.empty());
-//        stack.push(10);
-//        System.out.println(stack.empty() + ", " + stack.peek());
 
-        //push 1-5 then display in reverse order
-
-//        for(int i = 1; i <= 5; i++)
-//        {
-//            stack.push(i);
-//        }
-//
-//        while (!stack.empty())
-//        {
-//            System.out.println(stack.pop());
-//        }
-
-        /*
-         * Chapter 10 - Exercise 6:
-         * (Displaying the prime numbers) Write a program that displays all the prime numbers less than 120 in decreasing order.
-         * Use the StackOfIntegers class to store the prime numbers (e.g., 2, 3, 5, ...) and retrieve and display them in reverse order.
-         */
-
-//        StacksOfIntegers primeStack = new StacksOfIntegers();
-//
-//        int i = 1;
-//        do
-//        {
-//            if(isPrime(i))
-//            {
-//                primeStack.push(i);
-//            }
-//        } while (i++ < 120);
-//
-//        System.out.println("There are " + primeStack.getSize() + " prime numbers less than 120. These are:" );
-//
-//        while (!primeStack.empty())
-//        {
-//            System.out.println(primeStack.pop());
-//        }
     }
 
-    public static boolean isPrime(int i)
-    {
-        boolean isPrime = true;
-        for (int j = 2; j <= (i / 2); j++)
-        {
-            if(i % j == 0)
-            {
-                return false;
-            }
-        }
-        return isPrime;
-    }
+
+
 }
