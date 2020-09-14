@@ -33,12 +33,15 @@ public class Ch14_05_06_PropertyBinding_NodeProperties extends Application
         circle.setRadius(50);
         circle.setFill(Color.RED);
         pane.getChildren().add(circle);
-
+        pane.autosize();
         //Scene
         Scene scene = new Scene(pane, 200, 200);
         scene.setFill(Color.GREEN);
 //        pane.layoutXProperty().bind(scene.widthProperty());
 //        pane.layoutYProperty().bind(scene.heightProperty());
+//        circle.centerXProperty().bind(scene.widthProperty().divide(2));
+//        circle.centerYProperty().bind(scene.heightProperty().divide(2));
+
         stage.setScene(scene);
         stage.show();
 
