@@ -64,8 +64,11 @@ public class Ch14_03_04_Basics_Panes extends Application
 //        circle.setRadius(100);
 
         //colors:
-        circle.setStroke(Color.RED);
-        circle.setFill(Color.RED);
+        //circle.setStroke(Color.RED);
+        //circle.setFill(Color.RED);
+
+        Color color = new Color(0.95, 0.04, 0.06, 0.91);
+        circle.setFill(color);
 
         //Pane
         Pane pane = new Pane();
@@ -77,7 +80,8 @@ public class Ch14_03_04_Basics_Panes extends Application
         pane.getChildren().add(circle);
         //Scene
         Scene circleScene = new Scene(pane, 400, 400);
-        circleScene.setFill(Color.GREEN);
+        //circleScene.setFill(Color.GREEN);
+        circleScene.setFill(new Color(0.02, 0.92, 0.1, 0.91));
         stage.setScene(circleScene);
         //stage.setResizable(false);
         stage.show();
