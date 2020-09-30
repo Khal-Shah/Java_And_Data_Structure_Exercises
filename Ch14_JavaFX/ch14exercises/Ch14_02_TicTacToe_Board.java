@@ -28,7 +28,7 @@ public class Ch14_02_TicTacToe_Board extends Application
     public void start(Stage stage) throws Exception
     {
 
-        //GridPane: is 2D so we CAN'T do a 3x3 tictactoe board with it
+        //GridPane: is 2D so we CAN'T do a 3x3 tictactoe board with it? Nope, turns out we can. (see nested for)
         GridPane grid = new GridPane();
         grid.setVgap(20);
         grid.setHgap(20);
@@ -42,7 +42,7 @@ public class Ch14_02_TicTacToe_Board extends Application
             {
                 int r = -1 + random.nextInt(3);
 
-                grid.add(getNode(r), i, j);
+                grid.add(getNode(r), i, j);         //still a 2d board (row and col)
             }
         }
 //          we can't add the same ImageView multiple times, have to create a new ImageView if we wanna add same pic
