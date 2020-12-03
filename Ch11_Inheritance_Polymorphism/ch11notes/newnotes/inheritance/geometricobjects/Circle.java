@@ -16,9 +16,11 @@ public class Circle extends GeometricObject
 
     public Circle(double radius, String color, boolean filled)
     {
+//        setColor(color);                //method inherited from parent class
+//        setFilled(filled);
+        //can use super keyword instead to refer to parent constructor
+        super(color, filled);
         this.radius = radius;
-        setColor(color);                //method inherited from parent class
-        setFilled(filled);
     }
 
     public double getRadius()
@@ -49,6 +51,8 @@ public class Circle extends GeometricObject
 
     public String printCircle()
     {
-        return "The circle was created on: " + getDateCreated() + "\nThe radius is: " + radius;
+        //return "The circle was created on: " + getDateCreated() + "\nThe radius is: " + radius;
+        //could also use super to explicitly call the method
+        return "The circle was created on: " + super.getDateCreated() + "\nThe radius is: " + radius;
     }
 }
