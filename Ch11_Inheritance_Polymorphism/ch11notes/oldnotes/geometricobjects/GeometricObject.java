@@ -1,4 +1,4 @@
-package geometricobjects;
+package ch11notes.oldnotes.geometricobjects;
 
 /* EXAMPLE: 
  * A general class GeometricObject can be used to model all geometric objects. This class contains the properties color 

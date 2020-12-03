@@ -45,7 +45,7 @@ public class GeometricObject
         return dateCreated;
     }
 
-    @Override
+    //@Override
     public String toString()
     {
         return "GeometricObject{" +

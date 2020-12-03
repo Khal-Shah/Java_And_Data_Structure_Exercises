@@ -1,6 +1,6 @@
-package geometricobjects;
+package ch11notes.oldnotes.geometricobjects;
 
-/* The main method creates objects of Circle and Rectangle and invokes the methods on these objects. 
+/* The main method creates objects of Circle and Rectangle and invokes the methods on these objects.
  * The toString() method is inherited from the GeometricObject class and is invoked from a Circle object and a Rectangle 
  * object
  *  
@@ -24,11 +24,11 @@ public class Circle_Rectangle_Driver
 		System.out.println("\nRectangle was created on " + rectangle.toString() + "The area is " + rectangle.getArea() +
 				" and the perimeter is " + rectangle.getPerimeter());
 		
-		displayObject (new CircleFromGeometricObject(1, "red", false));
+		displayObject(new CircleFromGeometricObject(1, "red", false));
 
 	}
 	
-	public static void displayObject (GeometricObject object)
+	public static void displayObject(GeometricObject object)
 	{
 		System.out.println("Created on " + object.getDateCreated() + "\nColor is " + object.getColor());
 	}

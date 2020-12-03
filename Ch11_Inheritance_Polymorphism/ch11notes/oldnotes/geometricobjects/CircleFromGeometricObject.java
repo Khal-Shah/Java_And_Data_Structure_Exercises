@@ -1,6 +1,6 @@
-package geometricobjects;
+package ch11notes.oldnotes.geometricobjects;
 
-/* The Circle class inherits all accessible data fields and methods from the GeometricObject class. In addition, it has a 
+/* The Circle class inherits all accessible data fields and methods from the GeometricObject class. In addition, it has a
  * new data field, radius, and its associated getter and setter methods. The Circle class also contains the getArea(), 
  * getPerimeter(), and getDiameter() methods for returning the area, perimeter, and diameter of the circle.
  * 

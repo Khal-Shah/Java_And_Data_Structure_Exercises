@@ -1,4 +1,4 @@
-package geometricobjects;
+package ch11notes.oldnotes.geometricobjects;
 
 /* The Rectangle class inherits all accessible data fields and methods from the GeometricObject class. In addition, it has 
  * the data fields width and height and their associated getter and setter methods. It also contains the getArea() and 

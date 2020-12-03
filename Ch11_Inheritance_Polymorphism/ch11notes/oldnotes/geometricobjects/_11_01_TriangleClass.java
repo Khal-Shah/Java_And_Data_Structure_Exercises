@@ -1,4 +1,5 @@
-package geometricobjects;
+package ch11notes.oldnotes.geometricobjects;
+
 import java.util.Scanner;
 
 /* Chapter 11 - Exercise 1
@@ -46,7 +47,7 @@ public class _11_01_TriangleClass
 		System.out.print("Is the triangle filled? Enter true for yes, and false for no.");
 		filled = kb.nextBoolean();
 		
-		Triangle triangle1 = new Triangle (side1, side2, side3);
+		Triangle triangle1 = new Triangle(side1, side2, side3);
 		triangle1.setColor(color);
 		triangle1.setFilled(filled);
 		

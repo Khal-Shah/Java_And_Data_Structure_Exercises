@@ -1,4 +1,4 @@
-package geometricobjects;
+package ch11notes.oldnotes.geometricobjects;
 
 
 public class CastingDemo
@@ -10,8 +10,8 @@ public class CastingDemo
 		/* The program uses implicit casting to assign a Circle object to object1 and a Rectangle object to object2, then 
 		 * invokes the displayObject method to display the information on these objects.
 		 */
-		Object object1 = new CircleFromGeometricObject (1);
-		Object object2 = new RectangleFromGeometricObject (1,1);
+		Object object1 = new CircleFromGeometricObject(1);
+		Object object2 = new RectangleFromGeometricObject(1,1);
 		/*	Why not define object as a Circle (declared) type in the first place? To enable generic programming, it is a good 
 		 * practice to define a variable with a supertype, which can accept an object of any subtype.
 		 */
