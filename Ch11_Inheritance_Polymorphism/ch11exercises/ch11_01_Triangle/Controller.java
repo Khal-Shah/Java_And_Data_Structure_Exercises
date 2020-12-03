@@ -18,6 +18,7 @@ public class Controller
 
     public static void main(String[] args)
     {
+        //Better to use array instead of ArrayList but just getting some practice.
         ArrayList<Double> sides = new ArrayList<>();
         getSides(sides);
 
@@ -29,7 +30,8 @@ public class Controller
         triangle.setFilled(triangleFilled);
         triangle.setColor(color);
 
-        System.out.printf(triangle.toString() + "\nArea = " + triangle.getArea() + "\nPerimeter = " + triangle.getPerimeter() +
+        //Display info
+        System.out.printf(triangle.toString() + "\nArea = " + Math.round(triangle.getArea() * 1000) / 1000.0 + "\nPerimeter = " + triangle.getPerimeter() +
                 "\nColor: " + triangle.getColor() + "\nFilled: " + triangle.isFilled());
 
 
