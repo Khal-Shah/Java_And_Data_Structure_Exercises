@@ -1,4 +1,4 @@
-package ch11notes;
+package ch11notes.oldnotes;
 import java.util.ArrayList;			//Need to import ArrayList class.
 import java.util.Arrays;
 import java.util.Scanner;

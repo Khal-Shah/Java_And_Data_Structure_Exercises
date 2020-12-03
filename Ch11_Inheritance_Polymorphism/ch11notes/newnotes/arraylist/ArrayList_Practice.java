@@ -1,3 +1,5 @@
+package ch11notes.newnotes.arraylist;
+
 import java.util.ArrayList;
 
 public class ArrayList_Practice

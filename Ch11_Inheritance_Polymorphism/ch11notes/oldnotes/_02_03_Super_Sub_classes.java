@@ -1,4 +1,4 @@
-package ch11notes;
+package ch11notes.oldnotes;
 
 /* Chater 11.1: INTRODUCTION
  * Object-oriented programming allows you to define new classes from existing classes. This is called inheritance.

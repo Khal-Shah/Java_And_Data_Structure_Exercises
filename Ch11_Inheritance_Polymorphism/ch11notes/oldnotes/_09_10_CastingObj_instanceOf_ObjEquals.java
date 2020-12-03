@@ -1,4 +1,4 @@
-package ch11notes;
+package ch11notes.oldnotes;
 
 
 /* Chapter 11.9: CASTING OBJECTS & THE INSTANCEOF OPERATOR

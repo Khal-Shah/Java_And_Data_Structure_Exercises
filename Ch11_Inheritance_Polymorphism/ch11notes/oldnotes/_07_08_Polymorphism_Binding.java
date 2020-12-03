@@ -1,7 +1,4 @@
-package ch11notes;
-
-import geometricobjects.CircleFromGeometricObject;
-import geometricobjects.GeometricObject;
+package ch11notes.oldnotes;
 
 /* Chapter 11.7: POLYMORPHISM:
  * Polymorphism means that a variable of a supertype can refer to a subtype object.

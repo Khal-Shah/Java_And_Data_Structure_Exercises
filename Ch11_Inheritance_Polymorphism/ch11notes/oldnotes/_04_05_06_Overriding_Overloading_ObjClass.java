@@ -1,4 +1,4 @@
-package ch11notes;
+package ch11notes.oldnotes;
 
 /* Chapter 11.4: OVERRIDING METHODS: (super.toString())
  * To override a method, the method must be defined in the subclass using the same signature and the same return type 
