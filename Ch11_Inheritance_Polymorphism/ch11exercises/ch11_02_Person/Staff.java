@@ -25,6 +25,11 @@ public class Staff extends Employee
         this.title = title;
     }
 
+    public Staff(String name, String address, String number, String email)
+    {
+        super(name, address, number, email);
+    }
+
     public Staff(String name, String address, String phoneNumber, String email, String office, double salary, MyDate date, String title)
     {
         super(name, address, phoneNumber, email, office, salary, date);
@@ -46,6 +51,6 @@ public class Staff extends Employee
     {
         return "Staff{" +
                 "title='" + title + '\'' +
-                '}';
+                '}' + "...Person: " + super.getName();
     }
 }

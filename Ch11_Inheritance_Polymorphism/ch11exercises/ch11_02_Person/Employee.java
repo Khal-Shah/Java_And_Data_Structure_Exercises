@@ -17,6 +17,11 @@ public class Employee extends Person
 
     }
 
+    public Employee(String name, String address, String number, String email)
+    {
+        super(name, address, number, email);
+    }
+
     public Employee(String office, double salary, MyDate date)
     {
         this.office = office;
@@ -68,7 +73,7 @@ public class Employee extends Person
         return "Employee{" +
                 "office='" + office + '\'' +
                 ", salary=" + salary +
-                ", date=" + dateHired +
-                '}';
+                ", hired date=" + dateHired.toString() +
+                '}' + "...Person: " + super.getName();
     }
 }

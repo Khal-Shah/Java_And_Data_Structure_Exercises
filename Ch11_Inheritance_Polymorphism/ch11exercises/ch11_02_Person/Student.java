@@ -26,6 +26,6 @@ public class Student extends Person
     @Override
     public String toString()
     {
-        return getClass().getName() + "\n" + STATUS;
+        return this.getClass().getSimpleName() + "{status = " + STATUS + "}...Person: " + super.getName();
     }
 }

@@ -109,4 +109,15 @@ public class MyDate
                     default -> "Error";
                 });
     }
+
+    @Override
+    public String toString()
+    {
+        return "{" +
+               "year=" + year +
+               ", month=" + month +
+               ", day=" + day +
+               ", dayName='" + dayName + '\'' +
+               '}';
+    }
 }

@@ -35,6 +35,11 @@ public class Faculty extends Employee
         this.rank = rank;
     }
 
+    public Faculty(String name, String address, String phone, String email)
+    {
+        super(name, address, phone, email);
+    }
+
     public String getOfficeHours()
     {
         return officeHours;
@@ -58,9 +63,9 @@ public class Faculty extends Employee
     @Override
     public String toString()
     {
-        return "Faculty{" +
+        return this.getClass().getSimpleName() + "{" +
                 "officeHours='" + officeHours + '\'' +
                 ", rank='" + rank + '\'' +
-                '}';
+                '}' + "...Person: " + super.getName();
     }
 }

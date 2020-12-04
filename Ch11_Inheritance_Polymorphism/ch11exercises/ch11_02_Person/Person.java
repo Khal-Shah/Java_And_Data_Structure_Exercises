@@ -67,7 +67,7 @@ public class Person
     @Override
     public String toString()
     {
-        return getClass().getName() + "{" +
+        return this.getClass().getSimpleName() + "{" +
                 "name='" + name + '\'' +
                 '}';
     }
