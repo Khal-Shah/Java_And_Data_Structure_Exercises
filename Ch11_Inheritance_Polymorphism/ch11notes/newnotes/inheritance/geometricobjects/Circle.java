@@ -49,7 +49,10 @@ public class Circle extends GeometricObject
     }
 
 
-    public String printCircle()
+    //Initially had this method named as printCircle
+    //We can call it toString and override the superclass meth
+    @Override
+    public String toString()
     {
         //return "The circle was created on: " + getDateCreated() + "\nThe radius is: " + radius;
         //could also use super to explicitly call the method

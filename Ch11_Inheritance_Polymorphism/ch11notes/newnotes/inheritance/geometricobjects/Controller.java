@@ -7,7 +7,7 @@ public class Controller
         Circle circle = new Circle(1);
 //        circle.setRadius(2);
         circle.setColor("Red");
-        System.out.println(circle.printCircle() + "\nThe color is " + circle.getColor() + "\n" +
+        System.out.println(circle.toString() + "\nThe color is " + circle.getColor() + "\n" +
                            "Diameter of " + circle.getDiameter() +"\nHas an area of " + circle.getArea());
     }
 }

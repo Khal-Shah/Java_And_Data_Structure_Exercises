@@ -1,6 +1,6 @@
 package ch10exercises.Ch10_14_MyDate;
 
-/* Chapter 10 - Exercise 13:
+/* Chapter 10 - Exercise 14:
 (The MyDate class) Design a class named MyDate. The class contains:
 ■ The data fields year, month, and day that represent a date. month is 0-based, i.e., 0 is for January.
 ■ A no-arg constructor that creates a MyDate object for the current date.
