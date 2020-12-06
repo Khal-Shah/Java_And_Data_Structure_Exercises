@@ -1,7 +1,7 @@
 package ch11notes.newnotes.polymorphism;
 import ch11notes.newnotes.inheritance.geometricobjects.*;
 
-public class PolymorphismDemo
+public class Polymorphism_Demo
 {
     public static void main(String[] args)
     {
