@@ -8,9 +8,17 @@ public class DynamicBinding_Demo
     {
         //printObj(new Staff("Unimportant"));
         //printObj(new Employee());
-        printObj(new Student());
-        printObj(new Person());
-        printObj(new Object());
+//        printObj(new Student());
+//        printObj(new Person());
+//        printObj(new Object());
+
+        //Dynamic Binding:
+        Object o = new Person();
+        System.out.println(o.toString());
+        System.out.print(o instanceof Person);
+
+//        Person p = new Staff();
+//        Employee e = new Person(); //wouldn't work
     }
 
     public static void printObj(Object x)
