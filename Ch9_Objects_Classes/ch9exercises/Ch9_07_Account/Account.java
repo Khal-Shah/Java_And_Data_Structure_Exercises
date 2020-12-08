@@ -9,7 +9,7 @@ public class Account
     private static double annualInterestRate;                    //Assume all accounts have the same interest rate.
     private Date dateCreated;
 
-    Account()
+    public Account()
     {
         id = 0;
         balance = 0;
@@ -79,4 +79,13 @@ public class Account
         balance += depositAmount;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Account{" +
+               "id=" + id +
+               ", balance=" + balance +
+               ", dateCreated=" + dateCreated +
+               '}';
+    }
 }
