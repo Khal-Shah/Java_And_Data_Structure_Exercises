@@ -19,9 +19,14 @@ public class Account_Subclasses_Controller
 
         //to use a method that's in CheckingAccount (actual type) but not in Account (declared type)
         //we have to cast it
-        ((CheckingAccount) checkingAccount).setOverdraftLimit(2000);
-        System.out.println("\nThe overdraft limit has been changed. If we withdraw again now:\n");
-        System.out.println("The overdraft limit is: " + ((CheckingAccount) checkingAccount).getOverdraftLimit());
+        //good practice to use instanceof
+        if(checkingAccount instanceof CheckingAccount)
+        {
+            ((CheckingAccount) checkingAccount).setOverdraftLimit(2000);
+            System.out.println("\nThe overdraft limit has been changed. If we withdraw again now:\n");
+            System.out.println("The overdraft limit is: " + ((CheckingAccount) checkingAccount).getOverdraftLimit());
+        }
+
 
         //Why do Account checkingAccount and not CheckingAccount checkingAccount?
         //it is a good practice to define a variable with a supertype, which can accept an object of any subtype
