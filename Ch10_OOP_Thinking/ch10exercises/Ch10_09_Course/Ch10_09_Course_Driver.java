@@ -12,7 +12,8 @@ Write a test program that creates a course, adds three students, removes one, an
 		//By Khaled Shah
 
 
-public class Ch10_09_Course_Driver
+public class
+Ch10_09_Course_Driver
 {
 
 	public static void main(String[] args)

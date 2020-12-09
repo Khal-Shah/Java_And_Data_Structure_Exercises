@@ -1,4 +1,4 @@
-package ch11exercises.ch11_02_Person;
+package ch11exercises.ch11_02_person;
 
 /*
 A student has a class status (freshman, sophomore, junior, or senior).

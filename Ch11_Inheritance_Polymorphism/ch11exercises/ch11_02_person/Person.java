@@ -1,4 +1,4 @@
-package ch11exercises.ch11_02_Person;
+package ch11exercises.ch11_02_person;
 
 /*
 A person has a name, address, phone number, and email address.

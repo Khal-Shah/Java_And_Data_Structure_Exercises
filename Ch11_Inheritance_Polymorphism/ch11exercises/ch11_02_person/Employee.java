@@ -1,4 +1,4 @@
-package ch11exercises.ch11_02_Person;
+package ch11exercises.ch11_02_person;
 
 import ch10exercises.Ch10_14_MyDate.MyDate;
 

@@ -1,6 +1,6 @@
 package ch11notes.newnotes.polymorphism;
 
-import ch11exercises.ch11_02_Person.*;
+import ch11exercises.ch11_02_person.*;
 
 public class DynamicBinding_Demo
 {

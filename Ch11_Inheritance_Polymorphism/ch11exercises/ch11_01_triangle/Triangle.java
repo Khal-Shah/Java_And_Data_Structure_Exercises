@@ -1,4 +1,4 @@
-package ch11exercises.ch11_01_Triangle;
+package ch11exercises.ch11_01_triangle;
 
 import ch11notes.newnotes.inheritance.geometricobjects.GeometricObject;
 

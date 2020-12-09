@@ -1,7 +1,6 @@
-package ch11exercises.ch11_03_Account;
+package ch11exercises.ch11_03_account;
 
 import ch9exercises.Ch9_07_Account.Account;
-import com.sun.javafx.binding.StringFormatter;
 
 /**
  * (Subclasses of Account) In Programming Exercise 9.7, the Account class was defined to model a bank account.
@@ -12,6 +11,8 @@ import com.sun.javafx.binding.StringFormatter;
  * has an overdraft limit, but a savings account cannot be overdrawn.
  * Draw the UML diagram for the classes and then implement them. Write a test program that creates objects of
  * Account, SavingsAccount, and CheckingAccount and invokes their toString() methods.
+ *
+ * @@author Khaled Shah
  */
 
 public class SavingsAccount extends Account

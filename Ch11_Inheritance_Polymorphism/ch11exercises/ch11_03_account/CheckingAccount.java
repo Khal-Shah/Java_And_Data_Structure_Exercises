@@ -1,4 +1,4 @@
-package ch11exercises.ch11_03_Account;
+package ch11exercises.ch11_03_account;
 
 import ch9exercises.Ch9_07_Account.Account;
 
