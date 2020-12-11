@@ -1,4 +1,4 @@
-package ch11exercises;
+package ch11exercises.ch11_04_max_arraylist;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +13,7 @@ import java.util.Random;
  * @author Khaled Shah
  */
 
-public class Ch11_04_ArrayList_Max
+public class ArrayList_Max
 {
     public static void main(String[] args)
     {

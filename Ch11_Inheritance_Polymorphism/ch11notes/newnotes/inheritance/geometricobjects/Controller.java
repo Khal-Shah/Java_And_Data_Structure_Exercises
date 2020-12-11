@@ -10,7 +10,7 @@ public class Controller
         System.out.println(circle1.toString() + "\nThe color is " + circle1.getColor() + "\n" +
                            "Diameter of " + ((Circle) circle1).getDiameter() + "\nHas an area of " + ((Circle) circle1).getArea());
 
-        GeometricObject circle2 = new Circle(1);
+        GeometricObject circle2 = new Circle(2);
         System.out.println(((Circle) circle1).equals(circle2));
     }
 }

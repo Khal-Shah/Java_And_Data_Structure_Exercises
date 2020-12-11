@@ -56,7 +56,8 @@ public class Circle extends GeometricObject
     {
         //return "The circle was created on: " + getDateCreated() + "\nThe radius is: " + radius;
         //could also use super to explicitly call the method
-        return "The circle was created on: " + super.getDateCreated() + "\nThe radius is: " + radius;
+        return "Super: " + super.toString() + "\nThe circle was created on: " + super.getDateCreated() + "\nThe radius is: " + radius
+                + "\nThe area is " + getArea();
     }
 
     //check whether 2 objects (circles) are equal based on their radius
@@ -65,7 +66,7 @@ public class Circle extends GeometricObject
     {
         if(obj instanceof Circle)
         {
-            return radius == ((Circle) obj).radius;
+            return this.radius == ((Circle) obj).radius;
         }
         else
         {
