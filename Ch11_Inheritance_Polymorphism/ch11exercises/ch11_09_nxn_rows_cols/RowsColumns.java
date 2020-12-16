@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-/**
+/** Chapter 11 - Exercise 9:
  * (Largest rows and columns) Write a program that randomly fills in 0s and 1s into an n-by-n matrix,
  * prints the matrix, and finds the rows and columns with the most 1s. (Hint: Use two ArrayLists to
  * store the row and column indices with the most 1s.)
@@ -23,14 +23,6 @@ import java.util.Random;
 
 public class RowsColumns
 {
-//    private int rows;
-//    private int cols;
-//
-//
-//    public RowsColumns()
-//    {
-//        this.rows = 0;
-//    }
 
     public static void main(String[] args)
     {
@@ -75,7 +67,7 @@ public class RowsColumns
 
         String transposeMatrix = col1 + "\n" + col2 + "\n" + col3 + "\n" + col4 + "\n";
         int transposeCount = 0;
-        System.out.println(transposeMatrix);
+        //System.out.println(transposeMatrix);
         do
         {
             if(matrix.charAt(i) == '1')
@@ -103,7 +95,7 @@ public class RowsColumns
             i++;
         } while((i < matrix.length()) && (i < transposeMatrix.length()));
 
-        System.out.println(rowCount + "\n" + colCount);
+        //System.out.println(rowCount + "\n" + colCount);
         System.out.println("The largest row index is " + rowCount.indexOf(Collections.max(rowCount)) +
                            "\nThe largest column index is " + colCount.indexOf(Collections.max(colCount)));
 
