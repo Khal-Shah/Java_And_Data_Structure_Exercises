@@ -1,4 +1,4 @@
-package ch12notes;
+package ch12notes.old;
 
 /* 12.6: WHEN TO USE EXCEPTIONS:
  * A method should throw an exception if the error needs to be handled by its caller.

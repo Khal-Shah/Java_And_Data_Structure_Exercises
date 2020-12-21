@@ -1,4 +1,4 @@
-package ch12notes;
+package ch12notes.old;
 import java.util.Scanner;
 
 import java.io.FileNotFoundException;
