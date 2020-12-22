@@ -1,4 +1,4 @@
-package ch12notes.old;
+package ch12notes.oldnotes;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

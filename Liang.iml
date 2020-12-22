@@ -22,9 +22,10 @@
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch14_JavaFX" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch11_Inheritance_Polymorphism/ch11notes/More Notes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch12_ExceptionHandling_Text_IO/ch12notes/new" isTestSource="false" />
     </content>
-    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="jdk" jdkName="openjdk-14" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>

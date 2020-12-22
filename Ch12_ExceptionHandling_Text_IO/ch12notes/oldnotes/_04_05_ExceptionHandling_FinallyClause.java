@@ -1,4 +1,4 @@
-package ch12notes.old;
+package ch12notes.oldnotes;
 
 /* Chapter 12.4: MORE ON EXCEPTION HANDLING:
  * A handler for an exception is found by propagating the exception backward through a chain of method calls, starting 
