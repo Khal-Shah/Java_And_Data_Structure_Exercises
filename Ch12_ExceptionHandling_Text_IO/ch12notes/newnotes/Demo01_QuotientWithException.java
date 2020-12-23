@@ -2,7 +2,7 @@ package ch12notes.newnotes;
 
 import java.util.Scanner;
 
-public class QuotientWithException
+public class Demo01_QuotientWithException
 {
     static Scanner kb = new Scanner(System.in);
     //quotient method
@@ -11,7 +11,7 @@ public class QuotientWithException
         //divide n1 by n2 so n2 if n2 is 0 throw exception
         if(n2 == 0)
         {
-            throw new ArithmeticException("Divisor cannot be zero.");
+            //throw new ArithmeticException("Divisor cannot be zero.");
         }
 
         return n1 / n2;
