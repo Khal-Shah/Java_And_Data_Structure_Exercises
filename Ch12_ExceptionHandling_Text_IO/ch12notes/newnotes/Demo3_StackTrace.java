@@ -1,6 +1,6 @@
 package ch12notes.newnotes;
 
-public class Demo03_StackTrace
+public class Demo3_StackTrace
 {
     public static void main(String[] args)
     {

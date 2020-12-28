@@ -1,6 +1,7 @@
 package ch11exercises.ch11_01_triangle;
 
 import ch11notes.newnotes.inheritance.geometricobjects.GeometricObject;
+import ch12exercises.ex05_triangle.IllegalTriangleException;
 
 /** Chapter 11 - Exercise 1:
  * (The Triangle class) Design a class named Triangle that extends GeometricObject. The class contains:
@@ -31,6 +32,7 @@ public class Triangle extends GeometricObject
         this(1.0, 1.0, 1.0);
     }
 
+    //Modified for Chapter 12 - Exercise 5:
     public Triangle(double s1, double s2, double s3)
     {
         this.side1 = s1;

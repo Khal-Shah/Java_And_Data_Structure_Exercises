@@ -3,7 +3,7 @@ package ch12notes.newnotes;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Demo02_InputMismatchException extends Throwable
+public class Demo2_InputMismatchException extends Throwable
 {
     static Scanner kb = new Scanner(System.in);
 

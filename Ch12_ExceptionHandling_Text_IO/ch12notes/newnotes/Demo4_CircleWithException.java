@@ -1,17 +1,17 @@
 package ch12notes.newnotes;
 
-public class Demo04_CircleWithException
+public class Demo4_CircleWithException
 {
     private double radius;
     private static int numberOfObjects = 0;
 
-    public Demo04_CircleWithException()
+    public Demo4_CircleWithException()
     {
         //default radius of 1:
         this(1.0);
     }
 
-    public Demo04_CircleWithException(double radius)
+    public Demo4_CircleWithException(double radius)
     {
         setRadius(radius);
         numberOfObjects++;
@@ -50,9 +50,9 @@ public class Demo04_CircleWithException
         //Test the CircleWithException Class
         try
         {
-            Demo04_CircleWithException c1 = new Demo04_CircleWithException(5);
-            Demo04_CircleWithException c2 = new Demo04_CircleWithException(-5);
-            Demo04_CircleWithException c3 = new Demo04_CircleWithException(0);
+            Demo4_CircleWithException c1 = new Demo4_CircleWithException(5);
+            Demo4_CircleWithException c2 = new Demo4_CircleWithException(-5);
+            Demo4_CircleWithException c3 = new Demo4_CircleWithException(0);
         }
         catch (IllegalArgumentException exception)
         {
@@ -61,6 +61,6 @@ public class Demo04_CircleWithException
             //System.out.println(exception.getMessage());          //Radius cannot be negative
         }
 
-        System.out.println("Number of objects created: " + Demo04_CircleWithException.getNumberOfObjects());
+        System.out.println("Number of objects created: " + Demo4_CircleWithException.getNumberOfObjects());
     }
 }

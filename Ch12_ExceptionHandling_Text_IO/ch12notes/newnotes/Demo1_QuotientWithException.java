@@ -2,7 +2,7 @@ package ch12notes.newnotes;
 
 import java.util.Scanner;
 
-public class Demo01_QuotientWithException
+public class Demo1_QuotientWithException
 {
     static Scanner kb = new Scanner(System.in);
     //quotient method
