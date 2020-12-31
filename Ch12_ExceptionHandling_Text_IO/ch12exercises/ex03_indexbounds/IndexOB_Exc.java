@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author Khaled Shah
  */
 
-public class ArrayIndexOutOfBounds extends Throwable
+public class IndexOB_Exc extends Throwable
 {
     private static final int TOTAL = 100;
     static Scanner kb = new Scanner(System.in);

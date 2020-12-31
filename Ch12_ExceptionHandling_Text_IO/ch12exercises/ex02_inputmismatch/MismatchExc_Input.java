@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author Khaled Shah
  */
 
-public class InputMismatch
+public class MismatchExc_Input
 {
     static Scanner kb = new Scanner(System.in);
 
