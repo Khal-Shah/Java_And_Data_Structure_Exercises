@@ -11,7 +11,8 @@ public class Controller
         }
         catch(InvalidRadiusException ex)
         {
-            System.out.println(ex);
+            ex.printStackTrace();
+            System.out.println(ex.getMessage());
         }
         finally
         {

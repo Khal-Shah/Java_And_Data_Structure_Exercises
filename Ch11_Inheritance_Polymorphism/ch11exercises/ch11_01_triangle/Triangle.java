@@ -18,6 +18,7 @@ import ch12exercises.ex05_triangle.IllegalTriangleException;
  *
  * The toString() method is implemented as follows:
  * return "Triangle: side1 = " + side1 + " side2 = " + side2 + " side3 = " + side3;
+ *
  * @author Khaled Shah
  */
 
@@ -27,17 +28,30 @@ public class Triangle extends GeometricObject
     private double side2;
     private double side3;
 
-    public Triangle()
+    public Triangle() throws IllegalTriangleException
     {
         this(1.0, 1.0, 1.0);
     }
 
     //Modified for Chapter 12 - Exercise 5:
-    public Triangle(double s1, double s2, double s3)
+    // Construct a triangle with the specified sides
+    // public Triangle(double side1,double side2,double side3)throws IllegalTriangleException
+    public Triangle(double s1, double s2, double s3) throws IllegalTriangleException
     {
+        if(sidesInvalid(s1, s2, s3))
+        {
+            IllegalTriangleException exception = new IllegalTriangleException(s1, s2, s3);
+            throw exception;
+        }
+
         this.side1 = s1;
         this.side2 = s2;
         this.side3 = s3;
+    }
+
+    private static boolean sidesInvalid(double s1, double s2, double s3)
+    {
+        return (((s1 + s2) <= s3) || ((s1 + s3) <= s2) || ((s2 + s3) <= s1));
     }
 
     public double getSide1()

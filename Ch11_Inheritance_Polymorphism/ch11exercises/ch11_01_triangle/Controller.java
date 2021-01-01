@@ -1,5 +1,7 @@
 package ch11exercises.ch11_01_triangle;
 
+import ch12exercises.ex05_triangle.IllegalTriangleException;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -9,6 +11,7 @@ import java.util.Scanner;
  *  * indicate whether the triangle is filled. The program should create a Triangle object with these sides and set the
  *  * color and filled properties using the input. The program should display the area, perimeter, color, and true
  *  * or false to indicate whether it is filled or not.
+ *
  * @author Khaled Shah
  */
 
@@ -16,7 +19,7 @@ public class Controller
 {
     static Scanner kb = new Scanner(System.in);
 
-    public static void main(String[] args)
+    public static void main(String[] args) throws IllegalTriangleException
     {
         //Better to use array instead of ArrayList but just getting some practice.
         ArrayList<Double> sides = new ArrayList<>();
