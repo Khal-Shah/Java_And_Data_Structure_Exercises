@@ -20,9 +20,9 @@ public class GeometricObjectController
         geoObj2.setFilled(true);
 
         //Display circle
-        displayGeometricObject(geoObj1);
+        geoObj1.displayGeometricObject(geoObj1);
         //display rectangle
-        displayGeometricObject(geoObj2);
+        geoObj2.displayGeometricObject(geoObj2);
 
     }
 
@@ -32,12 +32,5 @@ public class GeometricObjectController
         return geoObj1.getArea() == geoObj2.getArea();
     }
 
-    public static void displayGeometricObject(GeometricObject geoObj)
-    {
-        System.out.println("Area: " + geoObj.getArea() + "\nPerimeter: " + geoObj.getPerimeter() + "\n" +
-                           "Is filled: " + geoObj.isFilled() + "\nColor: " + geoObj.getColor());
 
-        System.out.println("--------------------------------------------------------------------------");
-        System.out.println();
-    }
 }

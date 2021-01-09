@@ -1,15 +1,20 @@
 package ch13exercises.ch13_01_Triangle_Extending_GeoObj;
-//import packageName.className
+
 import ch13notes.Ch13_2_AbstractClasses.GeometricObject;
 
-/**
+/** Chapter 13 - Exercise 1:
  * (Triangle class) Design a new Triangle class that extends the abstract GeometricObject class.
  * Draw the UML diagram for the classes Triangle and GeometricObject and then implement the Triangle class.
- * Write a test program that prompts the user to enter three sides of the triangle,
- * a color, and a Boolean value to indicate whether the triangle is filled.
- * The program should create a Triangle object with these sides and set the color and filled properties
- * using the input. The program should display the area, perimeter, color, and true or false to indicate
- * whether it is filled or not.
+ *
+ * ch13notes.Ch13_2_AbstractClasses.GeometricObject modified to make it an abstract class with abs method area and perimeter
+ *
+ * Triangle of an area with Heron's formula.
+ * Let a,b,c be the lengths of the sides of a triangle.
+ * The area is given by:
+ * Area	=	 √	 p	 (	p	−	a	) 	(	p	−	b	)	 (	p	−	c	)
+ * where p is half the perimeter, or
+ * (a	+	b	+	c)  /   2
+ *
  @author Khaled Shah
  */
 
@@ -24,17 +29,29 @@ public class Triangle extends GeometricObject
         this.side3 = s3;
     }
 
-
+    //Triangle area (Using Heron's formula)
     @Override
     public double getArea()
     {
-//        return 0.5 * length * height;
-        return 0; // TODO: Find how to compute area of triangle (1/2) * b * h
+        // Area	=	 √	 p	 (	p	−	a	) 	(	p	−	b	)	 (	p	−	c	)
+        double p = getPerimeter() / 2;
+        double area = Math.sqrt(p * (p - this.side1) * (p - this.side2) * (p - this.side3));
+        return area;
     }
 
     @Override
     public double getPerimeter()
     {
         return side1 + side2 + side3;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Triangle{" +
+                "side1=" + side1 +
+                ", side2=" + side2 +
+                ", side3=" + side3 +
+                '}';
     }
 }
