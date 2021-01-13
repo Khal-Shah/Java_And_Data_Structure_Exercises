@@ -1,4 +1,4 @@
-package ch13exercises.ch13_01_Triangle_Extending_GeoObj;
+package ch13exercises.ex01_Triangle_Extending_GeoObj;
 
 import ch13notes.Ch13_2_AbstractClasses.GeometricObject;
 
