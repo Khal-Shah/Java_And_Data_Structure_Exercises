@@ -8,7 +8,7 @@ public abstract class GeometricObject
     private boolean filled;
     private Date dateCreated;
 
-    protected GeometricObject()     //default geometric obj
+    protected GeometricObject()     //Constructor can only be invoked from child
     {
         dateCreated = new Date();
     }
@@ -45,6 +45,15 @@ public abstract class GeometricObject
     public Date getDateCreated()
     {
         return dateCreated;
+    }
+
+    public static void displayGeometricObject(GeometricObject geoObj)
+    {
+        System.out.println("Area: " + geoObj.getArea() + "\nPerimeter: " + geoObj.getPerimeter() + "\n" +
+                "Is filled: " + geoObj.isFilled() + "\nColor: " + geoObj.getColor());
+
+        System.out.println("--------------------------------------------------------------------------");
+        System.out.println();
     }
 
     @Override

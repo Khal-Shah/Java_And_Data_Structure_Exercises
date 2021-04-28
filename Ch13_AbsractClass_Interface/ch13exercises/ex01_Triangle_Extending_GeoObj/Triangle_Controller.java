@@ -1,13 +1,14 @@
-package ch13exercises.ch13_01_Triangle_Extending_GeoObj;
+package ch13exercises.ex01_Triangle_Extending_GeoObj;
 
 import ch13notes.Ch13_2_AbstractClasses.GeometricObject;
-import ch13notes.Ch13_2_AbstractClasses.GeometricObjectController;
+
 import java.util.Scanner;
 
 
 /**
  * Write a test program that prompts the user to enter three sides of the triangle, a color,
  * and a Boolean value to indicate whether the triangle is filled.
+ *
  * The program should create a Triangle object with these sides and set the color and filled properties
  * using the input. The program should display the area, perimeter, color, and true or false to
  * indicate whether it is filled or not.
@@ -20,7 +21,7 @@ public class Triangle_Controller
 
     public static void main(String[] args)
     {
-        double[] sides = new double[3];
+        double[] sides;
         sides = getSides();
 
         GeometricObject triangle = new Triangle(sides[0], sides[1], sides[2]);
@@ -28,7 +29,7 @@ public class Triangle_Controller
         triangle.setFilled(true);
         System.out.println(triangle.toString());
 
-        ch13notes.Ch13_2_AbstractClasses.GeometricObjectController.displayGeometricObject(triangle);
+        triangle.displayGeometricObject(triangle);
 
     }
 
