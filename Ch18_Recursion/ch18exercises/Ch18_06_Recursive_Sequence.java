@@ -1,12 +1,13 @@
 package ch18exercises;
 
-/* Chapter 18 - Exercise 6:
+/** Chapter 18 - Exercise 6:
  * (Sum series) Write a recursive method to compute the following series:
  * m (i) = 1/2 + 2/3 + 3/4 +...+ i/i+1
  * Write a test program that displays m(i) for i = 1, 2, . . ., 10
+ * @author khaled Shah
  */
 
-public class _06_Recursive_Sequence
+public class Ch18_06_Recursive_Sequence
 {
 
 	public static void main(String[] args)

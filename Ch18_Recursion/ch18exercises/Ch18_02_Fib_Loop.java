@@ -1,7 +1,7 @@
 package ch18exercises;
 import java.util.Scanner;
 
-/* Chapter 18 - Exercise 2:
+/** Chapter 18 - Exercise 2:
  * (Fibonacci numbers) Rewrite the fib method in Listing 18.2 using iterations.
 Hint:To compute fib(n) without recursion,you need to obtain fib(n - 2) and fib(n - 1) first. 
 Let f0 and f1 denote the two previous Fibonacci numbers.The current Fibonacci number would then be f0 + f1.
@@ -16,9 +16,11 @@ f1 = currentFib;
 }
        // After the loop, currentFib is fib(n)
 Write a test program that prompts the user to enter an index and displays its Fibonacci number.
+
+ 	@author khaled Shah
  */
 
-public class _02_Fib_Loop
+public class Ch18_02_Fib_Loop
 {
 	static Scanner kb = new Scanner(System.in);
 
@@ -36,6 +38,11 @@ public class _02_Fib_Loop
 		int f0 = 0;
 		int f1 = 1;
 		int fCurrent = 0;
+
+		if(index == 1)
+		{
+			return f1;
+		}
 		
 		for (int i = 1; i < index; i++)
 		{
