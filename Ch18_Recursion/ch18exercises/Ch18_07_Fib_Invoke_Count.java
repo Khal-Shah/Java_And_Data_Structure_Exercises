@@ -1,13 +1,16 @@
 package ch18exercises;
 import java.util.Scanner;
 
-/* Chapter 18 - Exercise 7:
+/**
+Chapter 18 - Exercise 7:
  * (Fibonacciseries) ModifyListing18.2, ComputeFibonacci.java,
  * so that the program finds the number of times the fib method is called. 
  * (Hint: Use a static variable and increment it every time the method is called.)
+ *
+ * @author Khaled
  */
 
-public class _07_Fib_Invoke_Count
+public class Ch18_07_Fib_Invoke_Count
 {
 	static Scanner kb = new Scanner(System.in);
 	static int count = 0;
@@ -27,19 +30,16 @@ public class _07_Fib_Invoke_Count
 		count++;
 		if (index == 0)
 		{
-			//count++;
 			return 0;
 		}
 		
 		else if (index == 1)
 		{
-			//count++;
 			return 1;
 		}
 		
 		else
 		{
-			//count ++;
 			return (fibonacci(index - 2) + fibonacci(index - 1));
 		}
 	}

@@ -5,37 +5,41 @@ import org.junit.Test;
 import java.util.Scanner;
 
 /*
- * (Sum series) Write a recursive method to compute the following series:
- * m (i) = 1/2 + 2/3 + 3/4 +...+ i/i+1
- * Write a test program that displays m(i) for i = 1, 2, . . ., 10
+
  **/
 
 public class Exercise_Practice
 {
     static Scanner kb = new Scanner(System.in);
-
+    static int charCount = 0;
 
     @Test
-    public void sumSeriesTest()
+    public void countTest()
     {
-        System.out.print("m(10) =");
-        for(int i = 1; i <= 10; i++)
-        {
-            System.out.printf(" %.2f ", sumSequence(i));
-        }
+        int totalCount = count("welcome", 'e');
+        System.out.println(totalCount);
     }
 
-    public double sumSequence(double i)
+    public static int count(String str, char a)
     {
-        if(i == 1)
+        System.out.println(str);
+        if(str.length() == 1)
         {
-            return i / (i + 1);
+            if(str.charAt(0) == a)
+            {
+                charCount++;
+            }
+            return charCount;
         }
 
-        else
+        else if(str.charAt(0) == a)
         {
-            return ((i/(i + 1)) + sumSequence(i - 1));
+            charCount++;
+            //System.out.println(charCount);
         }
+
+        return count(str.substring(1), a);
     }
+
 
 }
