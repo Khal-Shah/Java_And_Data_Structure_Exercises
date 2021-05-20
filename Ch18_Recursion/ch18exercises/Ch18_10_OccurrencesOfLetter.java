@@ -13,7 +13,7 @@ for the character in the string.
 * @author Khaled
  */
 
-public class Ch18_10_OccurancesOfLetter
+public class Ch18_10_OccurrencesOfLetter
 {
 
 	static Scanner kb = new Scanner(System.in);

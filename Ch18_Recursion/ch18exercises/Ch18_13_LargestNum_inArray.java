@@ -2,12 +2,14 @@ package ch18exercises;
 
 import java.util.Scanner;
 
-/* Chapter 18 - Exercise 13:
+/** Chapter 18 - Exercise 13:
  * (Find the largest number in an array)
  * Write a recursive method that returns the largest integer in an array. 
  * Write a test program that prompts the user to enter a list of eight integers and displays the largest element.
+ *
+ * @author Khaled
  */
-public class _13_LargestNum_inArray
+public class Ch18_13_LargestNum_inArray
 {
 	static Scanner kb = new Scanner(System.in);
 
