@@ -16,16 +16,23 @@ import java.util.Collections;
 public class SortArrayList
 {
 
-    private ArrayList<Object> list = new ArrayList<>();
+    private ArrayList<Integer> list;
 
-    public SortArrayList(ArrayList list)
+    public SortArrayList(ArrayList<Integer> list)
     {
+        this.list = new ArrayList<>();
         this.list = list;
     }
 
     public static void sort(ArrayList<Integer> list)
     {
         Collections.sort(list);
+        System.out.print("list = [");
+        for(Object e: list)
+        {
+            System.out.print(e + ", ");
+        }
+        System.out.println("]");
     }
 
     @Override

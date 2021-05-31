@@ -1,6 +1,7 @@
 package ch11exercises.ch11_10_mystack_inheritance;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /** Chapter 11 - Exercise 10:
  * (Implement MyStack using inheritance) In Listing 11.10, MyStack is implemented using composition.
@@ -60,23 +61,25 @@ public class MyStack extends ArrayList
     {
         //String[] reversedItems = new String[getSize()];
 
-        for(int i = 0; i < list.size(); i++)
-        {
-            this.list.set(i, getReverseString(list.get(i)));
-        }
-
+//        for(int i = 0; i < list.size(); i++)
+//        {
+//            this.list.set(i, getReverseString(list.get(i)));
+//        }
+        Collections.reverse(this.list);
     }
 
-    public String getReverseString(Object str)
-    {
-        String string = (String) str;
-        String reversedString = "";
-        for(int i = (string.length() - 1); i >= 0; i--)
-        {
-            reversedString += string.charAt(i);
-        }
-        return reversedString;
-    }
+    //to reverse each string (but the question is asking to reverse the order of list items which we can use the Collections.reverse
+    //method to do reverse the items in the arraylist.
+//    public String getReverseString(Object str)
+//    {
+//        String string = (String) str;
+//        String reversedString = "";
+//        for(int i = (string.length() - 1); i >= 0; i--)
+//        {
+//            reversedString += string.charAt(i);
+//        }
+//        return reversedString;
+//    }
 
     @Override
     public String toString()

@@ -23,17 +23,16 @@ public class AccountController
 {
     public static void main(String[] args)
     {
-        Account account1 = new Account(1122, 1000, "George");
+        Account account = new Account(1122, 1000, "George");
         Account.annualInterestRate = 1.5;
-        //account1.setAnnualInterestRate(1.5);              //^if we make annualInterest rate public static
-        account1.deposit(30);
-        account1.deposit(40);
-        account1.deposit(50);
-        account1.withdraw(5);
-        account1.withdraw(4);
-        account1.withdraw(2);
-        System.out.printf(account1.toString());
-
+        //((Account) account).setAnnualInterestRate(1.5);              //^if we make annualInterest rate public static
+        account.deposit(30);
+        account.deposit(40);
+        account.deposit(50);
+        account.withdraw(5);
+        account.withdraw(4);
+        account.withdraw(2);
+        System.out.println(account);
     }
 
 

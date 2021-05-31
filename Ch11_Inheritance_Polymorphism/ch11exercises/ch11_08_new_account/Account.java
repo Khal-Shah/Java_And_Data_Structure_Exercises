@@ -44,14 +44,13 @@ public class Account
     public static double annualInterestRate;
     private Date dateCreated;
     private String name;
-    private ArrayList<Transaction> transactions = new ArrayList();
+
+    private ArrayList<Transaction> transactions;
 
     public Account()
     {
-        this.id = 0;
-        this.balance = 0;
+        this(0, 0);
         this.annualInterestRate = 0;
-        this.dateCreated = new Date();
     }
 
     public Account(int id, double balance)
@@ -59,6 +58,7 @@ public class Account
         this.id = id;
         this.balance = balance;
         dateCreated = new Date();
+        transactions = new ArrayList<>();
     }
 
     public Account(int id, double balance, String name)
@@ -116,12 +116,13 @@ public class Account
     //Modify the withdraw and deposit methods to add a transaction to the transactions array list.
     public void withdraw(double amount)
     {
-        char type = 'W';
+        String desc = "Withdraw made of amount " + amount + " by " + name;
+
 
         if(amount < balance)
         {
             this.balance -= amount;
-            transactions.add(new Transaction(type, amount, balance, ""));
+            transactions.add(new Transaction('W', amount, balance, desc));
         }
 
         else
@@ -134,12 +135,12 @@ public class Account
 
     public void deposit(double amount)
     {
-        char type = 'D';
+        String desc = "Deposit made of amount " + amount + " by " + name;
 
         if(amount > 0)
         {
             this.balance += amount;
-            transactions.add(new Transaction(type, amount, balance, ""));
+            transactions.add(new Transaction('D', amount, balance, desc));
         }
 
         else
@@ -159,7 +160,7 @@ public class Account
                ", annualInterestRate=" + annualInterestRate +
                ", dateCreated=" + dateCreated +
                ", name='" + name + '\'' +
-               ", transactions=" + transactions.toString() +
+               ", transactions=" + transactions +
                '}';
     }
 }

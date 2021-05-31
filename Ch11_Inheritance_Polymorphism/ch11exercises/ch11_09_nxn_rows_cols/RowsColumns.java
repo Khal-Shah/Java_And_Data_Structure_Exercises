@@ -102,3 +102,101 @@ public class RowsColumns
     }
 
 }
+
+/* Another way of doing this exercise:
+System.out.print("Enter the array size n: ");
+        int size = kb.nextInt();
+
+        ArrayList<Integer> rows = new ArrayList<>();
+
+        Random random = new Random();
+
+        for(int i = 0; i < size; i++)
+        {
+            for(int j = 0; j < size; j++)
+            {
+                rows.add(random.nextInt(2));
+            }
+        }
+
+        printMatrix(rows, size);
+
+        ArrayList<Integer> rowCount = new ArrayList<>();
+        ArrayList<Integer> colCount = new ArrayList<>();
+        int index = 0;
+        int count = 0;
+
+        for(int i = 0; i <= rows.size(); i++)
+        {
+            if(i % 4 == 0 && i != 0)
+            {
+                rowCount.add(index, count);
+                index++;
+                count = 0;
+            }
+
+            if(i == 16)
+            {
+                break;
+            }
+            count += ((rows.get(i) == 1)? 1 : 0);
+        }
+
+        int col1 = 0;
+        int col2 = 0;
+        int col3 = 0;
+        int col4 = 0;
+
+        for(int i = 0; i < rows.size(); i++)
+        {
+            index = i % 4;
+
+            switch(index)
+            {
+                case 0 -> {
+                    if(rows.get(i) == 1)
+                    {
+                        col1++;
+                    }
+                }
+                case 1 -> {
+                    if(rows.get(i) == 1)
+                    {
+                        col2++;
+                    }
+                }
+                case 2 -> {
+                    if(rows.get(i) == 1)
+                    {
+                        col3++;
+                    }
+                }
+                case 3 -> {
+                    if(rows.get(i) == 1)
+                    {
+                        col4++;
+                    }
+                }
+            }
+
+        }
+
+        colCount.add(0, col1);
+        colCount.add(1, col2);
+        colCount.add(2, col3);
+        colCount.add(3, col4);
+
+        System.out.println("\nThe largest row index is " + rowCount.indexOf(Collections.max(rowCount)));
+        System.out.println("The largest col index is " + colCount.indexOf(Collections.max(colCount)));
+
+    private static void printMatrix(ArrayList<Integer> rows, int sz)
+    {
+        int count = 0;
+
+        for(Integer e: rows)
+        {
+            count++;
+            System.out.print(e + "\t" + ((count % sz == 0)? "\n" : ""));
+        }
+    }
+ */

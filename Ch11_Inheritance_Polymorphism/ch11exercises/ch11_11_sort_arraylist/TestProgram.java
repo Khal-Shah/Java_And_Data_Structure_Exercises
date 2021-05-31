@@ -13,21 +13,23 @@ public class TestProgram
 
     public static void main(String[] args)
     {
-        ArrayList list = new ArrayList();
+        ArrayList<Integer> list = new ArrayList<>();
         int i = 0;
 
         System.out.println("Enter 5 numbers below:");
         do
         {
             System.out.print("Enter number " + (i + 1 + ": "));
-            list.add(i, kb.next());
+            list.add(i, kb.nextInt());
         }while(++i < LIMIT);
 
         Object sortArrayList = new SortArrayList(list);
+        System.out.println("\nBefore sorting: " + sortArrayList);
+        System.out.print("After sorting: ");
         //Declared type determines method to match, Object doesn't have the sort() method (we created it in SortArrayList) class
         //Thus cast it
-        ((SortArrayList) sortArrayList).sort(list);
-        System.out.println(sortArrayList.toString());
+        SortArrayList.sort(list);
+
 
     }
 }

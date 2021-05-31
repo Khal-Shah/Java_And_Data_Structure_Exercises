@@ -1,10 +1,8 @@
 package ch11exercises.ch11_13_remove_duplicates;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
+
 
 /** Chapter 11 - Exercise 13:
  * (Remove duplicates) Write a method that removes the duplicate elements from an array list
@@ -24,9 +22,9 @@ import java.util.stream.Collectors;
 public class RemoveDuplicates
 {
     //Use Number because Integer extends it
-    private ArrayList<Number> list;
+    private ArrayList<Integer> list;
 
-    public RemoveDuplicates(ArrayList list)
+    public RemoveDuplicates(ArrayList<Integer> list)
     {
         this.list = new ArrayList<>();
         this.list = list;
@@ -34,23 +32,22 @@ public class RemoveDuplicates
 
     public static void removeDuplicate(ArrayList<Integer> list)
     {
-        ArrayList<Integer> newList = new ArrayList<>();
+        ArrayList<Integer> copyList = new ArrayList<>();
 
-        for(Integer E: list)
+        for(Integer integer : list)
         {
-            if(!newList.contains(E))
+            if(!copyList.contains(integer))
             {
-                newList.add(E);
+                copyList.add(integer);
             }
+
         }
-
-        // Second approach:
-        // Construct a new list from the set constucted from elements
-        // of the original list
-        //List<Integer> newList = list.stream().distinct().collect(Collectors.toList());
-
-        System.out.println(newList.toString());
+        list.clear();
+        list.addAll(copyList);
     }
+    // Second approach:
+    // Construct a new list from the set constructed from element of the original list
+    //List<Integer> newList = list.stream().distinct().collect(Collectors.toList());
 
     @Override
     public String toString()
@@ -75,8 +72,8 @@ public class RemoveDuplicates
             nums.add(i++, kb.nextInt());
         }
 
-        System.out.println("You've entered: " + new RemoveDuplicates(nums).toString());
-        System.out.print("The distinct integers are: ");
+        System.out.println("You've entered: " + new RemoveDuplicates(nums));
         RemoveDuplicates.removeDuplicate(nums);
+        System.out.print("The distinct integers are: " + nums);
     }
 }

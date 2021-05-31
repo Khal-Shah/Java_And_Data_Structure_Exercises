@@ -57,7 +57,8 @@ public class CombineTwoLists
         list2.toArray(list2Array);
 
         list1.addAll(Arrays.asList(list2Array));
-
+        //Could also just do list1.addAll(list2);
+//        list1.addAll(list2);
         return list1;
     }
 }
