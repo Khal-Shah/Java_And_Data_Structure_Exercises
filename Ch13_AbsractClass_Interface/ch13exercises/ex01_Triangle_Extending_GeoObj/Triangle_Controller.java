@@ -1,6 +1,6 @@
 package ch13exercises.ex01_Triangle_Extending_GeoObj;
 
-import ch13notes.Ch13_2_AbstractClasses.GeometricObject;
+import ch13notes.Ch13_2_abstract_classes.GeometricObject;
 
 import java.util.Scanner;
 

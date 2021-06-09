@@ -1,8 +1,7 @@
-package ch13notes.Ch13_3_Abstract_Number;
+package ch13notes.Ch13_3_abstract_number;
 
 import java.math.*;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class LargestNumbers
 {
@@ -23,6 +22,7 @@ public class LargestNumbers
         //was only of Integer type). Or is it because Collections /= Number?
         System.out.println("The largest number is: " + getLargestNumber(list));
 
+        System.out.println(list.toString());
     }
 
     public static Number getLargestNumber(ArrayList<Number> list)

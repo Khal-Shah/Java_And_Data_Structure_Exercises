@@ -16,7 +16,7 @@ public class SortArrayList_Exercise
     {
         //Create arrayList of size 10 with random integers between -99 and + 99
         ArrayList<Number> list = getNums();
-        System.out.println("Before sorting: " + list.toString());
+        System.out.println("Before sorting: " + list);
         System.out.print("After sorting: " );
         sort(list);
 
@@ -47,6 +47,6 @@ public class SortArrayList_Exercise
             sortedList.add(list.get(i++).doubleValue());
         }
         Collections.sort(sortedList);
-        System.out.println(sortedList.toString());
+        System.out.println(sortedList);
     }
 }
