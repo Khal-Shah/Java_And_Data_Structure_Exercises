@@ -1,4 +1,4 @@
-package ch13notes.Ch13_3_abstract_number;
+package ch13notes.sect_3_abstract_number;
 
 import java.math.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package ch13notes.Ch13_5_interfaces;
+package ch13notes.sect_5_interfaces;
 
 class Chicken extends Animal implements Edible
 {

@@ -1,4 +1,4 @@
-package ch13notes.Ch13_2_abstract_classes;
+package ch13notes.sect_2_abstract_classes;
 
 public class GeometricObjectController
 {

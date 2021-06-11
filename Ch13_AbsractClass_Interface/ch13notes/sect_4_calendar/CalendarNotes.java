@@ -1,4 +1,4 @@
-package ch13notes.Ch13_4_calendar;
+package ch13notes.sect_4_calendar;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;

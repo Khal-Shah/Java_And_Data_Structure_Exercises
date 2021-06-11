@@ -1,6 +1,6 @@
 package ch13exercises.ex01_Triangle_Extending_GeoObj;
 
-import ch13notes.Ch13_2_abstract_classes.GeometricObject;
+import ch13notes.sect_2_abstract_classes.GeometricObject;
 
 /** Chapter 13 - Exercise 1:
  * (Triangle class) Design a new Triangle class that extends the abstract GeometricObject class.

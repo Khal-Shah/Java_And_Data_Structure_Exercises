@@ -1,12 +1,33 @@
-package ch13notes.Ch13_2_abstract_classes;
-
+package ch13exercises.ex5_geometric_comparable;
 import java.util.Date;
 
-public abstract class GeometricObject
+public abstract class GeometricObject implements Comparable<GeometricObject>
 {
     private String color = "white";
     private boolean filled;
     private Date dateCreated;
+
+    @Override
+    public int compareTo(GeometricObject o)
+    {
+        if(this.getArea() > o.getArea())
+        {
+            return 1;
+        }
+
+        else if(this.getArea() < o.getArea())
+        {
+            return -1;
+        }
+
+        return 0;
+    }
+
+    public static GeometricObject max(GeometricObject obj1, GeometricObject obj2)
+    {
+        return obj1.compareTo(obj2) > 0? obj1 : obj2;
+    }
+
 
     protected GeometricObject()     //Constructor can only be invoked from child
     {
