@@ -1,4 +1,4 @@
-package ch13exercises.ex7_colorable_interface;
+package ch13exercises.ex07_colorable_interface;
 
 import ch13notes.sect_2_abstract_classes.GeometricObject;
 

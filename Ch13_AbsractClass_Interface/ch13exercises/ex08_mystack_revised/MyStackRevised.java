@@ -1,4 +1,4 @@
-package ch13exercises.ex8_mystack_revised;
+package ch13exercises.ex08_mystack_revised;
 import java.util.ArrayList;
 
 /** Chapter 13 - Exercise 8:
@@ -24,12 +24,14 @@ public class MyStackRevised implements Cloneable
 
         return newStack;
     }
+    //deep copy
 
 //    @Override
 //    public Object clone() throws CloneNotSupportedException
 //    {
 //        return super.clone();
 //    }
+    //shallow copy
 
     public boolean isEmpty()
     {

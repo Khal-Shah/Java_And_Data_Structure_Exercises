@@ -1,5 +1,4 @@
-package ch13exercises.ex5_geometric_comparable;
-import  ch13exercises.ex5_geometric_comparable.Circle;
+package ch13exercises.ex05_geometric_comparable;
 
 /** Chapter 13 - Exercise 5
  * (Enable GeometricObject comparable) Modify the GeometricObject class to implement

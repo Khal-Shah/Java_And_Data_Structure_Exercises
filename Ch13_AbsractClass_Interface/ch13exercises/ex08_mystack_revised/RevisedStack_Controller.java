@@ -1,4 +1,4 @@
-package ch13exercises.ex8_mystack_revised;
+package ch13exercises.ex08_mystack_revised;
 
 import java.math.BigInteger;
 import java.util.Date;

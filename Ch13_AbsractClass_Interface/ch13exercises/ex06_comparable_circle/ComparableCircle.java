@@ -1,4 +1,4 @@
-package ch13exercises.ex6_comparable_circle;
+package ch13exercises.ex06_comparable_circle;
 
 import ch13notes.sect_2_abstract_classes.Circle;
 import ch13notes.sect_2_abstract_classes.GeometricObject;

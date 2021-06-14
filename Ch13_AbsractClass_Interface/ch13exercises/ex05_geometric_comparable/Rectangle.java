@@ -1,4 +1,4 @@
-package ch13exercises.ex5_geometric_comparable;
+package ch13exercises.ex05_geometric_comparable;
 
 public class Rectangle extends GeometricObject
 {
