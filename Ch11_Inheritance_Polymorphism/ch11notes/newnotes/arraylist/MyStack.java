@@ -63,18 +63,18 @@ public class MyStack
     public static void main(String[] args)
     {
         Object date = new Date();
-        Object msg = new String("Hello World");
+        Object msg = "Hello World";
 
         Object myStack = new MyStack();
         ((MyStack) myStack).push(date);
         ((MyStack) myStack).push(msg);
 
-        System.out.println(myStack.toString());
+        System.out.println(myStack);
 
         System.out.println("Popping MyStack...");
         ((MyStack) myStack).pop();
 
-        System.out.println(myStack.toString());
+        System.out.println(myStack);
         System.out.println(((MyStack) myStack).getSize());
 
     }
