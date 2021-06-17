@@ -6,7 +6,7 @@ public class Square extends GeometricObject implements Colorable
 {
     private double side;
 
-    protected Square(double side)
+    public Square(double side)
     {
         this.side = side;
     }
