@@ -2,7 +2,7 @@ package ch13exercises.ex11_octagon_comparable_cloneable;
 
 import ch13notes.sect_2_abstract_classes.GeometricObject;
 
-/**
+/** Chapter 13 - Exercise 11:
  * (The Octagon class) Write a class named Octagon that extends GeometricObject
  * and implements the Comparable and Cloneable interfaces.
  *

@@ -1,7 +1,7 @@
 package ch13exercises.ex13_course_cloneable;
 import java.util.ArrayList;
 
-/**
+/** Chapter 13 - Exercise 13:
  * (Enable the Course class cloneable) Rewrite the Course class in Listing 10.6
  * to add a clone method to perform a deep copy on the students field.
  *

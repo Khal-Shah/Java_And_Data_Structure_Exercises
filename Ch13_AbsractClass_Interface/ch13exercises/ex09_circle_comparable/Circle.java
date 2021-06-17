@@ -2,7 +2,7 @@ package ch13exercises.ex09_circle_comparable;
 
 import ch13notes.sect_2_abstract_classes.GeometricObject;
 
-/**
+/** Chapter 13 - Exercise 9:
  * (Enable Circle comparable) Rewrite the Circle class in Listing 13.2 to extend GeometricObject
  * and implement the Comparable interface. Override the equals method in the Object class.
  *

@@ -7,7 +7,7 @@ import ch13notes.sect_2_abstract_classes.Circle;
 import ch13notes.sect_2_abstract_classes.GeometricObject;
 import ch13notes.sect_2_abstract_classes.Rectangle;
 
-/**
+/** Chapter 13 - Exercise 12:
  * (Sum the areas of geometric objects) Write a method that sums the areas of all the geometric objects in an array.
  * The method signature is:
  *  public static double sumArea(GeometricObject[] a)
