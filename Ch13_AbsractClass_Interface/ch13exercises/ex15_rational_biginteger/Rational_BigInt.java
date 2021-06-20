@@ -16,7 +16,7 @@ public class Rational_BigInt extends Number implements Comparable<Rational_BigIn
 
     public Rational_BigInt()
     {
-        this(BigInteger.ONE, BigInteger.ZERO);
+        this(BigInteger.ZERO, BigInteger.ONE);
     }
 
     public Rational_BigInt(BigInteger numerator, BigInteger denominator)

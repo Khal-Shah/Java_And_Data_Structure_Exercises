@@ -7,7 +7,7 @@ public class Rational extends Number implements Comparable<Rational>
 
     public Rational()
     {
-        this(1, 0);
+        this(0, 1);
     }
 
     public Rational(long numerator, long denominator)
