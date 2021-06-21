@@ -36,7 +36,14 @@ public class Decimal_to_Fraction
         //rational object for fractional part
         Rational_BigInt fractional = new Rational_BigInt(BigInteger.valueOf(Long.parseLong(decimal[1])), BigInteger.valueOf((long) Math.pow(10, decimal[1].length())));
 
-        System.out.println(whole.add(fractional));
+        if (Double.parseDouble(decimal[0]) > 0)
+        {
+            System.out.println(whole.add(fractional));
+        }
 
+        else
+        {
+            System.out.println(whole.subtract(fractional));
+        }
     }
 }
