@@ -1,4 +1,4 @@
-package ch19notes;
+package ch19notes.sect_1_2_intro;
 import java.util.ArrayList;
 
 /* Chapter 19 - GENERICS: Generics enable you to detect errors at compile time rather than at runtime.
@@ -43,7 +43,7 @@ Below is the class diagram for ArrayList after JDK 1.5:
 +set(index: int, o: E): E
  */
 
-public class _01_02_Intro_Benefits
+public class Intro_Benefits
 {
 
 	public static void main(String[] args)
