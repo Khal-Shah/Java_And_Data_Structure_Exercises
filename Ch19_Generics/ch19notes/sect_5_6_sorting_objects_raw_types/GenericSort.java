@@ -1,4 +1,4 @@
-package ch19notes.sect_5_sorting_objects_raw_types;
+package ch19notes.sect_5_6_sorting_objects_raw_types;
 
 public class GenericSort
 {
