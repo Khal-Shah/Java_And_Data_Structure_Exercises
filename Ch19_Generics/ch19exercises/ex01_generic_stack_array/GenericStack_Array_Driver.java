@@ -1,6 +1,6 @@
 package ch19exercises.ex01_generic_stack_array;
 
-public class GenericStack_Adday_Driver
+public class GenericStack_Array_Driver
 {
     public static void main(String[] args)
     {
