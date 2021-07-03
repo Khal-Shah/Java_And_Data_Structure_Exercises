@@ -24,6 +24,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Ch11_Inheritance_Polymorphism/ch11notes/More Notes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch12_ExceptionHandling_Text_IO/ch12notes/new" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch13_AbsractClass_Interface/ch13exercises/practice-exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch20_Lists_Stacks_Queues" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="openjdk-14" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
