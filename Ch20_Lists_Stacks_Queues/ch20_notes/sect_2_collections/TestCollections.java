@@ -1,8 +1,6 @@
 package ch20_notes.sect_2_collections;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class TestCollections
 {
@@ -39,10 +37,30 @@ public class TestCollections
         clonedCities.retainAll(moreCities);
         System.out.println("Common in cities AND moreCities: " + clonedCities);
 
+        System.out.println("========================================================================");
+        //Using ArrayList and HashSet and LinkedList
+        //ArrayList
+        Collection<String> names = new ArrayList<>();
+        //Collections = utility class with static methods
+        Collections.addAll(names, "Bart", "Homer", "Lisa", "Maggie", "Marge");
+        System.out.println("Names: " + names);
 
+        //HashSet
+        Collection<String> companies = new HashSet<>();
+        Collections.addAll(companies, "Apple", "Amazon", "Facebook", "Microsoft", "Netflix", "Google");
+        System.out.println("Companies: " + companies);
 
+        companies.addAll(names);
+        System.out.println("Companies and Names joined with addAll(): " + companies);
 
+        //LinkedList
+        Collection<String> days = new LinkedList<>();
+        Collections.addAll(days, "Sat", "Sun", "Mon", "Tue", "Wed");
+        System.out.println("Days: " + days);
+        //arraylist(names) was added to companies (hashshet), now we'll add companies to days
+        days.addAll(companies);
 
+        System.out.println("Days after adding companies: " + days);
     }
 }
 
