@@ -10,7 +10,7 @@ public class LambdaComparatorDemo
     {
         String[] cities = {"NYC", "Ottawa", "Tampa Bay", "Montreal", "Rome"};
         System.out.print("Before sorting: ");
-        for (String city : cities)
+        for(String city : cities)
         {
             System.out.print(city + "\t");
         }
@@ -23,7 +23,7 @@ public class LambdaComparatorDemo
          */
 
         System.out.print("\nAfter sorting by their alphabet order: ");
-        for (String city : cities)
+        for(String city : cities)
         {
             System.out.print(city + "\t");
         }
@@ -46,20 +46,38 @@ public class LambdaComparatorDemo
         System.out.println("\n========================================================================\n");
         //Example with Loan class
         Loan[] loans = {new Loan(2.5, 4, 2500),
-                new Loan(4.2, 3, 8700),
-                new Loan(1.9, 6, 15200),
-                new Loan(5, 10, 1000)};
+                        new Loan(4.2, 3, 8700),
+                        new Loan(1.9, 6, 15200),
+                        new Loan(5, 10, 1000),
+                        new Loan(6, 5, 1000)};
 
-        System.out.print("Before sorting, the loan amounts are: ");
-        for (Loan o : loans)
+        System.out.println("Before sorting, the loan amounts are: ");
+        for(Loan o : loans)
         {
-            System.out.print(o.getLoanAmount() + "\t");
+            System.out.print("Amount: " + o.getLoanAmount() + "\t");
+            System.out.print("IR: " + o.getAnnualInterestRate() + "\t");
+            System.out.print("Years:" + o.getNumberOfYears() + "\n");
         }
+
         Arrays.sort(loans, Comparator.comparing(Loan::getLoanAmount).reversed());
-        System.out.print("\nSorted by most loan amount: ");
-        for (Loan o : loans)
+        System.out.println("\nSorted by most loan amount: ");
+
+        for(Loan o : loans)
         {
-            System.out.print(o.getLoanAmount() + "\t");
+            System.out.print("Amount: " + o.getLoanAmount() + "\t");
+            System.out.print("IR: " + o.getAnnualInterestRate() + "\t");
+            System.out.print("Years:" + o.getNumberOfYears() + "\n");
+        }
+
+        System.out.println("\nSorted by most loan amount AND IR: ");
+        Arrays.sort(loans,
+                    Comparator.comparing(Loan:: getLoanAmount).thenComparing(Loan:: getAnnualInterestRate).reversed());
+
+        for(Loan o : loans)
+        {
+            System.out.print("Amount: " + o.getLoanAmount() + "\t");
+            System.out.print("IR: " + o.getAnnualInterestRate() + "\t");
+            System.out.print("Years:" + o.getNumberOfYears() + "\n");
         }
     }
 
