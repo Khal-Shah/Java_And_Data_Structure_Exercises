@@ -1,4 +1,4 @@
-package ch20_notes.sect_3_4_iterator_foreach;
+package ch20notes.sect_3_4_iterator_foreach;
 
 import java.util.Collections;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package ch20_notes.sect_6_comparator;
+package ch20notes.sect_6_comparator;
 
 import ch12exercises.ex04_argument.Loan;
 

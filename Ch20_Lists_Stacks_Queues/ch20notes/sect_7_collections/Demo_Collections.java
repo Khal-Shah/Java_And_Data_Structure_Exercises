@@ -1,4 +1,4 @@
-package ch20_notes.sect_7_collections;
+package ch20notes.sect_7_collections;
 
 import java.util.*;
 

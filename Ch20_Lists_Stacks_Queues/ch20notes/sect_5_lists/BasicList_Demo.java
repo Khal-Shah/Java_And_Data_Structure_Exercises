@@ -1,4 +1,4 @@
-package ch20_notes.sect_5_lists;
+package ch20notes.sect_5_lists;
 
 import java.util.Collections;
 import java.util.LinkedList;

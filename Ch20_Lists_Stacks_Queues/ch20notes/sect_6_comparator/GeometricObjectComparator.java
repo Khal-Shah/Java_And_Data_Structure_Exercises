@@ -1,4 +1,4 @@
-package ch20_notes.sect_6_comparator;
+package ch20notes.sect_6_comparator;
 
 import ch13exercises.ex01_Triangle_Extending_GeoObj.Triangle;
 import ch13exercises.ex07_colorable_interface.Square;
