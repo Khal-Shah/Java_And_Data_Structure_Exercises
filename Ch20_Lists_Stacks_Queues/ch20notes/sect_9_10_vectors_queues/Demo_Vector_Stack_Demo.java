@@ -3,7 +3,7 @@ package ch20notes.sect_9_10_vectors_queues;
 import java.util.Collections;
 import java.util.Stack;
 
-public class Vector_Stack_Demo
+public class Demo_Vector_Stack_Demo
 {
     public static void main(String[] args)
     {
