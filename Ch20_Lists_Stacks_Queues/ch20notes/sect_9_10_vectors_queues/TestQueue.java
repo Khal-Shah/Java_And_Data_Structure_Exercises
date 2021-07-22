@@ -2,10 +2,7 @@ package ch20notes.sect_9_10_vectors_queues;
 
 import org.junit.Test;
 
-import java.util.Collections;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class TestQueue
 {
@@ -23,13 +20,11 @@ public class TestQueue
     }
 
     @Test
-    public void testQueue2()
+    public void testPriorityQueue()
     {
-        PriorityQueue<String> provinces = new PriorityQueue<>();
-//        provinces.offer("Quebec");
+        PriorityQueue<String> provinces = new PriorityQueue<>(6);
         Collections.addAll(provinces, "Ontario", "New Brunswick", "Quebec", "BC", "Manitoba",
                            "PEI");
-
         System.out.println(provinces);
     }
 }
