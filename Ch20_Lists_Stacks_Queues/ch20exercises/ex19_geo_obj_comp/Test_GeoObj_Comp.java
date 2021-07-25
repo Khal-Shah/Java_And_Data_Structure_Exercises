@@ -10,8 +10,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-/**
- * Chapter 20 (Lists, Stacks, & Queues) - Exercise 11:
+/** Chapter 20 (Lists, Stacks, & Queues) - Exercise 19:
  *
  * (Use Comparator) Write the following generic method using selection sort and a comparator:
  * public static <E> void selectionSort(E[] list, Comparator<? super E> comparator)
