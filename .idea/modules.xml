@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ch20_Lists_Stacks_Queues/Ch20_Lists_Stacks_Queues.iml" filepath="$PROJECT_DIR$/Ch20_Lists_Stacks_Queues/Ch20_Lists_Stacks_Queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch21_Sets_Maps/Ch21_Sets_Maps.iml" filepath="$PROJECT_DIR$/Ch21_Sets_Maps/Ch21_Sets_Maps.iml" />
       <module fileurl="file://$PROJECT_DIR$/Liang.iml" filepath="$PROJECT_DIR$/Liang.iml" />
     </modules>
   </component>

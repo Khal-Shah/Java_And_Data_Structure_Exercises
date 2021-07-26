@@ -4,14 +4,6 @@
     <output url="file://$MODULE_DIR$/bin" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/Ch4_Math_Strings_Chars" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Ch5_Loops" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Ch1_Intro_Programming" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Ch2_Programming_with_UserInput" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Ch3_Selections_Boolean_RandomNum" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Ch6_Methods" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Ch7_Arrays" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Ch9_Objects_Classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch10_OOP_Thinking" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch11_Inheritance_Polymorphism" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch12_ExceptionHandling_Text_IO" isTestSource="false" />
@@ -25,6 +17,14 @@
       <sourceFolder url="file://$MODULE_DIR$/Ch12_ExceptionHandling_Text_IO/ch12notes/new" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch13_AbsractClass_Interface/ch13exercises/practice-exercises" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch20_Lists_Stacks_Queues" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch01_Intro_Programming" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch02_Programming_with_UserInput" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch03_Selections_Boolean_RandomNum" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch04_Math_Strings_Chars" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch05_Loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch06_Methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch07_Arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch09_Objects_Classes" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="openjdk-14" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
