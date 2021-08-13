@@ -1,4 +1,6 @@
-package ch21_notes.sect_06_occurrences_wods;
+package ch21_notes.sect_06_occurrences_words;
+
+import org.junit.Test;
 
 import java.util.Map;
 import java.util.TreeMap;
@@ -10,17 +12,21 @@ import java.util.TreeMap;
 
 public class CountOccurrenceOfWords
 {
-    public static void main(String[] args)
-    {
-        String text = "Good morning. Have a good class. " +
-                "Have a good visit. Have fun!";
+    //        TreeMap to hold words and their count
+    public  Map<String, Integer> map = new TreeMap<>();
+    public String text = "Good morning. Have a good class. " +
+                         "Have a good visit. Have fun!";
 
+    public void setText(String text)
+    {
+        this.text = text;
+    }
+
+    public Map<String, Integer> getMap()
+    {
         //Replace everything that is NOT character or (white)space with "" then split them by whitespace
         String[] words = text.replaceAll("[^a-zA-Z ]", "").split("\\s+");
         String key;
-
-//        TreeMap to hold words and their count
-        Map<String, Integer> map = new TreeMap<>();
 
         for(String word: words)
         {
@@ -41,9 +47,17 @@ public class CountOccurrenceOfWords
                 map.put(key, ++value);
             }
         }
+        return map;
+    }
+
+    @Test
+    public void testCountOccurrence()
+    {
+        CountOccurrenceOfWords countOccurrenceOfWords = new CountOccurrenceOfWords();
+        Map<String, Integer>   map                    = countOccurrenceOfWords.getMap();
         System.out.printf("%8s \t %5s \n", "Key", "Value");
         map.forEach((k, v) ->
-                System.out.printf("%8s \t %5s \n", k, v));
+                            System.out.printf("%8s \t %5s \n", k, v));
     }
 }
 
