@@ -28,6 +28,7 @@ public class CountKeywords_Revised
 
         while(!file.exists())
         {
+            System.out.print("You've entered an invalid path, please try again: ");
             path = kb.nextLine();
             file = new File(path);
         }
@@ -63,11 +64,6 @@ public class CountKeywords_Revised
         while(input.hasNext())
         {
             word = input.next();
-
-            if(word.contains("(for"))
-            {
-                System.out.println(word);
-            }
 
             //skip to the next line if there's a single line comment
             if(word.contains("//"))
