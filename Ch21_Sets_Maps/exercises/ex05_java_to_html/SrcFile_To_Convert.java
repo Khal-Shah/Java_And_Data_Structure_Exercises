@@ -1,4 +1,4 @@
-package exercises.ex5_java_to_html;
+package exercises.ex05_java_to_html;
 
 public class SrcFile_To_Convert
 {

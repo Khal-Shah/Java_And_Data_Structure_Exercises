@@ -1,4 +1,4 @@
-package exercises.ex5_java_to_html;
+package exercises.ex05_java_to_html;
 
 import java.io.*;
 import java.util.Scanner;
@@ -20,10 +20,10 @@ public class JavaToHTML_Conversion
     public static void main(String[] args) throws IOException
     {
         //file to convert:
-        File javaFile = new File("Ch21_Sets_Maps/exercises/ex5_java_to_html/SrcFile_To_Convert.java");
+        File javaFile = new File("Ch21_Sets_Maps/exercises/ex05_java_to_html/SrcFile_To_Convert.java");
 
         //new html file
-        File htmlFile = new File("Ch21_Sets_Maps/exercises/ex5_java_to_html/converted.html");
+        File htmlFile = new File("Ch21_Sets_Maps/exercises/ex05_java_to_html/converted.html");
 
         writeHtmlPre(htmlFile);
         writeJavaCode(javaFile, htmlFile);
