@@ -1,4 +1,4 @@
-package ch22_notes.sect_05_fibonacci_dynamic_programming;
+package ch22_notes.sect_05_06_fibonacci_gcd;
 
 import org.junit.Test;
 
