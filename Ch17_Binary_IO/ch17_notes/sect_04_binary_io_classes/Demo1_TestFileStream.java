@@ -11,7 +11,7 @@ public class Demo1_TestFileStream
     public static void main(String[] args) throws IOException
     {
         //create file
-        File file = new File("Ch17_Binary_I:O/ch17_notes/sect_04_binary_io_classes/temp.txt");
+        File file = new File("/ch17_notes/sect_04_binary_io_classes/temp.txt");
 
         //create output stream (to write) to the file
         FileOutputStream writer = new FileOutputStream(file);
@@ -24,7 +24,7 @@ public class Demo1_TestFileStream
         writer.close();
 
         //create input stream (read the file we just created and wrote to)
-        FileInputStream reader = new FileInputStream("Ch17_Binary_I:O/ch17_notes/sect_04_binary_io_classes/temp.txt");
+        FileInputStream reader = new FileInputStream("/ch17_notes/sect_04_binary_io_classes/temp.txt");
         int value;
 
         //input value = -1 signifies end of file

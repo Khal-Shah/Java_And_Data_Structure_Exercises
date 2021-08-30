@@ -10,7 +10,6 @@
       <sourceFolder url="file://$MODULE_DIR$/Ch13_AbsractClass_Interface" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch18_Recursion" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch19_Generics" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/bin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch14_JavaFX" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch11_Inheritance_Polymorphism/ch11notes/More Notes" isTestSource="false" />
@@ -27,6 +26,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Ch09_Objects_Classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch21_Sets_Maps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch22_Efficient_Algorithms" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch17_Binary_IO" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="openjdk-14" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />

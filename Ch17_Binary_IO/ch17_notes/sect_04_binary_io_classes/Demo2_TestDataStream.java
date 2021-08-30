@@ -10,7 +10,7 @@ public class Demo2_TestDataStream
     public static void main(String[] args) throws IOException
     {
         //create file (notice we have to use FileOutputStream and not File to be able to use DataOutStream
-        FileOutputStream file = new FileOutputStream("Ch17_Binary_I:O/ch17_notes/sect_04_binary_io_classes/grades.dat");
+        FileOutputStream file = new FileOutputStream("/ch17_notes/sect_04_binary_io_classes/grades.dat");
 
         //data output
         DataOutputStream output = new DataOutputStream(file);
@@ -35,7 +35,7 @@ public class Demo2_TestDataStream
 
 
         //Now read using DataInputStream
-        DataInputStream input = new DataInputStream(new FileInputStream("Ch17_Binary_I:O/ch17_notes/sect_04_binary_io_classes/grades.dat"));
+        DataInputStream input = new DataInputStream(new FileInputStream("/ch17_notes/sect_04_binary_io_classes/grades.dat"));
 
        while(true)
        {
