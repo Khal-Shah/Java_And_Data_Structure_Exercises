@@ -1,5 +1,6 @@
 package ch12exercises.ex04_argument;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /** Chapter 12 - Exercise 4:
@@ -9,7 +10,7 @@ import java.util.Date;
  * @author Khaled Shah
  */
 
-public class Loan
+public class Loan implements Serializable
 {
     private double annualInterestRate;
     private int numberOfYears;
@@ -76,8 +77,7 @@ public class Loan
     {
         if (loanAmount <= 0)
         {
-            IllegalArgumentException exception = new IllegalArgumentException("The loan amount has to be greater than 0.");
-            throw exception;
+            throw new IllegalArgumentException("The loan amount has to be greater than 0.");
         }
 
         this.loanAmount = loanAmount;
@@ -92,9 +92,8 @@ public class Loan
     public double getMonthlyPayment()
     {
         double monthlyInterestRate = getAnnualInterestRate() / (12 * 100);
-        double monthlyPayment = getLoanAmount() * monthlyInterestRate / (1 - (1 / Math.pow(1 + monthlyInterestRate,
+        return getLoanAmount() * monthlyInterestRate / (1 - (1 / Math.pow(1 + monthlyInterestRate,
                                                                                       getNumberOfYears() * 12)));
-        return monthlyPayment;
     }
 
     public double getTotalPayment()
