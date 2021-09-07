@@ -3,7 +3,7 @@ package ch17_exercises.ex12_combined_files;
 import java.io.*;
 
 /**
- * Chapter 17 (Binary I/O) - Exercise 10:
+ * Chapter 17 (Binary I/O) - Exercise 12:
  *
  *  (Combine files) Write a utility program that combines the files together into a
  * new file using the following command:
