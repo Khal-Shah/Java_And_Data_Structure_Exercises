@@ -1,4 +1,4 @@
-package Ch23_Sorting.ch23_notes.ch23_notes.ex01_generic_bubble_sort;
+package Ch23_Sorting.ch23_exercises.ex01_generic_bubble_sort;
 
 import java.util.Arrays;
 import java.util.Comparator;
