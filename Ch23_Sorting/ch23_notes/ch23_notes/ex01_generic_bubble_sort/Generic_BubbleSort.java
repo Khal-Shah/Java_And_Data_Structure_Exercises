@@ -21,14 +21,14 @@ public class Generic_BubbleSort
     {
         Integer[] numbers = {10, -5, 42, 3};
         String[] names = {"Denmark", "Canada", "America", "Bulgaria"};
-//        bubbleSort(numbers);
+        bubbleSort(numbers);
 //        bubbleSort(names);
 
         System.out.println(Arrays.toString(numbers));
         System.out.println(Arrays.toString(names));
 
         bubbleSort(names, Comparator.comparing(String::valueOf));
-        bubbleSort(numbers, Comparator.comparing(Integer::valueOf));
+//        bubbleSort(numbers, Comparator.comparing(Integer::valueOf));
         System.out.println(Arrays.toString(names));
         System.out.println(Arrays.toString(numbers));
 
