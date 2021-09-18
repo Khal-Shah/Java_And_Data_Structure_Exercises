@@ -27,6 +27,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Ch21_Sets_Maps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch22_Efficient_Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Ch17_Binary_IO" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Ch23_Sorting" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="openjdk-14" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
