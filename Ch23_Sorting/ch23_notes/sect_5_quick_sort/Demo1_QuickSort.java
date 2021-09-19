@@ -1,8 +1,8 @@
-package ch23_notes;
+package ch23_notes.sect_5_quick_sort;
 
 import java.util.Arrays;
 
-public class sect_5_quick_sort_Demo1_QuickSort
+public class Demo1_QuickSort
 {
     public static void main(String[] args)
     {
