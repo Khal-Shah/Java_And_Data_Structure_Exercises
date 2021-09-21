@@ -1,4 +1,4 @@
-package Ch23_Sorting.ch23_notes.sect_3_bubble_sort;
+package ch23_notes.sect_3_bubble_sort;
 
 import java.util.ArrayList;
 import java.util.Random;
