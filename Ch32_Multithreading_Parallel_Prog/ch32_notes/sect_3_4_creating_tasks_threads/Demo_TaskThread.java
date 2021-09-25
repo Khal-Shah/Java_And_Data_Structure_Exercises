@@ -1,4 +1,4 @@
-package ch32_notes.sect_3_4_creating_tasks_threads;
+package Ch32_Multithreading_Parallel_Prog.ch32_notes.sect_3_4_creating_tasks_threads;
 
 /*
 Three tasks:
