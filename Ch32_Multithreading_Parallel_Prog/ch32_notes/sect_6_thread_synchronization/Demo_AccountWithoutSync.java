@@ -43,18 +43,23 @@ public class Demo_AccountWithoutSync
 
         public void deposit(int amount)
         {
+            //^Instead of using it in the header we could've done:
+            synchronized(this)
+            {
+
 //            this.balance += amount;
-            int newBalance = this.balance + amount;
-            try
-            {
-                //Delay added to magnify the data-corruption problem and make it easy to see.
-                Thread.sleep(5);
-            }
-            catch(InterruptedException exception)
-            {
+                int newBalance = this.balance + amount;
+                try
+                {
+                    //Delay added to magnify the data-corruption problem and make it easy to see.
+                    Thread.sleep(5);
+                }
+                catch(InterruptedException exception)
+                {
 //                exception.printStackTrace();
+                }
+                this.balance = newBalance;
             }
-            this.balance = newBalance;
         }
     }
 
@@ -65,7 +70,10 @@ public class Demo_AccountWithoutSync
         public void run()
         {
             //penny: 1 cent, can use account object because it was declared static.
-            account.deposit(1);
+            synchronized(account)
+            {
+                account.deposit(1);
+            }
         }
     }
 }
