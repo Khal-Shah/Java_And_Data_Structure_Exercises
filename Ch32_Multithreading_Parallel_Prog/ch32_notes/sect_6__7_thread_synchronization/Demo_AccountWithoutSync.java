@@ -1,4 +1,4 @@
-package Ch32_Multithreading_Parallel_Prog.ch32_notes.sect_6_thread_synchronization;
+package Ch32_Multithreading_Parallel_Prog.ch32_notes.sect_6__7_thread_synchronization;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
